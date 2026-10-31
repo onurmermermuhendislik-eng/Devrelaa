@@ -1,0 +1,728 @@
+{
+  "version": 1,
+  "note": "Devre bolumleri. Pil: a=eksi uc, b=arti uc. slot: accepts tipi bekleyen bos konum. silhouette=true ise bos konumda soluk parca cizimi gosterilir (ilk bolumler); false ise sadece '?' (mantikla bulunur). Tipler: wire, battery, led, resistor, switch.",
+  "viewBox": [
+    4,
+    8,
+    144,
+    104
+  ],
+  "layouts": {
+    "loop": {
+      "TL": [
+        22,
+        22
+      ],
+      "TR": [
+        130,
+        22
+      ],
+      "BR": [
+        130,
+        98
+      ],
+      "BL": [
+        22,
+        98
+      ]
+    },
+    "ladder": {
+      "TL": [
+        22,
+        22
+      ],
+      "TM": [
+        76,
+        22
+      ],
+      "TR": [
+        130,
+        22
+      ],
+      "BL": [
+        22,
+        98
+      ],
+      "BM": [
+        76,
+        98
+      ],
+      "BR": [
+        130,
+        98
+      ]
+    }
+  },
+  "playsPerStage": {
+    "4-5": 2,
+    "6-8": 1
+  },
+  "stages": [
+    {
+      "id": "c1-kablo",
+      "bands": [
+        "4-5",
+        "6-8"
+      ],
+      "layout": "loop",
+      "silhouette": true,
+      "finish": "auto",
+      "parts": [
+        {
+          "id": "bat",
+          "type": "battery",
+          "a": "BL",
+          "b": "TL"
+        },
+        {
+          "id": "top",
+          "type": "wire",
+          "a": "TL",
+          "b": "TR"
+        },
+        {
+          "id": "led",
+          "type": "led",
+          "a": "TR",
+          "b": "BR"
+        },
+        {
+          "id": "bot",
+          "type": null,
+          "accepts": "wire",
+          "a": "BR",
+          "b": "BL"
+        }
+      ],
+      "options": [
+        "wire",
+        "battery"
+      ]
+    },
+    {
+      "id": "c2-pil",
+      "bands": [
+        "4-5",
+        "6-8"
+      ],
+      "layout": "loop",
+      "silhouette": true,
+      "finish": "auto",
+      "parts": [
+        {
+          "id": "bat",
+          "type": null,
+          "accepts": "battery",
+          "a": "BL",
+          "b": "TL"
+        },
+        {
+          "id": "top",
+          "type": "wire",
+          "a": "TL",
+          "b": "TR"
+        },
+        {
+          "id": "led",
+          "type": "led",
+          "a": "TR",
+          "b": "BR"
+        },
+        {
+          "id": "bot",
+          "type": "wire",
+          "a": "BR",
+          "b": "BL"
+        }
+      ],
+      "options": [
+        "battery",
+        "wire",
+        "led"
+      ]
+    },
+    {
+      "id": "c3-led",
+      "bands": [
+        "4-5",
+        "6-8"
+      ],
+      "layout": "loop",
+      "silhouette": true,
+      "finish": "auto",
+      "parts": [
+        {
+          "id": "bat",
+          "type": "battery",
+          "a": "BL",
+          "b": "TL"
+        },
+        {
+          "id": "top",
+          "type": "wire",
+          "a": "TL",
+          "b": "TR"
+        },
+        {
+          "id": "led",
+          "type": null,
+          "accepts": "led",
+          "a": "TR",
+          "b": "BR"
+        },
+        {
+          "id": "bot",
+          "type": "wire",
+          "a": "BR",
+          "b": "BL"
+        }
+      ],
+      "options": [
+        "led",
+        "wire",
+        "battery"
+      ]
+    },
+    {
+      "id": "c4-direnc",
+      "bands": [
+        "4-5",
+        "6-8"
+      ],
+      "layout": "loop",
+      "silhouette": true,
+      "finish": "auto",
+      "parts": [
+        {
+          "id": "bat",
+          "type": "battery",
+          "a": "BL",
+          "b": "TL"
+        },
+        {
+          "id": "top",
+          "type": null,
+          "accepts": "resistor",
+          "a": "TL",
+          "b": "TR"
+        },
+        {
+          "id": "led",
+          "type": "led",
+          "a": "TR",
+          "b": "BR"
+        },
+        {
+          "id": "bot",
+          "type": null,
+          "accepts": "wire",
+          "a": "BR",
+          "b": "BL"
+        }
+      ],
+      "options": [
+        "resistor",
+        "wire",
+        "battery"
+      ]
+    },
+    {
+      "id": "c5-anahtar",
+      "bands": [
+        "4-5",
+        "6-8"
+      ],
+      "layout": "loop",
+      "silhouette": true,
+      "finish": "switch",
+      "parts": [
+        {
+          "id": "bat",
+          "type": "battery",
+          "a": "BL",
+          "b": "TL"
+        },
+        {
+          "id": "top",
+          "type": "wire",
+          "a": "TL",
+          "b": "TR"
+        },
+        {
+          "id": "led",
+          "type": "led",
+          "a": "TR",
+          "b": "BR"
+        },
+        {
+          "id": "sw",
+          "type": null,
+          "accepts": "switch",
+          "a": "BR",
+          "b": "BL"
+        }
+      ],
+      "options": [
+        "switch",
+        "wire",
+        "resistor"
+      ]
+    },
+    {
+      "id": "c6-seri",
+      "bands": [
+        "6-8"
+      ],
+      "layout": "loop",
+      "silhouette": false,
+      "finish": "auto",
+      "parts": [
+        {
+          "id": "bat",
+          "type": "battery",
+          "a": "BL",
+          "b": "TL"
+        },
+        {
+          "id": "led1",
+          "type": "led",
+          "a": "TL",
+          "b": "TR"
+        },
+        {
+          "id": "right",
+          "type": "wire",
+          "a": "TR",
+          "b": "BR"
+        },
+        {
+          "id": "led2",
+          "type": null,
+          "accepts": "led",
+          "a": "BR",
+          "b": "BL"
+        }
+      ],
+      "options": [
+        "led",
+        "wire",
+        "switch"
+      ]
+    },
+    {
+      "id": "c7-paralel",
+      "bands": [
+        "6-8"
+      ],
+      "layout": "ladder",
+      "silhouette": false,
+      "finish": "auto",
+      "startPowered": true,
+      "parts": [
+        {
+          "id": "bat",
+          "type": "battery",
+          "a": "BL",
+          "b": "TL"
+        },
+        {
+          "id": "t1",
+          "type": "wire",
+          "a": "TL",
+          "b": "TM"
+        },
+        {
+          "id": "t2",
+          "type": "wire",
+          "a": "TM",
+          "b": "TR"
+        },
+        {
+          "id": "led1",
+          "type": "led",
+          "a": "TR",
+          "b": "BR"
+        },
+        {
+          "id": "b1",
+          "type": "wire",
+          "a": "BR",
+          "b": "BM"
+        },
+        {
+          "id": "b2",
+          "type": "wire",
+          "a": "BM",
+          "b": "BL"
+        },
+        {
+          "id": "led2",
+          "type": null,
+          "accepts": "led",
+          "a": "TM",
+          "b": "BM"
+        }
+      ],
+      "options": [
+        "led",
+        "wire",
+        "battery"
+      ]
+    },
+    {
+      "id": "c8-kablo-ust",
+      "bands": [
+        "4-5",
+        "6-8"
+      ],
+      "layout": "loop",
+      "silhouette": true,
+      "finish": "auto",
+      "parts": [
+        {
+          "id": "bat",
+          "type": "battery",
+          "a": "BL",
+          "b": "TL"
+        },
+        {
+          "id": "top",
+          "type": null,
+          "accepts": "wire",
+          "a": "TL",
+          "b": "TR"
+        },
+        {
+          "id": "led",
+          "type": "led",
+          "a": "TR",
+          "b": "BR"
+        },
+        {
+          "id": "bot",
+          "type": "wire",
+          "a": "BR",
+          "b": "BL"
+        }
+      ],
+      "options": [
+        "wire",
+        "battery"
+      ]
+    },
+    {
+      "id": "c9-pil-sag",
+      "bands": [
+        "4-5",
+        "6-8"
+      ],
+      "layout": "loop",
+      "silhouette": true,
+      "finish": "auto",
+      "parts": [
+        {
+          "id": "top",
+          "type": "wire",
+          "a": "TL",
+          "b": "TR"
+        },
+        {
+          "id": "bat",
+          "type": null,
+          "accepts": "battery",
+          "a": "BR",
+          "b": "TR"
+        },
+        {
+          "id": "bot",
+          "type": "wire",
+          "a": "BR",
+          "b": "BL"
+        },
+        {
+          "id": "led",
+          "type": "led",
+          "a": "BL",
+          "b": "TL"
+        }
+      ],
+      "options": [
+        "battery",
+        "wire",
+        "led"
+      ]
+    },
+    {
+      "id": "c10-led-ust",
+      "bands": [
+        "4-5",
+        "6-8"
+      ],
+      "layout": "loop",
+      "silhouette": true,
+      "finish": "auto",
+      "parts": [
+        {
+          "id": "bat",
+          "type": "battery",
+          "a": "BL",
+          "b": "TL"
+        },
+        {
+          "id": "top",
+          "type": null,
+          "accepts": "led",
+          "a": "TL",
+          "b": "TR"
+        },
+        {
+          "id": "right",
+          "type": "wire",
+          "a": "TR",
+          "b": "BR"
+        },
+        {
+          "id": "bot",
+          "type": "wire",
+          "a": "BR",
+          "b": "BL"
+        }
+      ],
+      "options": [
+        "led",
+        "wire",
+        "battery"
+      ]
+    },
+    {
+      "id": "c11-anahtar-ust",
+      "bands": [
+        "4-5",
+        "6-8"
+      ],
+      "layout": "loop",
+      "silhouette": true,
+      "finish": "switch",
+      "parts": [
+        {
+          "id": "bat",
+          "type": "battery",
+          "a": "BL",
+          "b": "TL"
+        },
+        {
+          "id": "sw",
+          "type": null,
+          "accepts": "switch",
+          "a": "TL",
+          "b": "TR"
+        },
+        {
+          "id": "led",
+          "type": "led",
+          "a": "TR",
+          "b": "BR"
+        },
+        {
+          "id": "bot",
+          "type": "wire",
+          "a": "BR",
+          "b": "BL"
+        }
+      ],
+      "options": [
+        "switch",
+        "wire",
+        "resistor"
+      ]
+    },
+    {
+      "id": "c12-onar-kablo",
+      "bands": [
+        "6-8"
+      ],
+      "layout": "loop",
+      "silhouette": false,
+      "finish": "auto",
+      "parts": [
+        {
+          "id": "bat",
+          "type": "battery",
+          "a": "BL",
+          "b": "TL"
+        },
+        {
+          "id": "top",
+          "type": null,
+          "accepts": "wire",
+          "a": "TL",
+          "b": "TR",
+          "fault": true
+        },
+        {
+          "id": "led",
+          "type": "led",
+          "a": "TR",
+          "b": "BR"
+        },
+        {
+          "id": "bot",
+          "type": "wire",
+          "a": "BR",
+          "b": "BL"
+        }
+      ],
+      "options": [
+        "wire",
+        "resistor",
+        "switch"
+      ]
+    },
+    {
+      "id": "c13-onar-paralel",
+      "bands": [
+        "6-8"
+      ],
+      "layout": "ladder",
+      "silhouette": false,
+      "finish": "auto",
+      "parts": [
+        {
+          "id": "bat",
+          "type": "battery",
+          "a": "BL",
+          "b": "TL"
+        },
+        {
+          "id": "t1",
+          "type": "wire",
+          "a": "TL",
+          "b": "TM"
+        },
+        {
+          "id": "t2",
+          "type": null,
+          "accepts": "wire",
+          "a": "TM",
+          "b": "TR",
+          "fault": true
+        },
+        {
+          "id": "led1",
+          "type": "led",
+          "a": "TR",
+          "b": "BR"
+        },
+        {
+          "id": "b1",
+          "type": "wire",
+          "a": "BR",
+          "b": "BM"
+        },
+        {
+          "id": "b2",
+          "type": "wire",
+          "a": "BM",
+          "b": "BL"
+        },
+        {
+          "id": "led2",
+          "type": "led",
+          "a": "TM",
+          "b": "BM"
+        }
+      ],
+      "options": [
+        "wire",
+        "led",
+        "battery"
+      ],
+      "startPowered": true
+    },
+    {
+      "id": "c14-tamamla-uc",
+      "bands": [
+        "6-8"
+      ],
+      "layout": "loop",
+      "silhouette": false,
+      "finish": "auto",
+      "parts": [
+        {
+          "id": "bat",
+          "type": null,
+          "accepts": "battery",
+          "a": "BL",
+          "b": "TL"
+        },
+        {
+          "id": "top",
+          "type": "wire",
+          "a": "TL",
+          "b": "TR"
+        },
+        {
+          "id": "led",
+          "type": null,
+          "accepts": "led",
+          "a": "TR",
+          "b": "BR"
+        },
+        {
+          "id": "bot",
+          "type": null,
+          "accepts": "wire",
+          "a": "BR",
+          "b": "BL"
+        }
+      ],
+      "options": [
+        "battery",
+        "led",
+        "wire"
+      ]
+    },
+    {
+      "id": "c15-tamamla-anahtar",
+      "bands": [
+        "6-8"
+      ],
+      "layout": "loop",
+      "silhouette": false,
+      "finish": "switch",
+      "parts": [
+        {
+          "id": "bat",
+          "type": "battery",
+          "a": "BL",
+          "b": "TL"
+        },
+        {
+          "id": "top",
+          "type": "wire",
+          "a": "TL",
+          "b": "TR"
+        },
+        {
+          "id": "led",
+          "type": null,
+          "accepts": "led",
+          "a": "TR",
+          "b": "BR"
+        },
+        {
+          "id": "sw",
+          "type": null,
+          "accepts": "switch",
+          "a": "BR",
+          "b": "BL"
+        }
+      ],
+      "options": [
+        "led",
+        "switch",
+        "wire"
+      ]
+    }
+  ]
+}

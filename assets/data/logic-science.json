@@ -1,0 +1,580 @@
+{
+  "version": 1,
+  "note": "Mantik ve Bilim baslangic seti (V7.7). Yeni gorev eklemek icin tasks dizisine kayit ekleyin (kod degismez). kind: order (gorsel siralama) | pattern (orutu tamamlama) | cause (neden-sonuc tahmini) | science (bilim sorusu + gozlem). 4-5 yas: en fazla 3 secenek/oge. Bilimsel metinler kisa ve cocuk duzeyindedir. V7.8: l4 etiketi kisaltildi, basliklar cevabi vermez, kayit hatasi metni.",
+  "text": {
+    "title": "Mantık ve Bilim",
+    "intro": "Bir görev seç, düşün ve dene!",
+    "nextUp": "Sıradaki görev",
+    "allDoneCard": "Bütün görevleri bitirdin! İstediğini tekrar oynayabilirsin.",
+    "start": "Başla",
+    "replayStart": "Tekrar oyna",
+    "replayLabel": "Tekrar oyna",
+    "replayNote": "Bu görevi tekrar yaptın. Rozetin zaten sende, yeni rozet yok.",
+    "solvedTitle": "Görev tamamlandı!",
+    "solved": "Doğru! Çok iyi düşündün.",
+    "badgeNew": "Yeni rozet kazandın!",
+    "badgeHave": "Bu rozet zaten sende.",
+    "badgeWord": "görev",
+    "allDone": "Bütün görevleri bitirdin. Harika bir bilim insanısın!",
+    "next": "Devam",
+    "nextTask": "Sonraki görev",
+    "toList": "Görev listesi",
+    "overall": "Biten görevler",
+    "tasksWord": "görev",
+    "doneLabel": "Tamamlandı",
+    "observeLabel": "Gözlem:",
+    "orderPick": "Sırayla dokun: önce hangisi gelir?",
+    "orderSlotsLabel": "Sıra",
+    "patternAsk": "Sırada hangisi var?",
+    "tryAgain": "Olmadı, sorun değil. Bir daha dene.",
+    "saveFailTitle": "Kayıt yazılamadı",
+    "saveFail": "Rozet henüz kazanılmadı. Telefonda yer açıp bu görevi tekrar çöz."
+  },
+  "tasks": [
+    {
+      "id": "l1-tohum",
+      "kind": "order",
+      "icon": "🌱",
+      "title": "Tohumdan çiçeğe",
+      "bands": [
+        "4-5",
+        "6-8"
+      ],
+      "say": "Sırayla dokun: tohumdan çiçeğe.",
+      "items": [
+        {
+          "icon": "🫘",
+          "label": "Tohum",
+          "hint": "Tohum ilk sıradadır. Toprağa o ekilir."
+        },
+        {
+          "icon": "🌱",
+          "label": "Filiz",
+          "hint": "Filiz, tohum toprağa girince çıkar. Önce tohumu düşün."
+        },
+        {
+          "icon": "🌷",
+          "label": "Çiçek",
+          "hint": "Çiçek en son açar. Önce küçük halleri gelir."
+        }
+      ],
+      "hint2": "Bir bitki önce tohumdur, sonra filiz olur, sonra çiçek açar.",
+      "learn": "Bitkiler tohumdan filiz olur, sonra büyüyüp çiçek açar."
+    },
+    {
+      "id": "l2-kucukten",
+      "kind": "order",
+      "icon": "📏",
+      "title": "Küçükten büyüğe",
+      "bands": [
+        "4-5",
+        "6-8"
+      ],
+      "say": "Sırayla dokun: en küçükten en büyüğe.",
+      "items": [
+        {
+          "icon": "🐜",
+          "label": "Karınca",
+          "hint": "Karınca en küçüktür. İlk sıra onun."
+        },
+        {
+          "icon": "🐱",
+          "label": "Kedi",
+          "hint": "Kedi karıncadan büyük ama filden küçük."
+        },
+        {
+          "icon": "🐘",
+          "label": "Fil",
+          "hint": "Fil en büyüktür. En sona kalır."
+        }
+      ],
+      "hint2": "En küçükten başla: karınca, sonra kedi, sonra fil.",
+      "learn": "Karınca küçük, kedi orta, fil çok büyüktür."
+    },
+    {
+      "id": "l3-gun",
+      "kind": "order",
+      "icon": "🌅",
+      "title": "Gün boyunca",
+      "bands": [
+        "6-8"
+      ],
+      "say": "Sırayla dokun: günün başından sonuna.",
+      "items": [
+        {
+          "icon": "🌅",
+          "label": "Sabah",
+          "hint": "Gün sabah başlar. İlk sıra sabahın."
+        },
+        {
+          "icon": "☀️",
+          "label": "Öğle",
+          "hint": "Öğle, sabahtan sonra gelir."
+        },
+        {
+          "icon": "🌇",
+          "label": "Akşam",
+          "hint": "Akşam öğleden sonra gelir."
+        },
+        {
+          "icon": "🌙",
+          "label": "Gece",
+          "hint": "Gece günün sonunda gelir."
+        }
+      ],
+      "hint2": "Gün şöyle ilerler: sabah, öğle, akşam, gece.",
+      "learn": "Gün sabah başlar, öğle ve akşam olur, gece biter."
+    },
+    {
+      "id": "l4-civciv",
+      "kind": "order",
+      "icon": "🐣",
+      "title": "Civciv büyüyor",
+      "bands": [
+        "6-8"
+      ],
+      "say": "Sırayla dokun: yumurtadan tavuğa.",
+      "items": [
+        {
+          "icon": "🥚",
+          "label": "Yumurta",
+          "hint": "Her şey yumurtayla başlar."
+        },
+        {
+          "icon": "🐣",
+          "label": "Çıkan civciv",
+          "hint": "Civciv yumurtanın içinden çıkar. Yumurta daha önce."
+        },
+        {
+          "icon": "🐥",
+          "label": "Küçük civciv",
+          "hint": "Küçük civciv, çıktıktan sonra gelir."
+        },
+        {
+          "icon": "🐔",
+          "label": "Tavuk",
+          "hint": "Tavuk en sonda. Önce küçük hali gelir."
+        }
+      ],
+      "hint2": "Yumurta, çıkan civciv, küçük civciv, sonra tavuk.",
+      "learn": "Civciv yumurtadan çıkar ve büyüyüp tavuk olur."
+    },
+    {
+      "id": "l5-renkler",
+      "kind": "pattern",
+      "icon": "🔴",
+      "title": "Renk dizisi",
+      "bands": [
+        "4-5",
+        "6-8"
+      ],
+      "say": "Sırada hangisi var?",
+      "seq": [
+        "🔴",
+        "🔵",
+        "🔴",
+        "🔵",
+        "🔴"
+      ],
+      "options": [
+        {
+          "icon": "🔵",
+          "text": "Mavi",
+          "ok": true
+        },
+        {
+          "icon": "🔴",
+          "text": "Kırmızı",
+          "hint": "Son sıra zaten kırmızıydı. Sırada başka renk gelir."
+        },
+        {
+          "icon": "🟢",
+          "text": "Yeşil",
+          "hint": "Dizide yeşil yok. İki renk sırayla tekrar ediyor."
+        }
+      ],
+      "hint2": "Kırmızı, mavi, kırmızı, mavi... Sırayı oku.",
+      "learn": "Dizi kırmızı ve mavi diye tekrar eder."
+    },
+    {
+      "id": "l6-hayvanlar",
+      "kind": "pattern",
+      "icon": "🐱",
+      "title": "Hayvan dizisi",
+      "bands": [
+        "4-5",
+        "6-8"
+      ],
+      "say": "Sırada hangisi var?",
+      "seq": [
+        "🐱",
+        "🐶",
+        "🐱",
+        "🐶",
+        "🐱"
+      ],
+      "options": [
+        {
+          "icon": "🐶",
+          "text": "Köpek",
+          "ok": true
+        },
+        {
+          "icon": "🐱",
+          "text": "Kedi",
+          "hint": "Son sıra zaten kediydi. Sırada başkası gelir."
+        },
+        {
+          "icon": "🐭",
+          "text": "Fare",
+          "hint": "Dizide fare yok. İki hayvan sırayla tekrar ediyor."
+        }
+      ],
+      "hint2": "Kedi, köpek, kedi, köpek... Sıradaki kim?",
+      "learn": "Dizi kedi ve köpek diye tekrar eder."
+    },
+    {
+      "id": "l7-meyveler",
+      "kind": "pattern",
+      "icon": "🍎",
+      "title": "Meyve dizisi",
+      "bands": [
+        "6-8"
+      ],
+      "say": "Sırada hangisi var?",
+      "seq": [
+        "🍎",
+        "🍎",
+        "🍌",
+        "🍎",
+        "🍎"
+      ],
+      "options": [
+        {
+          "icon": "🍌",
+          "text": "Muz",
+          "ok": true
+        },
+        {
+          "icon": "🍎",
+          "text": "Elma",
+          "hint": "İki elmadan sonra farklı bir meyve geliyor. Dizinin başına bak."
+        },
+        {
+          "icon": "🍇",
+          "text": "Üzüm",
+          "hint": "Dizide üzüm yok. Dizideki iki meyveye bak."
+        },
+        {
+          "icon": "🍓",
+          "text": "Çilek",
+          "hint": "Dizide çilek yok. Dizideki iki meyveye bak."
+        }
+      ],
+      "hint2": "İki elma, bir muz; yine iki elma. Sonra ne gelir?",
+      "learn": "Dizi iki elma ve bir muzdan oluşan grupla tekrar eder."
+    },
+    {
+      "id": "l8-yildizlar",
+      "kind": "pattern",
+      "icon": "⭐",
+      "title": "Yıldız dizisi",
+      "bands": [
+        "6-8"
+      ],
+      "say": "Yıldızlar nasıl artıyor? Sırada hangisi var?",
+      "seq": [
+        "⭐",
+        "⭐⭐",
+        "⭐⭐⭐"
+      ],
+      "options": [
+        {
+          "icon": "⭐⭐⭐⭐",
+          "text": "Dört yıldız",
+          "ok": true
+        },
+        {
+          "icon": "⭐⭐",
+          "text": "İki yıldız",
+          "hint": "İki yıldız daha önce geldi. Yıldızlar artıyor."
+        },
+        {
+          "icon": "⭐⭐⭐",
+          "text": "Üç yıldız",
+          "hint": "Üç yıldız zaten var. Bir fazlasını bul."
+        }
+      ],
+      "hint2": "Her seferinde bir yıldız artıyor: bir, iki, üç...",
+      "learn": "Her adımda bir yıldız daha ekleniyor."
+    },
+    {
+      "id": "l9-anahtar",
+      "kind": "cause",
+      "icon": "🔘",
+      "title": "Anahtarı kapat",
+      "bands": [
+        "4-5",
+        "6-8"
+      ],
+      "say": "Devrede anahtarı kapattın. Lamba ne yapar?",
+      "scene": "🔋🔘💡",
+      "options": [
+        {
+          "icon": "💡",
+          "text": "Yanar",
+          "ok": true
+        },
+        {
+          "icon": "🌑",
+          "text": "Sönük kalır",
+          "hint": "Anahtar kapanınca yol tamamlanır. Enerji lambaya gider."
+        },
+        {
+          "icon": "💥",
+          "text": "Patlar",
+          "hint": "Lamba patlamaz. Pil lambayı güvenle yakar."
+        }
+      ],
+      "hint2": "Kapalı anahtar yolu tamamlar. Enerji geçer.",
+      "observe": {
+        "icon": "💡",
+        "text": "Anahtar kapanınca yol tamamlanır ve lamba yanar."
+      }
+    },
+    {
+      "id": "l10-yagmur",
+      "kind": "cause",
+      "icon": "🌧️",
+      "title": "Yağmurlu gün",
+      "bands": [
+        "4-5",
+        "6-8"
+      ],
+      "say": "Dışarıda yağmur yağıyor. Çıkarken ne alırsın?",
+      "scene": "🌧️",
+      "options": [
+        {
+          "icon": "☂️",
+          "text": "Şemsiye",
+          "ok": true
+        },
+        {
+          "icon": "🕶️",
+          "text": "Güneş gözlüğü",
+          "hint": "Gözlük güneşten korur, yağmurdan değil."
+        },
+        {
+          "icon": "🩴",
+          "text": "Terlik",
+          "hint": "Terlik seni yağmurdan korumaz. Üstünü örten bir şey lazım."
+        }
+      ],
+      "hint2": "Yağmur üstüne yağar. Onu ne durdurur?",
+      "observe": {
+        "icon": "☂️",
+        "text": "Şemsiye yağmuru üstümüzden uzak tutar."
+      }
+    },
+    {
+      "id": "l11-pil",
+      "kind": "cause",
+      "icon": "🔋",
+      "title": "Pil bitti",
+      "bands": [
+        "6-8"
+      ],
+      "say": "Oyuncak arabanın pili bitti. Araba ne yapar?",
+      "scene": "🚗🔋",
+      "options": [
+        {
+          "icon": "🛑",
+          "text": "Durur",
+          "ok": true
+        },
+        {
+          "icon": "🚗",
+          "text": "Daha hızlı gider",
+          "hint": "Enerji bitince araba hızlanmaz. Pil enerji verir."
+        },
+        {
+          "icon": "💡",
+          "text": "Işık saçar",
+          "hint": "Pil bitince ışık da yanmaz."
+        }
+      ],
+      "hint2": "Araba enerjiyle gider. Enerji bitince ne olur?",
+      "observe": {
+        "icon": "🛑",
+        "text": "Pil enerji verir. Enerji bitince araba durur."
+      }
+    },
+    {
+      "id": "l12-buz",
+      "kind": "cause",
+      "icon": "🧊",
+      "title": "Dondurucu",
+      "bands": [
+        "6-8"
+      ],
+      "say": "Bir bardak suyu dondurucuya koydun. Sabah ne olur?",
+      "scene": "🥛❄️",
+      "options": [
+        {
+          "icon": "🧊",
+          "text": "Buz olur",
+          "ok": true
+        },
+        {
+          "icon": "☕",
+          "text": "Sıcak olur",
+          "hint": "Dondurucu çok soğuktur. Soğukta su nasıl değişir?"
+        },
+        {
+          "icon": "💨",
+          "text": "Buhar olur",
+          "hint": "Buhar sıcakta oluşur. Dondurucu ise soğuk."
+        }
+      ],
+      "hint2": "Çok soğuyan su katı olur.",
+      "observe": {
+        "icon": "🧊",
+        "text": "Su çok soğuyunca donar ve buz olur."
+      }
+    },
+    {
+      "id": "l13-miknatis",
+      "kind": "science",
+      "icon": "🧲",
+      "title": "Mıknatıs",
+      "bands": [
+        "4-5",
+        "6-8"
+      ],
+      "say": "Mıknatıs hangisini çeker?",
+      "scene": "🧲",
+      "options": [
+        {
+          "icon": "🔩",
+          "text": "Çivi",
+          "ok": true
+        },
+        {
+          "icon": "🧸",
+          "text": "Oyuncak ayı",
+          "hint": "Kumaş mıknatısa yapışmaz. Metal bir şey bul."
+        },
+        {
+          "icon": "🍎",
+          "text": "Elma",
+          "hint": "Meyveler mıknatısa yapışmaz. Sert bir metal bul."
+        }
+      ],
+      "hint2": "Mıknatıs demir gibi metalleri çeker.",
+      "observe": {
+        "icon": "🧲",
+        "text": "Mıknatıs çivi gibi demir parçaları çeker. Kumaşı ve meyveyi çekmez."
+      }
+    },
+    {
+      "id": "l14-golge",
+      "kind": "science",
+      "icon": "🖐️",
+      "title": "Duvardaki iz",
+      "bands": [
+        "4-5",
+        "6-8"
+      ],
+      "say": "Elini lambanın önüne tuttun. Duvarda ne görürsün?",
+      "scene": "💡🖐️",
+      "options": [
+        {
+          "icon": "🌑",
+          "text": "Gölge",
+          "ok": true
+        },
+        {
+          "icon": "🌈",
+          "text": "Gökkuşağı",
+          "hint": "Gökkuşağı yağmur ve güneşle olur. Elin ışığı engelliyor."
+        },
+        {
+          "icon": "🔊",
+          "text": "Ses",
+          "hint": "Ses duyulur, görülmez. Duvara bakıyoruz."
+        }
+      ],
+      "hint2": "Işık elinden geçemez. Arkasında ne olur?",
+      "observe": {
+        "icon": "🖐️",
+        "text": "Elin ışığı engeller. Arkasında gölge oluşur."
+      }
+    },
+    {
+      "id": "l15-batar",
+      "kind": "science",
+      "icon": "🪨",
+      "title": "Batan ve yüzen",
+      "bands": [
+        "6-8"
+      ],
+      "say": "Hangisi suda batar?",
+      "scene": "🌊",
+      "options": [
+        {
+          "icon": "🪨",
+          "text": "Taş",
+          "ok": true
+        },
+        {
+          "icon": "🍃",
+          "text": "Yaprak",
+          "hint": "Yaprak hafiftir, suyun üstünde yüzer."
+        },
+        {
+          "icon": "🪶",
+          "text": "Tüy",
+          "hint": "Tüy çok hafiftir, suda yüzer."
+        }
+      ],
+      "hint2": "Ağır ve sert şeyler suda batar.",
+      "observe": {
+        "icon": "🪨",
+        "text": "Taş suya bırakılınca batar. Yaprak ve tüy yüzer."
+      }
+    },
+    {
+      "id": "l16-isik",
+      "kind": "science",
+      "icon": "🪟",
+      "title": "Işığı geçiren",
+      "bands": [
+        "6-8"
+      ],
+      "say": "Hangisi ışığı içinden geçirir?",
+      "scene": "☀️",
+      "options": [
+        {
+          "icon": "🪟",
+          "text": "Cam",
+          "ok": true
+        },
+        {
+          "icon": "🧱",
+          "text": "Tuğla",
+          "hint": "Tuğlanın arkası görünmez. Işık geçmiyor."
+        },
+        {
+          "icon": "📚",
+          "text": "Kitap",
+          "hint": "Kitabın arkası görünmez. Işık geçmiyor."
+        }
+      ],
+      "hint2": "Arkasını görebildiğimiz şeyi seç.",
+      "observe": {
+        "icon": "🪟",
+        "text": "Cam ışığı geçirir, bu yüzden camdan dışarıyı görürüz. Tuğla ve kitap geçirmez."
+      }
+    }
+  ]
+}

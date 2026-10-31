@@ -1,0 +1,363 @@
+{
+ "version": 1,
+ "note": "Enerji Macerasi (V7.9). Ilk dilim: Pil ve Enerji bolgesi. Gorev motoru ve gorunumu Mantik ve Bilim ile ayni (order/pattern/cause/science). coins = ilk cozumde kazanilan coin (yalniz gorsel odul; kayip, sinir, satin alma YOK; toplam coin cozulen gorevlerden TURETILIR, ayri kayit alani yok). 4-5 yas: en fazla 3 secenek/oge. regions: yalniz open olan oynanabilir; digerleri Yakinda.",
+ "regions": [
+  {
+   "id": "pil",
+   "icon": "🔋",
+   "title": "Pil ve Enerji",
+   "status": "open"
+  },
+  {
+   "id": "gunes",
+   "icon": "☀️",
+   "title": "Güneş enerjisi",
+   "status": "soon"
+  },
+  {
+   "id": "gece",
+   "icon": "🌙",
+   "title": "Gündüz ve gece",
+   "status": "soon"
+  },
+  {
+   "id": "depo",
+   "icon": "🏭",
+   "title": "Batarya",
+   "status": "soon"
+  },
+  {
+   "id": "devre",
+   "icon": "🔌",
+   "title": "Devre mantığı",
+   "status": "soon"
+  }
+ ],
+ "text": {
+  "title": "Enerji Macerası",
+  "intro": "Pil ve Enerji bölgesi: bir görev seç!",
+  "nextUp": "Sıradaki görev",
+  "allDoneCard": "Bu bölgeyi bitirdin! İstediğin görevi tekrar oynayabilirsin.",
+  "start": "Başla",
+  "replayStart": "Tekrar oyna",
+  "replayLabel": "Tekrar oyna",
+  "replayNote": "Bu görevi tekrar yaptın. Rozet ve coin zaten sende, yeni ödül yok.",
+  "solvedTitle": "Görev tamamlandı!",
+  "solved": "Doğru! Çok iyi düşündün.",
+  "badgeNew": "Yeni rozet kazandın!",
+  "badgeHave": "Bu rozet zaten sende.",
+  "badgeWord": "görev",
+  "allDone": "Pil ve Enerji bölgesini bitirdin. Harika bir enerji kâşifisin!",
+  "next": "Devam",
+  "nextTask": "Sonraki görev",
+  "toList": "Görev listesi",
+  "overall": "Biten görevler",
+  "tasksWord": "görev",
+  "doneLabel": "Tamamlandı",
+  "observeLabel": "Gözlem:",
+  "orderPick": "Sırayla dokun: önce hangisi gelir?",
+  "orderSlotsLabel": "Sıra",
+  "patternAsk": "Sırada hangisi var?",
+  "tryAgain": "Olmadı, sorun değil. Bir daha dene.",
+  "saveFailTitle": "Kayıt yazılamadı",
+  "saveFail": "Rozet henüz kazanılmadı. Telefonda yer açıp bu görevi tekrar çöz.",
+  "coinWord": "coin",
+  "coinGain": "coin kazandın!",
+  "regionsLabel": "Macera bölgeleri",
+  "soonWord": "Yakında",
+  "coinsLabel": "Coinlerin"
+ },
+ "tasks": [
+  {
+   "id": "e1-pil-ne",
+   "kind": "science",
+   "region": "pil",
+   "coins": 1,
+   "icon": "🚗",
+   "title": "Oyuncak araba",
+   "bands": [
+    "4-5",
+    "6-8"
+   ],
+   "say": "Hangisi oyuncak arabayı çalıştırır?",
+   "scene": "🚗",
+   "options": [
+    {
+     "icon": "🔋",
+     "text": "Pil",
+     "ok": true
+    },
+    {
+     "icon": "🪨",
+     "text": "Taş",
+     "hint": "Taş enerji vermez. Arabayı pil çalıştırır."
+    },
+    {
+     "icon": "🍃",
+     "text": "Yaprak",
+     "hint": "Yaprak arabayı çalıştırmaz. Oyuncağın içindeki pile bak."
+    }
+   ],
+   "hint2": "Oyuncağın içine takılan küçük şeyi düşün.",
+   "observe": {
+    "icon": "🔋",
+    "text": "Pil oyuncağa enerji verir. Enerji oyuncağı çalıştırır."
+   },
+   "learn": "Pil enerji verir."
+  },
+  {
+   "id": "e2-lamba",
+   "kind": "cause",
+   "region": "pil",
+   "coins": 1,
+   "icon": "💡",
+   "title": "Pil ve lamba",
+   "bands": [
+    "4-5",
+    "6-8"
+   ],
+   "say": "Pili kabloyla lambaya bağladık. Lamba ne yapar?",
+   "scene": "🔋〰️💡",
+   "options": [
+    {
+     "icon": "💡",
+     "text": "Yanar",
+     "ok": true
+    },
+    {
+     "icon": "🌑",
+     "text": "Sönük kalır",
+     "hint": "Pil enerji verir. Kablo yolu tamamlar, lamba yanar."
+    },
+    {
+     "icon": "💥",
+     "text": "Kırılır",
+     "hint": "Lamba kırılmaz. Pil onu güvenle yakar."
+    }
+   ],
+   "hint2": "Pil enerji verir, kablo yolu tamamlar.",
+   "observe": {
+    "icon": "💡",
+    "text": "Pil, kablo ve lamba bir yol olunca enerji lambaya gider ve lamba yanar."
+   },
+   "learn": "Enerji pilden kabloyla lambaya gider."
+  },
+  {
+   "id": "e3-enerji-yolu",
+   "kind": "order",
+   "region": "pil",
+   "coins": 1,
+   "icon": "🛤️",
+   "title": "Enerji nereye gider?",
+   "bands": [
+    "4-5",
+    "6-8"
+   ],
+   "say": "Sırayla dokun: enerji nereden başlar, nereye gider?",
+   "items": [
+    {
+     "icon": "🔋",
+     "label": "Pil",
+     "hint": "Enerji pilden başlar. İlk sıra pil."
+    },
+    {
+     "icon": "〰️",
+     "label": "Kablo",
+     "hint": "Kablo enerjiyi taşır. Pilden sonra gelir."
+    },
+    {
+     "icon": "💡",
+     "label": "Lamba",
+     "hint": "Lamba en sonda. Enerji ona ulaşınca yanar."
+    }
+   ],
+   "hint2": "Önce pil, sonra kablo, en son lamba.",
+   "learn": "Enerji pilden çıkar, kabloyla gider, lambayı yakar."
+  },
+  {
+   "id": "e4-biten-pil",
+   "kind": "cause",
+   "region": "pil",
+   "coins": 1,
+   "icon": "🪫",
+   "title": "Pilin enerjisi",
+   "bands": [
+    "4-5",
+    "6-8"
+   ],
+   "say": "Oyuncak arabanın pili bitti. Araba ne yapar?",
+   "scene": "🚗🪫",
+   "options": [
+    {
+     "icon": "🛑",
+     "text": "Durur",
+     "ok": true
+    },
+    {
+     "icon": "💨",
+     "text": "Daha hızlı gider",
+     "hint": "Enerji bitince araba hızlanmaz. Yavaşlar ve durur."
+    },
+    {
+     "icon": "🚀",
+     "text": "Uçar",
+     "hint": "Araba enerji bitince uçmaz. Durur."
+    }
+   ],
+   "hint2": "Enerjisi biten oyuncak çalışmaz.",
+   "observe": {
+    "icon": "🪫",
+    "text": "Pilin enerjisi bitince oyuncak durur. Yeni bir pil takınca yine çalışır."
+   },
+   "learn": "Enerji bitince oyuncak durur."
+  },
+  {
+   "id": "e5-pille-calisan",
+   "kind": "science",
+   "region": "pil",
+   "coins": 1,
+   "icon": "📺",
+   "title": "Evdeki eşyalar",
+   "bands": [
+    "4-5",
+    "6-8"
+   ],
+   "say": "Hangisi pille çalışabilir?",
+   "scene": "🏠",
+   "options": [
+    {
+     "icon": "📺",
+     "text": "Uzaktan kumanda",
+     "ok": true
+    },
+    {
+     "icon": "📚",
+     "text": "Kitap",
+     "hint": "Kitap enerji kullanmaz. İçinde pil yok."
+    },
+    {
+     "icon": "🪑",
+     "text": "Sandalye",
+     "hint": "Sandalye enerji kullanmaz. Pille çalışmaz."
+    }
+   ],
+   "hint2": "İçine pil takılan şeyi seç.",
+   "observe": {
+    "icon": "📺",
+    "text": "Kumanda gibi bazı eşyalar pille çalışır. Kitap ve sandalye çalışmaz."
+   },
+   "learn": "Bazı eşyalar pille çalışır."
+  },
+  {
+   "id": "e6-pil-deseni",
+   "kind": "pattern",
+   "region": "pil",
+   "coins": 1,
+   "icon": "🔁",
+   "title": "Pil dizisi",
+   "bands": [
+    "4-5",
+    "6-8"
+   ],
+   "say": "Sırada hangisi var?",
+   "seq": [
+    "🔋",
+    "🪫",
+    "🔋",
+    "🪫",
+    "🔋"
+   ],
+   "options": [
+    {
+     "icon": "🪫",
+     "text": "Boş pil",
+     "ok": true
+    },
+    {
+     "icon": "🔋",
+     "text": "Dolu pil",
+     "hint": "Son sıra zaten dolu pildi. Sırada boş pil gelir."
+    },
+    {
+     "icon": "💡",
+     "text": "Lamba",
+     "hint": "Dizide lamba yok. Dolu ve boş pil sırayla tekrar ediyor."
+    }
+   ],
+   "hint2": "Dolu, boş, dolu, boş... Sırayı oku.",
+   "learn": "Dizi dolu ve boş pil diye tekrar eder."
+  },
+  {
+   "id": "e7-pilin-ici",
+   "kind": "science",
+   "region": "pil",
+   "coins": 2,
+   "icon": "⚡",
+   "title": "Pilin içi",
+   "bands": [
+    "6-8"
+   ],
+   "say": "Pilin içinde ne saklıdır?",
+   "scene": "🔋",
+   "options": [
+    {
+     "icon": "⚡",
+     "text": "Enerji",
+     "ok": true
+    },
+    {
+     "icon": "💧",
+     "text": "Su",
+     "hint": "Pilin içinde içilecek su yok. Pil enerji saklar."
+    },
+    {
+     "icon": "💨",
+     "text": "Hava",
+     "hint": "Pil hava saklamaz. Enerji saklar."
+    }
+   ],
+   "hint2": "Pil oyuncağa ne verir? Onu saklar.",
+   "observe": {
+    "icon": "⚡",
+    "text": "Pil enerjiyi saklar. Bir oyuncağa bağlanınca enerjiyi ona verir."
+   },
+   "learn": "Pil enerjiyi saklar."
+  },
+  {
+   "id": "e8-biten-pil-yeri",
+   "kind": "science",
+   "region": "pil",
+   "coins": 2,
+   "icon": "♻️",
+   "title": "Bitmiş piller",
+   "bands": [
+    "6-8"
+   ],
+   "say": "Bitmiş pili nereye atmalıyız?",
+   "scene": "🪫",
+   "options": [
+    {
+     "icon": "♻️",
+     "text": "Pil toplama kutusu",
+     "ok": true
+    },
+    {
+     "icon": "🗑️",
+     "text": "Normal çöp",
+     "hint": "Piller doğaya zarar verebilir. Özel kutuya atılır."
+    },
+    {
+     "icon": "🌱",
+     "text": "Toprağa gömeriz",
+     "hint": "Pil toprağa zarar verir. Toprağa gömmeyiz."
+    }
+   ],
+   "hint2": "Piller için özel bir toplama kutusu var.",
+   "observe": {
+    "icon": "♻️",
+    "text": "Bitmiş piller özel toplama kutularına atılır. Böylece doğayı korumuş oluruz."
+   },
+   "learn": "Bitmiş pilleri özel kutuya atarız."
+  }
+ ]
+}

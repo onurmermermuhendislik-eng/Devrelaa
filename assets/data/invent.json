@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "note": "Mucit Atolyesi: serbest devre kurma. Pil sabit, bosluklara arac konur. Dugum konumlari circuits.json > layouts'tan gelir.",
+  "tools": [
+    "wire",
+    "led",
+    "resistor",
+    "switch"
+  ],
+  "layouts": {
+    "loop": {
+      "id": "loop",
+      "icon": "➰",
+      "battery": {
+        "id": "bat",
+        "a": "BL",
+        "b": "TL"
+      },
+      "slots": [
+        {
+          "id": "s1",
+          "a": "TL",
+          "b": "TR"
+        },
+        {
+          "id": "s2",
+          "a": "TR",
+          "b": "BR"
+        },
+        {
+          "id": "s3",
+          "a": "BR",
+          "b": "BL"
+        }
+      ]
+    },
+    "ladder": {
+      "id": "ladder",
+      "icon": "🪜",
+      "battery": {
+        "id": "bat",
+        "a": "BL",
+        "b": "TL"
+      },
+      "slots": [
+        {
+          "id": "s1",
+          "a": "TL",
+          "b": "TM"
+        },
+        {
+          "id": "s2",
+          "a": "TM",
+          "b": "TR"
+        },
+        {
+          "id": "s3",
+          "a": "TR",
+          "b": "BR"
+        },
+        {
+          "id": "s4",
+          "a": "BR",
+          "b": "BM"
+        },
+        {
+          "id": "s5",
+          "a": "BM",
+          "b": "BL"
+        },
+        {
+          "id": "s6",
+          "a": "TM",
+          "b": "BM"
+        }
+      ]
+    }
+  },
+  "discoveries": [
+    {
+      "id": "light",
+      "icon": "💡",
+      "tr": "İlk ışık"
+    },
+    {
+      "id": "switch",
+      "icon": "🔘",
+      "tr": "Anahtarla aç-kapa"
+    },
+    {
+      "id": "resistor",
+      "icon": "🟫",
+      "tr": "Direnç ışığı kısar"
+    },
+    {
+      "id": "series",
+      "icon": "➰",
+      "tr": "İki LED, tek yol: daha soluk"
+    },
+    {
+      "id": "parallel",
+      "icon": "🪜",
+      "tr": "İki yol: ikisi de parlak"
+    },
+    {
+      "id": "short",
+      "icon": "⚡",
+      "tr": "Kısa devre"
+    }
+  ],
+  "text": {
+    "intro": "Kendi devreni kur! Bir parça seç, boşluğa dokun.",
+    "noled": "Bir LED ekleyelim mi?",
+    "gap": "Yol tamamlanmadı. Boşlukları doldur.",
+    "switch": "Anahtarı kapatmayı dene.",
+    "short": "Pil çok yoruldu! Yolun içine bir LED koy. Merak etme, bu sadece bir oyun.",
+    "ledoff": "LED yolun üstünde değil. Yerini değiştir.",
+    "lit": "Harika! Devren çalışıyor.",
+    "new": "Yeni bir şey keşfettin!",
+    "saved": "Buluşun kaydedildi.",
+    "cleared": "Tahta temizlendi. Yeniden dene!",
+    "savefirst": "Önce devren çalışsın, sonra kaydet.",
+    "empty": "Henüz buluşun yok. Çalışan bir devre kurup ⭐ ile kaydet.",
+    "pick": "Önce aşağıdan bir parça seç.",
+    "weak": "Pil yetmedi! Yolda çok parça var. Birkaçını çıkar.",
+    "full": "Buluş kutun dolu (6). Önce 📂 içinden birini sil.",
+    "updated": "Buluşun güncellendi.",
+    "savefail": "Kaydedemedim. Tekrar dene.",
+    "broken": "Bu buluş açılamadı.",
+    "removed": "Buluş silindi."
+  }
+}

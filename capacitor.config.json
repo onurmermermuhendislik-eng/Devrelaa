@@ -1,0 +1,13 @@
+{
+  "appId": "com.altez.minilab.v4",
+  "appName": "ALTEZ MiniLab",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  },
+  "android": {
+    "allowMixedContent": false,
+    "webContentsDebuggingEnabled": false
+  },
+  "backgroundColor": "#EAF5FC"
+}

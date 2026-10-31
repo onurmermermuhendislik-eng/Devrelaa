@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108"><g transform="translate(24 24) scale(.3)">
+  <g id="legs" fill="none" stroke="#5B7FA8" stroke-width="8" stroke-linecap="round">
+    <path d="M86 160V182"/><path d="M114 160V182"/>
+  </g>
+  <rect id="base" x="70" y="134" width="60" height="26" rx="9" fill="#5B7FA8"/>
+  <path id="base-line" d="M78 147H122" stroke="#8FB0D4" stroke-width="4" stroke-linecap="round"/>
+  <path id="bulb" d="M100 22C68 22 46 46 46 76C46 96 56 109 68 121C73 126 74 130 74 136H126C126 130 127 126 132 121C144 109 154 96 154 76C154 46 132 22 100 22Z" fill="#FFE9A3" stroke="#F2C45A" stroke-width="6" stroke-linejoin="round"/>
+  <path id="shine" d="M64 64C67 51 77 43 88 40" fill="none" stroke="#FFFFFF" stroke-opacity=".75" stroke-width="7" stroke-linecap="round"/>
+  <path id="bolt" d="M108 46L80 88H98L90 118L122 74H103Z" fill="#F29B4B" stroke="#F29B4B" stroke-width="5" stroke-linejoin="round"/>
+</g></svg>

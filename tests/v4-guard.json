@@ -1,0 +1,10 @@
+{
+ "src/games/shape-complete/circuit-sim.js": "86596f1f1c3e5f8c316abf37a8e02ed3fc0cf9aa9994b5c7ccc3e7705d060a07",
+ "src/games/shape-complete/circuit-render.js": "2c32191d0bccc47efbc56fae1e4818e6bf4f30dbbb3c8f39c7efa4681d0eb1b4",
+ "src/games/shape-complete/circuit-rounds.js": "e11ea66135f14840f4ed666b561c2b74238c1fb8d20abed5c11dc00cce744553",
+ "src/games/shape-complete/game.js": "47d3dcb5a2ee3862c206bb27a5800adf75b3ea5c76bb6bd6ce6391530b20a3ee",
+ "src/games/shape-complete/rounds.js": "d63bddaee46a223f7ae3ab4ae5868444a00a94e640a5ffd78e28726c2e46cfe8",
+ "src/games/number-hunt/rounds.js": "857b90466a800a79971e5edc6e942211dfebd0d36bebbb7db994b21a8d327a04",
+ "src/games/number-hunt/game.js": "b268b0e7813eb252e801ac1c4ec3b9831e7984c70a3b4e98d4de9164d56e62c2",
+ "src/games/number-hunt/render.js": "232483572a0651d959d1d6f240d21794a41480b6ad715d8d32b5e0462b47a718"
+}

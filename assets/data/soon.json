@@ -1,0 +1,8 @@
+{
+  "_note": "Gelecek ozellik kartlari (ana menu). Yeni karti eklemek/etkinlestirmek bu dosyadir: enabled=true VE gameId kayitli bir oyunsa kart o oyunu acar; aksi halde yalniz bilgi paneli acilir. Metinler strings.tr.json > soon altindadir; durum etiketi tek noktadan (soon.status) gelir.",
+  "items": [
+    { "id": "adventure", "icon": "🏭", "art": ["🔧", "🏘️", "☀️", "🌬️", "⚡"], "enabled": false, "gameId": "energy-adventure", "orientation": "landscape", "featured": true },
+    { "id": "profile", "icon": "🧑‍🚀", "art": [], "enabled": false, "gameId": null },
+    { "id": "parental", "icon": "🛡️", "art": [], "enabled": false, "gameId": null }
+  ]
+}

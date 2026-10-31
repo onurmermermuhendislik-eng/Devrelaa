@@ -1,0 +1,721 @@
+{
+ "version": 1,
+ "note": "Tum geometri 0..100 kutusunda. sector acilari SVG'de saat yonunde artar (0=dogu, 90=guney, 270=kuzey). partitions.<ad> = kesim listesi; her kesim, sekli ortusmeden tam kaplayan bir parca grubudur.",
+ "shapes": {
+  "circle": {
+   "label": "Daire",
+   "outline": {
+    "type": "circle",
+    "cx": 50,
+    "cy": 50,
+    "r": 42
+   },
+   "partitions": {
+    "half": [
+     [
+      {
+       "id": "left",
+       "geom": {
+        "type": "sector",
+        "cx": 50,
+        "cy": 50,
+        "r": 42,
+        "from": 90,
+        "to": 270
+       }
+      },
+      {
+       "id": "right",
+       "geom": {
+        "type": "sector",
+        "cx": 50,
+        "cy": 50,
+        "r": 42,
+        "from": 270,
+        "to": 450
+       }
+      }
+     ],
+     [
+      {
+       "id": "top",
+       "geom": {
+        "type": "sector",
+        "cx": 50,
+        "cy": 50,
+        "r": 42,
+        "from": 180,
+        "to": 360
+       }
+      },
+      {
+       "id": "bottom",
+       "geom": {
+        "type": "sector",
+        "cx": 50,
+        "cy": 50,
+        "r": 42,
+        "from": 0,
+        "to": 180
+       }
+      }
+     ]
+    ],
+    "quarter": [
+     [
+      {
+       "id": "tl",
+       "geom": {
+        "type": "sector",
+        "cx": 50,
+        "cy": 50,
+        "r": 42,
+        "from": 180,
+        "to": 270
+       }
+      },
+      {
+       "id": "tr",
+       "geom": {
+        "type": "sector",
+        "cx": 50,
+        "cy": 50,
+        "r": 42,
+        "from": 270,
+        "to": 360
+       }
+      },
+      {
+       "id": "br",
+       "geom": {
+        "type": "sector",
+        "cx": 50,
+        "cy": 50,
+        "r": 42,
+        "from": 0,
+        "to": 90
+       }
+      },
+      {
+       "id": "bl",
+       "geom": {
+        "type": "sector",
+        "cx": 50,
+        "cy": 50,
+        "r": 42,
+        "from": 90,
+        "to": 180
+       }
+      }
+     ]
+    ]
+   }
+  },
+  "square": {
+   "label": "Kare",
+   "outline": {
+    "type": "poly",
+    "points": [
+     [
+      12,
+      12
+     ],
+     [
+      88,
+      12
+     ],
+     [
+      88,
+      88
+     ],
+     [
+      12,
+      88
+     ]
+    ]
+   },
+   "partitions": {
+    "half": [
+     [
+      {
+       "id": "left",
+       "geom": {
+        "type": "poly",
+        "points": [
+         [
+          12,
+          12
+         ],
+         [
+          50,
+          12
+         ],
+         [
+          50,
+          88
+         ],
+         [
+          12,
+          88
+         ]
+        ]
+       }
+      },
+      {
+       "id": "right",
+       "geom": {
+        "type": "poly",
+        "points": [
+         [
+          50,
+          12
+         ],
+         [
+          88,
+          12
+         ],
+         [
+          88,
+          88
+         ],
+         [
+          50,
+          88
+         ]
+        ]
+       }
+      }
+     ],
+     [
+      {
+       "id": "top",
+       "geom": {
+        "type": "poly",
+        "points": [
+         [
+          12,
+          12
+         ],
+         [
+          88,
+          12
+         ],
+         [
+          88,
+          50
+         ],
+         [
+          12,
+          50
+         ]
+        ]
+       }
+      },
+      {
+       "id": "bottom",
+       "geom": {
+        "type": "poly",
+        "points": [
+         [
+          12,
+          50
+         ],
+         [
+          88,
+          50
+         ],
+         [
+          88,
+          88
+         ],
+         [
+          12,
+          88
+         ]
+        ]
+       }
+      }
+     ]
+    ],
+    "quarter": [
+     [
+      {
+       "id": "tl",
+       "geom": {
+        "type": "poly",
+        "points": [
+         [
+          12,
+          12
+         ],
+         [
+          50,
+          12
+         ],
+         [
+          50,
+          50
+         ],
+         [
+          12,
+          50
+         ]
+        ]
+       }
+      },
+      {
+       "id": "tr",
+       "geom": {
+        "type": "poly",
+        "points": [
+         [
+          50,
+          12
+         ],
+         [
+          88,
+          12
+         ],
+         [
+          88,
+          50
+         ],
+         [
+          50,
+          50
+         ]
+        ]
+       }
+      },
+      {
+       "id": "bl",
+       "geom": {
+        "type": "poly",
+        "points": [
+         [
+          12,
+          50
+         ],
+         [
+          50,
+          50
+         ],
+         [
+          50,
+          88
+         ],
+         [
+          12,
+          88
+         ]
+        ]
+       }
+      },
+      {
+       "id": "br",
+       "geom": {
+        "type": "poly",
+        "points": [
+         [
+          50,
+          50
+         ],
+         [
+          88,
+          50
+         ],
+         [
+          88,
+          88
+         ],
+         [
+          50,
+          88
+         ]
+        ]
+       }
+      }
+     ]
+    ]
+   }
+  },
+  "triangle": {
+   "label": "Üçgen",
+   "outline": {
+    "type": "poly",
+    "points": [
+     [
+      50,
+      10
+     ],
+     [
+      90,
+      86
+     ],
+     [
+      10,
+      86
+     ]
+    ]
+   },
+   "partitions": {
+    "half": [
+     [
+      {
+       "id": "left",
+       "geom": {
+        "type": "poly",
+        "points": [
+         [
+          50,
+          10
+         ],
+         [
+          50,
+          86
+         ],
+         [
+          10,
+          86
+         ]
+        ]
+       }
+      },
+      {
+       "id": "right",
+       "geom": {
+        "type": "poly",
+        "points": [
+         [
+          50,
+          10
+         ],
+         [
+          90,
+          86
+         ],
+         [
+          50,
+          86
+         ]
+        ]
+       }
+      }
+     ]
+    ],
+    "quarter": [
+     [
+      {
+       "id": "top",
+       "geom": {
+        "type": "poly",
+        "points": [
+         [
+          50,
+          10
+         ],
+         [
+          70,
+          48
+         ],
+         [
+          30,
+          48
+         ]
+        ]
+       }
+      },
+      {
+       "id": "bl",
+       "geom": {
+        "type": "poly",
+        "points": [
+         [
+          30,
+          48
+         ],
+         [
+          50,
+          86
+         ],
+         [
+          10,
+          86
+         ]
+        ]
+       }
+      },
+      {
+       "id": "br",
+       "geom": {
+        "type": "poly",
+        "points": [
+         [
+          70,
+          48
+         ],
+         [
+          90,
+          86
+         ],
+         [
+          50,
+          86
+         ]
+        ]
+       }
+      },
+      {
+       "id": "center",
+       "geom": {
+        "type": "poly",
+        "points": [
+         [
+          30,
+          48
+         ],
+         [
+          70,
+          48
+         ],
+         [
+          50,
+          86
+         ]
+        ]
+       }
+      }
+     ]
+    ]
+   }
+  },
+  "rectangle": {
+   "label": "Dikdörtgen",
+   "outline": {
+    "type": "poly",
+    "points": [
+     [
+      8,
+      26
+     ],
+     [
+      92,
+      26
+     ],
+     [
+      92,
+      74
+     ],
+     [
+      8,
+      74
+     ]
+    ]
+   },
+   "partitions": {
+    "half": [
+     [
+      {
+       "id": "left",
+       "geom": {
+        "type": "poly",
+        "points": [
+         [
+          8,
+          26
+         ],
+         [
+          50,
+          26
+         ],
+         [
+          50,
+          74
+         ],
+         [
+          8,
+          74
+         ]
+        ]
+       }
+      },
+      {
+       "id": "right",
+       "geom": {
+        "type": "poly",
+        "points": [
+         [
+          50,
+          26
+         ],
+         [
+          92,
+          26
+         ],
+         [
+          92,
+          74
+         ],
+         [
+          50,
+          74
+         ]
+        ]
+       }
+      }
+     ],
+     [
+      {
+       "id": "top",
+       "geom": {
+        "type": "poly",
+        "points": [
+         [
+          8,
+          26
+         ],
+         [
+          92,
+          26
+         ],
+         [
+          92,
+          50
+         ],
+         [
+          8,
+          50
+         ]
+        ]
+       }
+      },
+      {
+       "id": "bottom",
+       "geom": {
+        "type": "poly",
+        "points": [
+         [
+          8,
+          50
+         ],
+         [
+          92,
+          50
+         ],
+         [
+          92,
+          74
+         ],
+         [
+          8,
+          74
+         ]
+        ]
+       }
+      }
+     ]
+    ],
+    "quarter": [
+     [
+      {
+       "id": "tl",
+       "geom": {
+        "type": "poly",
+        "points": [
+         [
+          8,
+          26
+         ],
+         [
+          50,
+          26
+         ],
+         [
+          50,
+          50
+         ],
+         [
+          8,
+          50
+         ]
+        ]
+       }
+      },
+      {
+       "id": "tr",
+       "geom": {
+        "type": "poly",
+        "points": [
+         [
+          50,
+          26
+         ],
+         [
+          92,
+          26
+         ],
+         [
+          92,
+          50
+         ],
+         [
+          50,
+          50
+         ]
+        ]
+       }
+      },
+      {
+       "id": "bl",
+       "geom": {
+        "type": "poly",
+        "points": [
+         [
+          8,
+          50
+         ],
+         [
+          50,
+          50
+         ],
+         [
+          50,
+          74
+         ],
+         [
+          8,
+          74
+         ]
+        ]
+       }
+      },
+      {
+       "id": "br",
+       "geom": {
+        "type": "poly",
+        "points": [
+         [
+          50,
+          50
+         ],
+         [
+          92,
+          50
+         ],
+         [
+          92,
+          74
+         ],
+         [
+          50,
+          74
+         ]
+        ]
+       }
+      }
+     ]
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,5 @@
+ALTEZ MiniLab V8.5-dev
+Surum: 8.5 (versionCode 26)
+ApplicationId: com.altez.minilab.v4
+Uretim: 20261023-WORKSPACE
+Kaynak: tam kaynak ZIP (yama degildir); GELISTIRME (dev) surumu; GERCEK ANDROID CIHAZ TESTI YAPILMADI

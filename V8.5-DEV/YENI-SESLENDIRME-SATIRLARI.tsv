@@ -1,0 +1,18 @@
+anahtar	hedef-dosya	kaynak	metin
+adv_ddb1d04c	assets/sounds/voice/adv_ddb1d04c.mp3	adventure.regions.karanlik.finalTitle	Karanlık evi aydınlattın!
+adv_1d8b562a	assets/sounds/voice/adv_1d8b562a.mp3	adventure.tasks.karanlik-ev.say	Odada pil, anahtar ve lamba bul. Dokun ve ara!
+adv_68aeb0f3	assets/sounds/voice/adv_68aeb0f3.mp3	adventure.tasks.karanlik-ev.win	Başardın! Lambamız ışıl ışıl yanıyor!
+adv_41d4d7f8	assets/sounds/voice/adv_41d4d7f8.mp3	adventure.tasks.karanlik-ev.hints.insulator	Hımm, bu elektriği taşımaz. Pil, anahtar ve lamba lazım!
+adv_1af7bacb	assets/sounds/voice/adv_1af7bacb.mp3	adventure.tasks.karanlik-ev.hints.incomplete	Boş yerlere pil, anahtar ve lamba koyalım.
+adv_e590c758	assets/sounds/voice/adv_e590c758.mp3	adventure.tasks.karanlik-ev.hints.start	Pil, anahtar ve lamba koy. Sonra anahtara dokun.
+adv_60fe03ab	assets/sounds/voice/adv_60fe03ab.mp3	adventure.tasks.karanlik-ev.hints.idle	Sandığa, çekmeceye ve dolaba dokunmayı dene!
+adv_4717d70e	assets/sounds/voice/adv_4717d70e.mp3	adventure.tasks.karanlik-ev.scenes[0].learn	Akşam oldu. Haydi küçük mucit, eve girelim!
+adv_00cbda00	assets/sounds/voice/adv_00cbda00.mp3	adventure.tasks.karanlik-ev.scenes[1].learn	Aaa, ev çok karanlık! Lambalar yanmıyor.
+adv_cb146e7f	assets/sounds/voice/adv_cb146e7f.mp3	adventure.tasks.karanlik-ev.scenes[2].learn	Hadi, lambayı yakacak parçaları birlikte bulalım!
+adv_c4afb1e7	assets/sounds/voice/adv_c4afb1e7.mp3	adventure.tasks.karanlik-ev.spots[0].say	Harika! Sandıkta pil var. Pil elektrik verir.
+adv_c2a814ed	assets/sounds/voice/adv_c2a814ed.mp3	adventure.tasks.karanlik-ev.spots[1].say	Süper! Anahtar buldun. Anahtar yolu açar ve kapatır.
+adv_9fa27c00	assets/sounds/voice/adv_9fa27c00.mp3	adventure.tasks.karanlik-ev.spots[2].say	Bravo! Lamba da burada. Şimdi devreyi kuralım!
+adv_0611cad2	assets/sounds/voice/adv_0611cad2.mp3	adventure.tasks.karanlik-ev.spots[3].say	Ay ışığı var ama oda karanlık. Aramaya devam et!
+adv_8ca163f8	assets/sounds/voice/adv_8ca163f8.mp3	adventure.tasks.karanlik-ev.spots[4].say	Bu bir yaprak. Yaprak elektriği taşımaz.
+adv_a72219df	assets/sounds/voice/adv_a72219df.mp3	adventure.tasks.karanlik-ev.spots[5].say	Bu bir taş. Taş da elektriği taşımaz.
+adv_51f3721e	assets/sounds/voice/adv_51f3721e.mp3	adventure.tasks.karanlik-ev.next	Sıradaki macera: Ormanda Gece Kurtarma. Çok yakında!

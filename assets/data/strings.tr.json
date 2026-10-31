@@ -1,0 +1,300 @@
+{
+  "app": "ALTEZ MiniLab",
+  "play": "Oyna",
+  "voice": {
+    "complete": "Eksik parçayı bul",
+    "color": "Aynı rengi bul",
+    "shape": "Aynı şekli bul",
+    "pattern": "Sıradaki hangisi?",
+    "circuitSwitch": "Şimdi anahtara dokun.",
+    "again": "Tekrar deneyelim",
+    "good": "Harika",
+    "circuit_wire": "Eksik kabloyu bul.",
+    "circuit_battery": "Pili al ve boş yere koy.",
+    "circuit_led": "LED'i al ve boş yere koy.",
+    "circuit_resistor": "Direnci al ve boş yere koy.",
+    "circuit_switch": "Anahtarı al ve boş yere koy.",
+    "circuit_multi": "Eksik parçaları bul ve boş yerlere koy.",
+    "circuitDone": "Harika! Devre tamamlandı.",
+    "rotate": "Döndürülmüş şekli bul.",
+    "symmetry": "Diğer tarafı tamamla.",
+    "circuit_fix": "Bozuk parçayı bul."
+  },
+  "tagline": "Keşfet • Öğren • Mucit Ol",
+  "slogan": "Keşfet · Öğren · Üret",
+  "splash": {
+    "versionLabel": "Uygulama sürümü {v}",
+    "developer": "ALTEZ Enerji"
+  },
+  "soon": {
+    "heading": "Çok yakında",
+    "status": "GELİŞTİRME AŞAMASINDA",
+    "ok": "Tamam",
+    "items": {
+      "adventure": {
+        "title": "Enerji Macerası",
+        "desc": "Atölyeden santrale, keşfederek öğren!",
+        "message": "Enerji Macerası üzerinde çalışıyoruz. Tamamlandığında burada oynayabileceksin!",
+        "note": "Bu oyun telefonu yatay tutarak oynanacak."
+      },
+      "profile": {
+        "title": "Kullanıcı Girişi ve Profil",
+        "desc": "Profilini oluştur, ilerlemeni takip et.",
+        "message": "Bu bölüm henüz hazır değil. İleride profilini oluşturup ilerlemeni takip edebileceksin.",
+        "note": "Şimdilik giriş yapman gerekmez. İlerlemen bu cihazda saklanır."
+      },
+      "parental": {
+        "title": "Ebeveyn Kontrolü",
+        "desc": "Oyun süresini ve kullanım saatlerini yönet.",
+        "message": "Bu bölüm henüz hazır değil. İleride oyun süresi ve kullanım saatleri burada yönetilecek.",
+        "note": "Şu anda süre sınırı veya PIN koruması yoktur."
+      }
+    }
+  },
+  "games": {
+    "shape-complete": {
+      "title": "Şekli Tamamla",
+      "desc": "Şekilleri keşfet, devreleri tamamla."
+    },
+    "number-hunt": {
+      "title": "Sayı Avı",
+      "desc": "Sayıları bul, say ve keşfet."
+    },
+    "invent": {
+      "title": "Mucit Atölyesi",
+      "desc": "Kendi devreni kur, dene, keşfet."
+    },
+    "learn": {
+      "title": "Eğitim",
+      "desc": "Adım adım öğren: devre nedir?"
+    },
+    "tasks": {
+      "title": "Görevler",
+      "desc": "Bir görev oyunu seç!"
+    },
+    "detective": {
+      "title": "Elektrik Dedektifi",
+      "desc": "Eksik parçayı bul, arızayı onar."
+    },
+    "logic-science": {
+      "title": "Mantık ve Bilim",
+      "desc": "Sırala, tamamla, tahmin et, gözlemle."
+    },
+    "energy-adventure": {
+      "title": "Enerji Soruları",
+      "desc": "Pil ve enerjiyi keşfet, coin topla."
+    }
+  },
+  "menu": {
+    "aria": "Ana bölümler",
+    "back": "Ana menü",
+    "versionLabel": "Sürüm",
+    "games": {
+      "title": "Oyunlar",
+      "desc": "Eğlen ve keşfet"
+    },
+    "edu": {
+      "title": "Eğitim",
+      "desc": "Öğren ve ilerle"
+    },
+    "profile": {
+      "title": "Profil",
+      "desc": "İlerlemeni gör"
+    },
+    "parent": {
+      "title": "Ebeveyn",
+      "desc": "Süre ve ayarlar"
+    },
+    "gamesTitle": "Oyunlar",
+    "gamesIntro": "Bir oyun seç!",
+    "dev": "GELİŞTİRME AŞAMASINDA"
+  },
+  "mascot": {
+    "messages": {
+      "greet": [
+        "Merhaba Minik Kâşif!"
+      ],
+      "enter": [
+        "Hangi oyunu seçelim?",
+        "Bugün ne keşfedeceğiz?",
+        "Hadi eğlenelim!",
+        "Yanındayım, birlikte yapalım!"
+      ],
+      "correct": [
+        "Harika!",
+        "Bravo!",
+        "Çok iyi!",
+        "Süpersin!",
+        "Yaşasın, doğru!"
+      ],
+      "wrong": [
+        "Sorun değil, bir daha dene!",
+        "Biraz daha düşün, yapabilirsin!",
+        "Bir daha bakalım!",
+        "Yanlış yapmak öğretir!",
+        "Birlikte denemeye devam!"
+      ],
+      "hint": [
+        "Bak, sana bir ipucu!",
+        "Dikkatle bak, çok yakınsın!",
+        "İpucuna bir bak!",
+        "Küçük bir fikrim var!"
+      ],
+      "done": [
+        "Görevi tamamladın!",
+        "Muhteşem iş çıkardın!",
+        "Yaşasın, başardın!",
+        "Bir yıldız daha kazandın!"
+      ],
+      "adventure": [
+        "Enerji yolculuğuna hazır mısın?",
+        "Yol arkadaşın yanında!",
+        "Önce pili keşfedelim!"
+      ],
+      "mapStart": [
+        "Merhaba! Sıradaki göreve dokun.",
+        "Haydi macera başlasın!"
+      ],
+      "mapNext": [
+        "Yeni görev açıldı! Dokun.",
+        "Sıradaki görev seni bekliyor!"
+      ],
+      "mapFinal": [
+        "Harika! Bölümü bitirdin!",
+        "Sen gerçek bir mucitsin!"
+      ]
+    }
+  },
+  "mm": {
+    "aria": "Ana menü",
+    "tagline": "Keşfet • Öğren • Mucit Ol",
+    "play": {
+      "t": "Oyna",
+      "d": "Mini oyunlar"
+    },
+    "adv": {
+      "t": "Enerji Macerası",
+      "d": "Haritada ilerle, lambayı yak!",
+      "cont": "Devam et"
+    },
+    "edu": {
+      "t": "Eğitim",
+      "d": "Adım adım öğren"
+    },
+    "prog": {
+      "t": "İlerlemem",
+      "d": "Yıldızlar ve jetonlar"
+    },
+    "set": {
+      "t": "Ayarlar",
+      "d": "Ses ve yaş"
+    },
+    "back": "Ana menü",
+    "soundOn": "Ses açık",
+    "soundOff": "Ses kapalı",
+    "version": "Sürüm",
+    "progress": {
+      "title": "İlerlemem",
+      "adv": "Enerji Macerası",
+      "advLine": "{done} / {total} görev",
+      "coins": "jeton",
+      "stars": "yıldız",
+      "edu": "Eğitim",
+      "eduLine": "{done} / {total} ders",
+      "games": "Mini oyunlar",
+      "gamesLine": "{n} doğru",
+      "empty": "Henüz başlamadın. Bir oyun seç!"
+    },
+    "settings": {
+      "title": "Ayarlar",
+      "sound": "Ses",
+      "soundHelp": "Sesli yönergeleri aç veya kapat",
+      "band": "Yaş grubu",
+      "band45": "4–5 yaş",
+      "band68": "6–8 yaş",
+      "voiceTest": "Ses testi",
+      "voiceTestHelp": "Telefonun Türkçe sesini dene",
+      "voiceTesting": "Dinle…",
+      "voiceOk": "Ses çalıştı. Duydun mu?",
+      "voiceBad": "Ses çıkmadı. Telefonda Google Metin Okuma ve Türkçe ses kurulu olmalı; ses açık mı bak.",
+      "voiceOff": "Ses kapalı. Önce sesi aç.",
+      "voiceSample": "Merhaba! Ben Minik Kâşif. Birlikte keşfedelim!",
+      "intro": "Tanıtımı izle",
+      "introHelp": "Kısa açılış filmini tekrar izle",
+      "bandLocked": "Yaş grubunu ebeveyn değiştirir",
+      "music": "Müzik",
+      "musicHelp": "Macera müziğini aç veya kapat",
+      "musicVol": "Müzik seviyesi",
+      "musicVolHelp": "Dokun: düşük, orta, yüksek",
+      "amb": "Ortam sesleri",
+      "ambHelp": "Ev, orman gibi ortam seslerini aç veya kapat",
+      "on": "Açık",
+      "off": "Kapalı",
+      "volLow": "Düşük",
+      "volMid": "Orta",
+      "volHigh": "Yüksek",
+      "soundOffNote": "Ses kapalı: müzik ve ortam sesleri de çalmaz."
+    },
+    "profile": {
+      "title": "Profil",
+      "btn": "Profil",
+      "iconLabel": "Profil: giriş yapılmadı",
+      "loggedLabel": "Profil: {name}",
+      "signedOut": "Henüz giriş yapmadın",
+      "signIn": "Giriş yap",
+      "first": "Ad",
+      "last": "Soyad",
+      "save": "Kaydet",
+      "edit": "Adı değiştir",
+      "signOut": "Çıkış yap",
+      "hello": "Merhaba, {name}!",
+      "note": "Profil yalnızca bu telefonda saklanır. Çevrimiçi hesap veya Google girişi yoktur. Çıkış yapınca ilerlemen silinmez.",
+      "needBoth": "Ad ve soyadı yaz.",
+      "saved": "Profil kaydedildi.",
+      "out": "Çıkış yapıldı. İlerlemen duruyor.",
+      "band": "Yaş grubu",
+      "progress": "İlerlemem"
+    },
+    "parent": {
+      "title": "Ebeveyn kontrolü",
+      "btn": "Ebeveyn",
+      "on": "Açık",
+      "off": "Kapalı",
+      "iconOn": "Ebeveyn kontrolü açık",
+      "iconOff": "Ebeveyn kontrolü kapalı",
+      "state": "Ebeveyn kontrolü",
+      "stateHelp": "Açıkken kilitli oyunlar açılmaz ve yaş grubu değiştirilemez.",
+      "child": "Çocuk",
+      "noProfile": "Profil yok",
+      "band": "Yaş grubu",
+      "voice": "Sesli yönergeler",
+      "voiceHelp": "Görev yönergelerini sesli oku",
+      "done": "Tamamlananlar",
+      "access": "Oyun erişimi",
+      "accessHelp": "Kilitli oyunlar yalnızca ebeveyn kontrolü açıkken kapanır.",
+      "allowed": "Açık",
+      "blocked": "Kilitli",
+      "changePin": "PIN değiştir",
+      "pinChanged": "PIN değiştirildi.",
+      "lockedGame": "Bu bölüm ebeveyn tarafından kilitlendi.",
+      "lockedBand": "Yaş grubunu ebeveyn değiştirir.",
+      "tasks": "görev",
+      "lessons": "ders"
+    },
+    "gate": {
+      "title": "Ebeveyn doğrulaması",
+      "pinAsk": "4 haneli PIN'i gir",
+      "pinNew": "Yeni 4 haneli PIN seç",
+      "pinAgain": "PIN'i tekrar gir",
+      "challengeAsk": "Yetişkin sorusu: işlemin sonucu kaç?",
+      "ok": "Tamam",
+      "cancel": "Kapat",
+      "forgot": "PIN'i unuttum",
+      "wrong": "PIN yanlış.",
+      "wrongAnswer": "Sonuç yanlış.",
+      "mismatch": "PIN'ler aynı değil. Yeniden seç.",
+      "wait": "Çok fazla deneme. Biraz bekle.",
+      "del": "Sil"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "_note": "scripts/version.env dosyasindan otomatik uretilir (scripts/gen-version.mjs); elle duzenlemeyin.",
+  "versionName": "8.5",
+  "versionCode": 26,
+  "tag": "V8.5"
+}

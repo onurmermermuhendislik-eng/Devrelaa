@@ -1,0 +1,46 @@
+ALTEZ MiniLab V8.2 - DEBUG KULLANIMI (kesin komutlar)
+
+Bu ZIP (ALTEZ-MiniLab-V8.2-FULL.zip) bagimsiz TAM kaynaktir: web kaynagi, testler, android/ projesi, Gradle wrapper, package.json + package-lock.json, betikler.
+Tabani: ALTEZ-MiniLab-V7.4-FULL.zip (SHA-256 2ac05919973cd3a09ed34786a9dd221eafab4191222539312abf1b1d5dc827ee) - bu dosyaya dokunulmadi.
+Uygulama kimligi: com.altez.minilab.v4   Surum: 8.2 (versionCode 23)
+
+GEREKSINIMLER: Node 20+, npm, JDK (V7.4 ve oncesini derlerken kullandiginiz), Android SDK (ANDROID_HOME veya ANDROID_SDK_ROOT), internet/npm/Gradle onbellegi.
+UI smoke icin Playwright (PLAYWRIGHT_PATH=<.../node_modules/playwright>).
+
+1) TEMIZ KURULUM (YENI, bos bir klasore ac; var olan klasorun uzerine acma):
+  mkdir -p /home/altez/v78-clean && cd /home/altez/v78-clean
+  unzip /yol/ALTEZ-MiniLab-V8.2-FULL.zip && cd altez-minilab-v8.2
+  sha256sum -c --strict MANIFEST.sha256
+  npm ci --no-audit --no-fund
+
+2) TEST:
+  node scripts/preflight.mjs . --ship      # beklenen: PREFLIGHT: GECTI
+  npm test                                 # beklenen: 170 test, 0 basarisiz
+  PLAYWRIGHT_PATH=<yol> node scripts/ui-v81.mjs     # V8.2 HEDEFLI UI testi; beklenen: 112/112 kontrol basarili (eski hedefli: ui-v79 110, ui-v78-home 108, ui-v78 67) (kisa regresyonlar: ui-v77 205, ui-v76 49, ui-v75 63)
+  PLAYWRIGHT_PATH=<yol> node scripts/ui-smoke.mjs    # TAM smoke (V7.4'te 545 kontrol); V7.7 ve V7.9'de bilincli olarak tekrar kosulmadi
+
+3) WEB DERLEMESI:
+  node scripts/build.mjs                   # www/ uretir
+
+4) ANDROID DEBUG DERLEMESI (testler + UI smoke + cap sync + gradlew assembleDebug + APK dogrulama):
+  export ANDROID_HOME=<sdk yolu>; export PLAYWRIGHT_PATH=<playwright yolu>
+  SMOKE_SCRIPT=scripts/ui-v81.mjs bash install-and-build.sh 2>&1 | tee ../v78-build.log     # hedefli UI testiyle (tam smoke icin SMOKE_SCRIPT vermeyin)
+  Sonuc satiri: RESULT=OK / PARTIAL / FAILED. APK ve rapor, proje klasorunun USTUNDE yeni altez-minilab-v8.2-out-<zaman>/ klasorune yazilir.
+  Beklenen APK: com.altez.minilab.v4, versionCode 21, versionName 8.1, debug anahtariyla imzali (aapt/apksigner ile dogrulanir).
+  Bagimsiz teslim klasoru (FULL.zip + APK + SHA256SUMS + TEST-RAPORU) icin: bash scripts/release.sh  (yalniz RESULT=OK ise uretir)
+
+5) APK'YI TELEFONA AKTAR:
+  adb install -r <apk>        (veya APK'yi telefona kopyalayip "bilinmeyen kaynaklardan kurulum" izniyle ac)
+  Eski V7.4/V7.3 ayni kimlikle (com.altez.minilab.v4) ustune guncellenir; kayitli ilerleme korunur (ayni imza anahtari: debug).
+
+6) TELEFONDA V7.9 KONTROLU: ANDROID_TEST.md icindeki V7.9 maddeleri (Z1-Z12: Gorevler, Elektrik Dedektifi, Mantik ve Bilim, tekrarda odul yok, acilis ekrani surumu, Cok yakinda kartlari, ses kapali, yatay ekran, geri tusu).
+
+ONEMLI: Gradle/APK derlemesi ve gercek cihaz testi bu paketi hazirlayan ortamda CALISTIRILMADI (Android SDK ve npm kayit defteri yok). "V7.9 APK dogrulandi" demek icin 4. adim sizde calismalidir.
+
+GUNCELLEME NOTU (V8.1: ayni applicationId; ayni imza gerekir): Mevcut V7.9 APK'sinin imza sertifikasi ile yeni APK'nin sertifikasi AYNI olmalidir (apksigner verify --print-certs ile SHA-256 parmak izlerini karsilastirin). Farkliysa telefondaki uygulamanin kaldirilmasi ilerleme/kayit kaybina yol acabilir; bunu sessizce onermeyin, once kullaniciya bildirin. OUT_DIR daha once bulunmayan yeni bir klasor olmalidir.
+
+V8.2: window.__altezOrient (yön kilidi çağrı günlüğü); #/profile, #/parent rotaları; test: node scripts/ui-v82.mjs
+
+V8.3: giris sesi assets/sounds/intro-caglayan.mp3 (manifest anahtari introVoice); test: node scripts/ui-v83.mjs
+
+V8.4: yon kapsami src/core/orient.js (LANDSCAPE_ROUTE); test: node scripts/ui-v84.mjs

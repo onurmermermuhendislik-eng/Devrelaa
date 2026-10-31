@@ -1,0 +1,192 @@
+{
+  "version": 1,
+  "note": "Elektrik Dedektifi vakalari (V7.8: 17 vaka). Devre benzetimi Mucit Atolyesi analyze() ile AYNI; burada yalniz vaka verisi ve metinler var. Yeni vaka eklemek icin tasks dizisine kayit ekleyin (kod degismez). kind: missing (eksik parcayi sec) | build (baglantiyi tamamla) | fault (ariza yerini bul). 4-5 yas: en fazla 3 secenek/parca.",
+  "text": {
+    "title": "Elektrik Dedektifi",
+    "intro": "Bir vaka seç, ipuçlarını bul!",
+    "nextUp": "Sıradaki vaka",
+    "allDoneCard": "Bütün vakaları çözdün! İstediğini tekrar oynayabilirsin.",
+    "start": "İncele",
+    "replayStart": "Tekrar oyna",
+    "replayLabel": "Tekrar oyna",
+    "replayNote": "Bu vakayı tekrar çözdün. Rozetin zaten sende, yeni rozet yok.",
+    "solvedTitle": "Vaka çözüldü!",
+    "solved": "Harika! Lamba yandı, vakayı çözdün.",
+    "badgeNew": "Yeni rozet kazandın!",
+    "badgeHave": "Bu rozet zaten sende.",
+    "badgeWord": "vaka",
+    "allDone": "Bütün vakaları çözdün. Süper dedektifsin!",
+    "next": "Devam",
+    "nextTask": "Sonraki vaka",
+    "toList": "Vaka listesi",
+    "overall": "Çözülen vakalar",
+    "tasksWord": "vaka",
+    "doneLabel": "Çözüldü",
+    "pick": "Önce aşağıdan bir parça seç, sonra boş yere dokun.",
+    "partial": "Bir sorunu buldun ve düzelttin! Başka sorun var mı?",
+    "wrongTap": "Orası sağlam görünüyor. Başka yere bak.",
+    "closeTask": "Vakayı kapat",
+    "saveFailTitle": "Kayıt yazılamadı",
+    "saveFail": "Rozet henüz kazanılmadı. Telefonda yer açıp bu vakayı tekrar çöz.",
+    "hints": {
+      "gap": "Yolda boşluk var, enerji geçemez. Boşlukları doldur.",
+      "noled": "Yolda LED yok. LED ışık verir, bir LED koy.",
+      "short": "Yolda ışık veren parça yok. Yola bir LED koy.",
+      "switch": "Anahtar açık, yol kopuk. Anahtara dokun.",
+      "resistor": "Yola bir direnç de koy. Direnç ışığı kısar.",
+      "needswitch": "Yola bir anahtar koy. Anahtar yolu açıp kapatır.",
+      "needwire": "Yola bir kablo da koy. Kablo yolu bağlar.",
+      "ledoff": "LED yola bağlı değil. Yolu baştan sona tamamla.",
+      "weak": "Yolda çok parça var, pil yetmedi. Birkaçını çıkar.",
+      "needseries": "İki LED'i aynı yola, peş peşe koy.",
+      "needparallel": "İki ayrı yola birer LED koy.",
+      "notall": "Bütün lambalar yanmalı. Yanmayan lambaya giden yola bak."
+    },
+    "healthy": {
+      "wire": "Bu kablo sağlam, yolu iyi bağlıyor.",
+      "led": "Bu lamba sağlam. Sorun başka yerde.",
+      "resistor": "Bu direnç sağlam. Sorun başka yerde.",
+      "switch": "Bu anahtar kapalı ve sağlam."
+    }
+  },
+  "tasks": [
+    {
+      "id": "d1-kayip-lamba", "kind": "missing", "icon": "💡", "title": "Karanlık vaka", "bands": ["4-5"],
+      "story": "Lamba yanmıyor! Yolda bir parça kayıp. Hangisi?",
+      "layout": "loop", "slots": ["wire", null, "wire"], "options": ["led", "wire", "resistor"], "answer": ["led"],
+      "goal": { "lit": true },
+      "hints": { "wire": "Kablo yolu bağlar ama ışık vermez. Işık veren parçayı bul.", "resistor": "Direnç ışığı kısar ama ışık vermez. Işık veren parçayı bul." },
+      "hint2": "Işık veren parçanın adı LED. Aşağıda onu bul."
+    },
+    {
+      "id": "d2-kopuk-yol", "kind": "missing", "icon": "🔌", "title": "Enerji nerede takıldı?", "bands": ["4-5"],
+      "story": "Lamba yerinde ama yol kopuk. Boşluğa ne gelmeli?",
+      "layout": "loop", "slots": ["led", null, "wire"], "options": ["wire", "switch"], "answer": ["wire"],
+      "goal": { "lit": true },
+      "hints": { "switch": "Bu anahtar açık, yol yine kopuk. Yolu hemen birleştiren parçayı bul." },
+      "hint2": "Kablo yolu birleştirir. Kabloyu dene."
+    },
+    {
+      "id": "d3-acik-anahtar", "kind": "fault", "icon": "🔘", "title": "Her şey yerinde", "bands": ["4-5", "6-8"],
+      "story": "Her şey yerinde ama lamba yanmıyor. Sorun nerede?",
+      "layout": "loop", "slots": ["wire", "led", "switch"], "states": { "s3": "open" },
+      "culprits": [{ "slot": "s3", "fix": "close" }],
+      "goal": { "lit": true },
+      "hint2": "Yolu açıp kapatan parçaya bak."
+    },
+    {
+      "id": "d4-bosluk", "kind": "fault", "icon": "🔍", "title": "Sönük lamba", "bands": ["4-5", "6-8"],
+      "story": "Lamba yanmıyor. Yolun bir yerinde boşluk var!",
+      "layout": "loop", "slots": ["wire", null, "led"],
+      "culprits": [{ "slot": "s2", "fix": "wire" }],
+      "goal": { "lit": true },
+      "hint2": "Kesik çizgiye bak. Orada yol kopuk."
+    },
+    {
+      "id": "d5-tamamla", "kind": "build", "icon": "🧩", "title": "Devreyi tamamla", "bands": ["4-5", "6-8"],
+      "story": "Lamba yerinde ama yol kopuk. Boşlukları doldur.",
+      "layout": "loop", "slots": [null, "led", null], "fixed": [1], "tools": ["wire", "led", "resistor"],
+      "goal": { "lit": true },
+      "hint2": "İki boşluğa da bir parça koy. Kablo yolu bağlar."
+    },
+    {
+      "id": "d6-kendin-kur", "kind": "build", "icon": "🛠️", "title": "Kendin kur", "bands": ["4-5", "6-8"],
+      "story": "Yol bomboş! Lamba yanacak şekilde kur.",
+      "layout": "loop", "slots": [null, null, null], "tools": ["wire", "led"],
+      "goal": { "lit": true, "with": ["led"] },
+      "hint2": "Bir LED ve iki kablo yeter."
+    },
+    {
+      "id": "d7-direnc", "kind": "build", "icon": "🎛️", "title": "Güvenli ışık", "bands": ["6-8"],
+      "story": "Devreyi direnç ile tamamla. Direnç ışığı kısar.",
+      "layout": "loop", "slots": ["wire", "led", null], "fixed": [0, 1], "tools": ["wire", "led", "resistor", "switch"],
+      "goal": { "lit": true, "with": ["resistor"] },
+      "hint2": "Boşluğa direnç koy; direnç yolu da bağlar."
+    },
+    {
+      "id": "d8-anahtar", "kind": "build", "icon": "🔘", "title": "Kontrol sende", "bands": ["6-8"],
+      "story": "Lambayı istediğimizde yakmak için yola anahtar koy.",
+      "layout": "loop", "slots": ["wire", "led", null], "fixed": [0, 1], "tools": ["wire", "led", "resistor", "switch"],
+      "goal": { "lit": true, "with": ["switch"] },
+      "hint2": "Anahtarı koyduktan sonra ona dokun; yol kapansın."
+    },
+    {
+      "id": "d9-paralel-ariza", "kind": "fault", "icon": "🪜", "title": "Yarım yanan çift", "bands": ["6-8"],
+      "story": "Bir lamba yanıyor, öbürü yanmıyor. Yol nerede kopuk?",
+      "layout": "ladder", "slots": ["wire", null, "wire", "led", "wire", "led"],
+      "culprits": [{ "slot": "s2", "fix": "wire" }],
+      "goal": { "lit": true },
+      "hints": { "s6": "Bu lamba yanıyor, sağlam. Yanmayan lambaya giden yola bak." },
+      "hint2": "Yanmayan lambanın yolunda kesik çizgi var."
+    },
+    {
+      "id": "d10-iki-lamba-parca", "kind": "missing", "icon": "🔎", "title": "İki lamba", "bands": ["6-8"],
+      "story": "İki lamba da yanmalı. Boşluğa hangi parça gelir?",
+      "layout": "ladder", "slots": ["wire", "wire", "wire", null, "wire", "led"], "options": ["led", "wire", "resistor"], "answer": ["led"],
+      "goal": { "lit": true, "minLit": 2 },
+      "hints": { "wire": "Kablo yolu kısa devre yapar. Kablonun yerine ışık veren parça lazım.", "resistor": "Direnç ışık vermez. İkinci lambayı yakacak parçayı bul." },
+      "hint2": "İki lamba için iki LED gerekir."
+    },
+    {
+      "id": "d11-iki-lamba", "kind": "build", "icon": "💡", "title": "İki lamba yak", "bands": ["6-8"],
+      "story": "İki lamba ayrı yollarda da yansın! Boşlara LED koy.",
+      "layout": "ladder", "slots": ["wire", "wire", "wire", null, "switch", null], "closed": ["s5"], "fixed": [0, 1, 2, 4], "tools": ["led", "wire"],
+      "goal": { "lit": true, "parallel": true, "minLit": 2 },
+      "hint2": "İki boşluğa da birer LED koy."
+    },
+    {
+      "id": "d12-iki-ariza", "kind": "fault", "icon": "🕵️", "title": "İki arıza", "bands": ["6-8"],
+      "story": "Lamba yanmıyor. Bu sefer iki yerde sorun var!",
+      "layout": "loop", "slots": [null, "led", "switch"], "states": { "s3": "open" },
+      "culprits": [{ "slot": "s1", "fix": "wire" }, { "slot": "s3", "fix": "close" }],
+      "goal": { "lit": true },
+      "hint2": "Kesik çizgiye ve anahtara bak."
+    },
+    {
+      "id": "d13-seri-lambalar", "kind": "build", "icon": "🔗", "title": "İki lamba, tek yol", "bands": ["4-5", "6-8"],
+      "story": "İki lamba yakalım! İkisini de aynı yola koy.",
+      "layout": "loop", "slots": [null, null, null], "tools": ["led", "wire"],
+      "goal": { "lit": true, "series": true, "minLit": 2 },
+      "hint2": "Boş yerlerin ikisine LED, birine kablo koy.",
+      "win": "Harika! İki lamba aynı yolda birlikte yandı."
+    },
+    {
+      "id": "d14-kumanda-parcasi", "kind": "missing", "icon": "🎚️", "title": "Kumanda parçası", "bands": ["4-5", "6-8"],
+      "story": "Lambayı istediğimde söndürmek istiyorum. Boşluğa hangi parça gelir?",
+      "layout": "loop", "slots": ["wire", "led", null], "closed": ["s3"], "options": ["switch", "wire", "resistor"], "answer": ["switch"],
+      "goal": { "lit": true, "with": ["switch"] },
+      "hints": { "wire": "Kablo lambayı yakar ama kapatamazsın. Açıp kapatan parçayı bul.", "resistor": "Direnç ışığı kısar ama kapatmaz. Açıp kapatan parçayı bul." },
+      "hint2": "Anahtar yolu açıp kapatır. Anahtarı dene.",
+      "win": "Harika! Anahtar lambayı açıp kapatır."
+    },
+    {
+      "id": "d15-kisa-yol", "kind": "fault", "icon": "🔥", "title": "Pil çok ısınıyor", "bands": ["6-8"],
+      "story": "Pil çok ısınıyor ve hiçbir lamba yanmıyor! Tehlikeli yolu bul.",
+      "layout": "ladder", "slots": ["wire", "wire", "led", "wire", "wire", "wire"],
+      "culprits": [{ "slot": "s6", "fix": "led" }],
+      "goal": { "lit": true, "minLit": 2 },
+      "hints": { "s3": "Bu lamba sağlam. Yalnız kablodan oluşan yola bak." },
+      "hint2": "Yalnız kablodan oluşan yol pili yorar. O yolda bir LED eksik.",
+      "win": "Harika! Kablo yoluna LED koydun, iki lamba da yandı."
+    },
+    {
+      "id": "d16-sessiz-kol", "kind": "fault", "icon": "🚪", "title": "Sessiz kol", "bands": ["6-8"],
+      "story": "Ortadaki lamba yanıyor ama sağdaki yanmıyor. Sağ yolu kontrol et.",
+      "layout": "ladder", "slots": ["wire", "wire", "led", "switch", "wire", "led"], "states": { "s4": "open" },
+      "culprits": [{ "slot": "s4", "fix": "close" }],
+      "goal": { "lit": true, "minLit": 2 },
+      "hints": { "s6": "Bu lamba yanıyor, sağlam. Yanmayan lambanın yoluna bak.", "s3": "Bu lamba sağlam. Yolundaki parçaya bak." },
+      "hint2": "Yanmayan lambanın yolunda, yolu kesen bir parça var.",
+      "win": "Harika! Anahtar yalnız kendi yolundaki lambayı açıp kapatır."
+    },
+    {
+      "id": "d17-yorgun-pil", "kind": "fault", "icon": "🔋", "title": "Yorgun pil", "bands": ["6-8"],
+      "story": "Ortadaki lamba yanıyor ama sağdaki üç lamba yanmıyor. Pil yetmiyor olabilir.",
+      "layout": "ladder", "slots": ["wire", "led", "led", "led", "resistor", "led"],
+      "culprits": [{ "slot": "s5", "fix": "wire" }],
+      "goal": { "lit": true, "minLit": 4 },
+      "hint2": "Pil çok yüke yetmez. Direnç de yük sayılır. Fazlalığı bul.",
+      "win": "Harika! Fazla yükü kaldırdın, bütün lambalar yandı."
+    }
+  ]
+}

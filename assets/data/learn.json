@@ -1,0 +1,816 @@
+{
+ "version": 2,
+ "note": "Egitim Bolumu icerigi (V7). Seviye sirasi assets/data/levels.json'dan gelir. Her ders: level (levels.json kimligi), basit adimlar. Adim turleri: show (anlatim + devre), task (devre gorevi), quiz (soru). Devre tahtasi Mucit Atolyesi ile AYNI mantigi/benzetimi kullanir (games/invent/logic.js); yeni benzetim motoru yoktur. Ders kilidi: dersler seviye sirasiyla ve kendi sirasiyla acilir (onceki ders bitmeden sonraki acilmaz). Dersi olmayan seviye 'Yakinda' gorunur. V7.5: istege bagli alanlar -> parts (parca sozlugu), adim.meet (parca karti: show=anlatim, task=Dene), adim.hints (gorev ipucu metni, T anahtarini ezer), ders.learned (bitis ekraninda \"Ogrendin\"). Adim sayisi/sirasi degismez (kayitli ilerleme ve noktalar korunur).",
+ "text": {
+  "title": "Eğitim",
+  "intro": "Bir ders seç ve öğrenmeye başla!",
+  "locked": "Önce bir önceki dersi bitir.",
+  "levelLocked": "Önce önceki seviyeyi bitir.",
+  "soon": "Bu seviye yakında geliyor!",
+  "next": "Devam",
+  "again": "Tekrar dene",
+  "wellDone": "Harika! Ders tamamlandı.",
+  "nextLesson": "Sonraki ders",
+  "toMap": "Ders listesi",
+  "quizWrong": "Olmadı, sorun değil. Bir daha bak ve tekrar dene.",
+  "quizRight": "Doğru! Çok iyi.",
+  "taskOk": "Harika! Başardın.",
+  "pick": "Önce aşağıdan bir parça seç, sonra boş yere dokun.",
+  "noled": "Devrede LED yok. LED ışık verir, bir LED koy.",
+  "gap": "Yolda boşluk var, enerji geçemez. Boşlukları doldur.",
+  "switch": "Anahtar açık, yol kopuk. Anahtara dokun, yol kapansın.",
+  "short": "Yolda LED yok, pil çok yoruldu. Yola bir LED koy.",
+  "ledoff": "LED yoldan ayrı kalmış. Yolu pilden pile tamamla.",
+  "weak": "Yolda çok parça var, pil yetmedi. Birkaçını çıkar.",
+  "resistor": "Yola bir direnç de koy. Direnç ışığı kısar.",
+  "needswitch": "Yola bir anahtar koy. Anahtar yolu açıp kapatır.",
+  "doneLabel": "Tamamlandı",
+  "lockedLabel": "Kilitli",
+  "needseries": "İki LED'i aynı yola, arka arkaya koy.",
+  "needparallel": "İki ayrı yola birer LED koy.",
+  "stage": "Aşaman",
+  "stageNow": "Şimdi buradasın",
+  "badgesTitle": "Rozetlerim",
+  "badgeLocked": "Rozet için dersi bitir",
+  "badgeEarned": "Rozet kazandın",
+  "needclose": "Yoldaki boşluğu kapat.",
+  "needled2": "Boşluklara LED ve anahtar koy.",
+  "lessonsOf": "ders",
+  "needwire": "Yola bir kablo da koy. Kablo yolu bağlar.",
+  "badgeNew": "Yeni rozet kazandın!",
+  "badgeHave": "Bu rozet zaten sende.",
+  "nextUp": "Sıradaki ders",
+  "startNext": "Başla",
+  "overallLabel": "Genel ilerleme",
+  "allDoneCard": "Hepsini bitirdin! İstediğin dersi tekrar oynayabilirsin.",
+  "replayLabel": "Tekrar oyna",
+  "replayNote": "Bu dersi tekrar oynadın. Rozetin zaten sende, yeni rozet yok.",
+  "replayStart": "Tekrar oyna",
+  "badgeWord": "rozet",
+  "levelDoneSuffix": "aşamasını bitirdin!",
+  "allDone": "Tüm dersleri bitirdin. Sen harika bir Mucitsin!",
+  "tryLabel": "Dene:",
+  "meetListen": "Parçayı dinle"
+ },
+ "lessons": [
+  {
+   "id": "circuit-1",
+   "level": "baslangic",
+   "icon": "🔌",
+   "title": "Elektrik devresi nedir?",
+   "goal": "Pil, kablo ve LED ile ışık yakacağız.",
+   "steps": [
+    {
+     "type": "show",
+     "say": "Bu bir elektrik devresi! Pil enerji verir.",
+     "board": {
+      "layout": "loop",
+      "slots": [
+       "wire",
+       "led",
+       "wire"
+      ]
+     },
+     "meet": "battery"
+    },
+    {
+     "type": "show",
+     "say": "Kablo, enerjinin gideceği yolu bağlar.",
+     "board": {
+      "layout": "loop",
+      "slots": [
+       "wire",
+       "led",
+       "wire"
+      ]
+     },
+     "meet": "wire"
+    },
+    {
+     "type": "show",
+     "say": "LED enerjiyle ışık verir.",
+     "board": {
+      "layout": "loop",
+      "slots": [
+       "wire",
+       "led",
+       "wire"
+      ]
+     },
+     "meet": "led"
+    },
+    {
+     "type": "show",
+     "say": "Yol kopuksa enerji gidemez. LED yanmaz.",
+     "board": {
+      "layout": "loop",
+      "slots": [
+       "wire",
+       "led",
+       null
+      ]
+     }
+    },
+    {
+     "type": "show",
+     "say": "Yol baştan sona bağlıysa devre kapalıdır. LED yanabilir!",
+     "board": {
+      "layout": "loop",
+      "slots": [
+       "wire",
+       "led",
+       "wire"
+      ]
+     }
+    },
+    {
+     "type": "task",
+     "say": "Şimdi sen yap! Boşluklara kablo ve LED koy.",
+     "board": {
+      "layout": "loop",
+      "slots": [
+       null,
+       null,
+       null
+      ]
+     },
+     "tools": [
+      "wire",
+      "led"
+     ],
+     "goal": {
+      "lit": true,
+      "with": [
+       "led",
+       "wire"
+      ]
+     },
+     "meet": "wire",
+     "hints": {
+      "noled": "Devrede LED yok. LED ışık verir, bir LED koy.",
+      "needwire": "LED tek başına yetmez. Yola kablo da koy.",
+      "gap": "Yolda boşluk var. Kablo ya da LED koyup yolu doldur."
+     }
+    },
+    {
+     "type": "quiz",
+     "say": "LED ne zaman yanar?",
+     "options": [
+      {
+       "icon": "🔗",
+       "text": "Yol bağlıyken",
+       "ok": true
+      },
+      {
+       "icon": "✂️",
+       "text": "Yol kopukken",
+       "hint": "Kopuk köprüden geçilmez. Enerji de kopuk yoldan geçemez."
+      }
+     ]
+    }
+   ],
+   "learned": "Öğrendin: pil, kablo ve LED bağlanınca ışık yanar."
+  },
+  {
+   "id": "switch-1",
+   "level": "baslangic",
+   "icon": "🔘",
+   "title": "Anahtar",
+   "goal": "Anahtarla ışığı açıp kapatacağız.",
+   "steps": [
+    {
+     "type": "show",
+     "say": "Anahtar yolu açar ve kapatır. Şimdi yol açık, LED yanmıyor.",
+     "board": {
+      "layout": "loop",
+      "slots": [
+       "wire",
+       "led",
+       "switch"
+      ]
+     },
+     "meet": "switch"
+    },
+    {
+     "type": "task",
+     "say": "Anahtara dokun!",
+     "board": {
+      "layout": "loop",
+      "slots": [
+       "wire",
+       "led",
+       "switch"
+      ]
+     },
+     "fixed": [
+      0,
+      1,
+      2
+     ],
+     "tools": [],
+     "goal": {
+      "lit": true,
+      "with": [
+       "switch"
+      ]
+     },
+     "meet": "switch",
+     "hints": {
+      "switch": "Anahtar açık, yol kopuk. Anahtara dokun!"
+     }
+    },
+    {
+     "type": "show",
+     "say": "Anahtar kapalıyken enerji geçer ve LED yanar.",
+     "board": {
+      "layout": "loop",
+      "slots": [
+       "wire",
+       "led",
+       "switch"
+      ],
+      "closed": [
+       "s3"
+      ]
+     }
+    },
+    {
+     "type": "task",
+     "say": "Kendi anahtarlı devreni kur ve ışığı yak.",
+     "board": {
+      "layout": "loop",
+      "slots": [
+       null,
+       null,
+       null
+      ]
+     },
+     "tools": [
+      "wire",
+      "led",
+      "switch"
+     ],
+     "goal": {
+      "lit": true,
+      "with": [
+       "led",
+       "switch"
+      ]
+     },
+     "meet": "switch",
+     "hints": {
+      "needswitch": "Yola bir anahtar koy. Anahtar yolu açıp kapatır.",
+      "noled": "Anahtarla birlikte bir LED de koy.",
+      "gap": "Yolda boşluk var. Pilden pile tüm yolu doldur.",
+      "switch": "Anahtar açık. Dokun, yol kapansın."
+     }
+    },
+    {
+     "type": "quiz",
+     "say": "Anahtar açıkken LED ne yapar?",
+     "options": [
+      {
+       "icon": "🌑",
+       "text": "Yanmaz",
+       "ok": true
+      },
+      {
+       "icon": "💡",
+       "text": "Yanar",
+       "hint": "Anahtar açıkken yol kopuktur. Enerji geçemez."
+      }
+     ]
+    }
+   ],
+   "learned": "Öğrendin: anahtar yolu açar ve kapatır."
+  },
+  {
+   "id": "resistor-1",
+   "level": "cirak",
+   "icon": "🟫",
+   "title": "Direnç",
+   "goal": "Direncin ışığı nasıl değiştirdiğini göreceğiz.",
+   "steps": [
+    {
+     "type": "show",
+     "say": "Direnç enerjiyi yavaşlatır. LED biraz sönük yanar.",
+     "board": {
+      "layout": "loop",
+      "slots": [
+       "wire",
+       "led",
+       "resistor"
+      ]
+     },
+     "meet": "resistor"
+    },
+    {
+     "type": "task",
+     "say": "Yola bir direnç koy ve LED'i yak.",
+     "board": {
+      "layout": "loop",
+      "slots": [
+       null,
+       null,
+       null
+      ]
+     },
+     "tools": [
+      "wire",
+      "led",
+      "resistor"
+     ],
+     "goal": {
+      "lit": true,
+      "with": [
+       "led",
+       "resistor"
+      ]
+     },
+     "meet": "resistor",
+     "hints": {
+      "resistor": "Yola bir direnç koy. Direnç ışığı kısar.",
+      "gap": "Yolda boşluk var. Boşlukları LED, direnç ya da kabloyla doldur."
+     }
+    },
+    {
+     "type": "quiz",
+     "say": "Direnç LED'e ne yapar?",
+     "options": [
+      {
+       "icon": "🌙",
+       "text": "Işığı kısar",
+       "ok": true
+      },
+      {
+       "icon": "☀️",
+       "text": "Işığı çok parlak yapar",
+       "hint": "Direnç dar bir yol gibidir. Enerji yavaş geçer."
+      }
+     ]
+    }
+   ],
+   "learned": "Öğrendin: direnç ışığı kısar."
+  },
+  {
+   "id": "series-1",
+   "level": "kalfa",
+   "icon": "🔗",
+   "title": "Seri devre",
+   "goal": "İki LED'i aynı yola dizeceğiz.",
+   "steps": [
+    {
+     "type": "show",
+     "say": "İki LED aynı yolda arka arkaya dizildi. Buna seri devre denir.",
+     "board": {
+      "layout": "loop",
+      "slots": [
+       "led",
+       "led",
+       "wire"
+      ]
+     }
+    },
+    {
+     "type": "show",
+     "say": "Yol tek. Enerji önce birinden, sonra ötekinden geçer. İkisi de yanar!",
+     "board": {
+      "layout": "loop",
+      "slots": [
+       "led",
+       "led",
+       "wire"
+      ]
+     }
+    },
+    {
+     "type": "show",
+     "say": "Yol bir yerden kopsa enerji gidemez. İkisi de söner.",
+     "board": {
+      "layout": "loop",
+      "slots": [
+       "led",
+       "led",
+       null
+      ]
+     }
+    },
+    {
+     "type": "task",
+     "say": "Şimdi sen yap! İki LED'i aynı yola koy ve ikisini de yak.",
+     "board": {
+      "layout": "loop",
+      "slots": [
+       null,
+       null,
+       null
+      ]
+     },
+     "tools": [
+      "wire",
+      "led"
+     ],
+     "goal": {
+      "lit": true,
+      "series": true,
+      "with": [
+       "led",
+       "wire"
+      ]
+     },
+     "meet": "led",
+     "hints": {
+      "needseries": "İki LED'i aynı yola, arka arkaya koy.",
+      "weak": "Yolda çok parça var, pil yetmedi. Parçaları azalt.",
+      "gap": "Yolda boşluk var. Boşlukları doldur."
+     }
+    },
+    {
+     "type": "quiz",
+     "say": "Seri devrede yol kopunca LED'ler ne yapar?",
+     "options": [
+      {
+       "icon": "🌑",
+       "text": "İkisi de söner",
+       "ok": true
+      },
+      {
+       "icon": "💡",
+       "text": "İkisi de yanar",
+       "hint": "Seride tek yol var. Yol kopunca enerji hiçbirine ulaşamaz."
+      }
+     ]
+    }
+   ],
+   "learned": "Öğrendin: seri devrede tek yol vardır."
+  },
+  {
+   "id": "parallel-1",
+   "level": "kalfa",
+   "icon": "🪜",
+   "title": "Paralel devre",
+   "goal": "Enerjiye iki ayrı yol açacağız.",
+   "steps": [
+    {
+     "type": "show",
+     "say": "Burada enerjinin gidebileceği iki ayrı yol var. Her yolda bir LED duruyor. Buna paralel devre denir.",
+     "board": {
+      "layout": "ladder",
+      "slots": [
+       "wire",
+       "led",
+       "wire",
+       "wire",
+       "wire",
+       "led"
+      ]
+     }
+    },
+    {
+     "type": "show",
+     "say": "Bir yol kopsa bile öbür yol açık kalır. O LED yanmaya devam eder!",
+     "board": {
+      "layout": "ladder",
+      "slots": [
+       "wire",
+       "led",
+       "wire",
+       "wire",
+       "wire",
+       null
+      ]
+     }
+    },
+    {
+     "type": "task",
+     "say": "Şimdi sen yap! İki ayrı yola birer LED koy ve ikisini de yak.",
+     "board": {
+      "layout": "ladder",
+      "slots": [
+       "wire",
+       null,
+       "wire",
+       "wire",
+       "wire",
+       null
+      ]
+     },
+     "fixed": [
+      0,
+      2,
+      3,
+      4
+     ],
+     "tools": [
+      "led"
+     ],
+     "goal": {
+      "lit": true,
+      "parallel": true,
+      "with": [
+       "led"
+      ]
+     },
+     "meet": "led",
+     "hints": {
+      "needparallel": "İki ayrı yol var. Her yola birer LED koy.",
+      "ledoff": "Bir yol yarım kaldı. İki yolu da LED ile tamamla."
+     }
+    },
+    {
+     "type": "quiz",
+     "say": "Paralel devrede bir yol kopunca öbür LED ne yapar?",
+     "options": [
+      {
+       "icon": "💡",
+       "text": "Yanmaya devam eder",
+       "ok": true
+      },
+      {
+       "icon": "🌑",
+       "text": "Hemen söner",
+       "hint": "Paralelde iki yol var. Biri kopsa öbür yoldan enerji gelir."
+      }
+     ]
+    }
+   ],
+   "learned": "Öğrendin: paralel devrede iki yol vardır."
+  },
+  {
+   "id": "usta-1",
+   "level": "usta",
+   "icon": "🧰",
+   "title": "Usta devresi",
+   "goal": "LED, direnç ve anahtarı birlikte kullan.",
+   "steps": [
+    {
+     "type": "show",
+     "say": "Usta üç parçayı birlikte kullanır: LED, direnç ve anahtar.",
+     "board": {
+      "layout": "loop",
+      "slots": [
+       "led",
+       "resistor",
+       "switch"
+      ]
+     }
+    },
+    {
+     "type": "show",
+     "say": "Anahtar kapalıyken enerji geçer. Direnç ışığı biraz kısar.",
+     "board": {
+      "layout": "loop",
+      "slots": [
+       "led",
+       "resistor",
+       "switch"
+      ],
+      "closed": [
+       "s3"
+      ]
+     }
+    },
+    {
+     "type": "task",
+     "say": "LED, direnç ve anahtarı yola koy. Sonra anahtarı kapat.",
+     "board": {
+      "layout": "loop",
+      "slots": [
+       null,
+       null,
+       null
+      ]
+     },
+     "tools": [
+      "led",
+      "resistor",
+      "switch"
+     ],
+     "goal": {
+      "lit": true,
+      "with": [
+       "led",
+       "resistor",
+       "switch"
+      ]
+     }
+    },
+    {
+     "type": "quiz",
+     "say": "Anahtarı kapatınca ne olur?",
+     "options": [
+      {
+       "icon": "💡",
+       "text": "Yol bağlanır, LED yanar",
+       "ok": true
+      },
+      {
+       "icon": "🌑",
+       "text": "Yol kopar, LED söner",
+       "hint": "Anahtar kapanınca yol bağlanır. Yol bağlıysa enerji geçer."
+      }
+     ]
+    }
+   ],
+   "learned": "Öğrendin: LED, direnç ve anahtar birlikte çalışır."
+  },
+  {
+   "id": "kasif-1",
+   "level": "kasif",
+   "icon": "🧭",
+   "title": "Açık ve kapalı devre",
+   "goal": "Yolda boşluk varsa ne olur, keşfet.",
+   "steps": [
+    {
+     "type": "show",
+     "say": "Yolda boşluk var. Buna açık devre denir. Enerji geçemez, LED yanmaz.",
+     "board": {
+      "layout": "loop",
+      "slots": [
+       "wire",
+       "led",
+       null
+      ]
+     }
+    },
+    {
+     "type": "show",
+     "say": "Boşluk kapandı. Buna kapalı devre denir. Enerji geçer, LED yanar.",
+     "board": {
+      "layout": "loop",
+      "slots": [
+       "wire",
+       "led",
+       "wire"
+      ]
+     }
+    },
+    {
+     "type": "task",
+     "say": "Yoldaki boşluğa bir kablo koy ve devreyi kapat.",
+     "board": {
+      "layout": "loop",
+      "slots": [
+       "wire",
+       "led",
+       null
+      ]
+     },
+     "fixed": [
+      0,
+      1
+     ],
+     "tools": [
+      "wire"
+     ],
+     "goal": {
+      "lit": true,
+      "with": [
+       "led",
+       "wire"
+      ]
+     },
+     "meet": "wire",
+     "hints": {
+      "gap": "Yolda boşluk var. Boşluğa bir kablo koy."
+     }
+    },
+    {
+     "type": "quiz",
+     "say": "Yolda boşluk varsa LED ne yapar?",
+     "options": [
+      {
+       "icon": "🌑",
+       "text": "Yanmaz",
+       "ok": true
+      },
+      {
+       "icon": "💡",
+       "text": "Yanar",
+       "hint": "Yolda boşluk varsa enerji o boşlukta durur."
+      }
+     ]
+    }
+   ],
+   "learned": "Öğrendin: açık devrede LED yanmaz, kapalı devrede yanar."
+  },
+  {
+   "id": "mucit-1",
+   "level": "mucit",
+   "icon": "💡",
+   "title": "Mucit görevi",
+   "goal": "İki LED ve bir anahtarla kendi devreni kur.",
+   "steps": [
+    {
+     "type": "show",
+     "say": "Mucit kendi devresini kurar. Bu devrede iki ayrı yol var.",
+     "board": {
+      "layout": "ladder",
+      "slots": [
+       "wire",
+       "wire",
+       "wire",
+       "led",
+       "switch",
+       "led"
+      ],
+      "closed": [
+       "s5"
+      ]
+     }
+    },
+    {
+     "type": "task",
+     "say": "Boşluklara iki LED ve bir anahtar koy. Anahtarı kapat, iki LED de yansın.",
+     "board": {
+      "layout": "ladder",
+      "slots": [
+       "wire",
+       "wire",
+       "wire",
+       null,
+       null,
+       null
+      ]
+     },
+     "fixed": [
+      0,
+      1,
+      2
+     ],
+     "tools": [
+      "led",
+      "switch"
+     ],
+     "goal": {
+      "lit": true,
+      "parallel": true,
+      "with": [
+       "led",
+       "switch"
+      ]
+     },
+     "hints": {
+      "needparallel": "İki ayrı yola birer LED koy.",
+      "needswitch": "Anahtarı da yola koy. Yolu o açıp kapatır.",
+      "switch": "Anahtar açık. Dokun, yol kapansın."
+     }
+    },
+    {
+     "type": "quiz",
+     "say": "Anahtar açılırsa LED'lere ne olur?",
+     "options": [
+      {
+       "icon": "🌑",
+       "text": "Söner",
+       "ok": true
+      },
+      {
+       "icon": "💡",
+       "text": "Yanmaya devam eder",
+       "hint": "Anahtar ana yoldadır. Yol açılınca enerji hiçbir kola gidemez."
+      }
+     ]
+    }
+   ],
+   "learned": "Öğrendin: kendi devreni kurabilirsin!"
+  }
+ ],
+ "parts": {
+  "battery": {
+   "icon": "🔋",
+   "name": "Pil",
+   "job": "Pil enerji verir.",
+   "like": "Pil, devrenin kalbi gibidir. Enerjiyi yola gönderir.",
+   "try": "Bak: enerji pilden çıkıp yolda ilerler."
+  },
+  "wire": {
+   "icon": "🧵",
+   "name": "Kablo",
+   "job": "Kablo yolu bağlar.",
+   "like": "Kablo, enerjinin yürüdüğü yol gibidir. Kopuk yoldan geçilmez.",
+   "try": "Dene: boşluğa bir kablo koy, yol bağlansın."
+  },
+  "led": {
+   "icon": "💡",
+   "name": "LED",
+   "job": "LED ışık verir.",
+   "like": "LED, enerji gelince parlayan küçük bir lamba gibidir.",
+   "try": "Dene: LED’i yolun üstüne koy, parlamasını izle."
+  },
+  "resistor": {
+   "icon": "🟫",
+   "name": "Direnç",
+   "job": "Direnç enerjiyi yavaşlatır.",
+   "like": "Direnç, dar bir yol gibidir. Enerji yavaş geçer, ışık kısılır.",
+   "try": "Dene: yola direnç koy, ışığın kısıldığını gör."
+  },
+  "switch": {
+   "icon": "🔘",
+   "name": "Anahtar",
+   "job": "Anahtar yolu açar ve kapatır.",
+   "like": "Anahtar, yoldaki bir köprü gibidir. Köprü bağlıyken enerji geçer.",
+   "try": "Dene: anahtara dokun, ışığın açılıp kapandığını gör."
+  }
+ }
+}

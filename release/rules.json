@@ -1,0 +1,40 @@
+{
+  "standard": 1,
+  "note": "Kalici Surum Teslim Standardi: TEK dislama ve zorunlu-dosya kaynagi. release-stage.mjs (kopyalama) ve preflight.mjs (denetim) ayni dosyayi okur.",
+  "excludeDirNames": ["node_modules", "www", ".git", ".gradle", ".cxx", ".idea", "build", "captures", "shots"],
+  "excludeFileNames": ["local.properties", ".env", "keystore.properties", "google-services.json", ".DS_Store", "Thumbs.db"],
+  "excludeGlobs": [".env.*", ".v6-*", ".v7-*", ".v8-*", "*.jks", "*.keystore", "*.pem", "*.p12", "*.log", "*.pre-sync-*", "*.apk", "*.zip", "*.tar.gz", "*.voice-diag-backup", "*.before-*", "*.bak", "*.orig", "*.rej"],
+  "allowedDespiteGlobs": [".env.example"],
+  "excludePaths": [
+    "scripts/v6-server-apply.sh",
+    "scripts/v7-server-apply.sh",
+    "android/app/src/main/assets/public",
+    "android/app/src/main/assets/capacitor.config.json",
+    "android/app/src/main/assets/capacitor.plugins.json"
+  ],
+  "required": [
+    "package.json", "package-lock.json", "capacitor.config.json", "index.html", ".env.example",
+    "README.md", "README-KURULUM.md", "ANDROID_TEST.md", "install-and-build.sh",
+    "release/rules.json", "release/features.json",
+    "scripts/build.mjs", "scripts/serve.mjs", "scripts/android-prep.mjs", "scripts/prepare-android.sh", "scripts/package-apk.sh",
+    "scripts/release.sh", "scripts/make-release.sh", "scripts/preflight.mjs", "scripts/release-stage.mjs", "scripts/ui-smoke.mjs", "scripts/version.env",
+    "src/main.js", "assets/manifest.json", "tests/helpers.js", "tests/v4-guard.json",
+    "android-res/play-store-icon-512.png"
+  ],
+  "requiredPackages": ["@capacitor/core", "@capacitor/cli", "@capacitor/android", "@capacitor/app", "@capacitor-community/text-to-speech"],
+  "externalTestPackages": ["playwright"],
+  "androidFiles": [
+    "android/gradlew", "android/gradle/wrapper/gradle-wrapper.properties", "android/gradle/wrapper/gradle-wrapper.jar",
+    "android/build.gradle", "android/settings.gradle", "android/variables.gradle", "android/gradle.properties",
+    "android/app/build.gradle", "android/app/src/main/AndroidManifest.xml", "android/capacitor.settings.gradle"
+  ],
+  "pluginEvidence": { "android/capacitor.settings.gradle": ["capacitor-app", "text-to-speech"] },
+  "secretPatterns": [
+    "-----BEGIN (RSA |EC |OPENSSH |DSA )?PRIVATE KEY-----",
+    "(storePassword|keyPassword)[ \\t]*[=:][ \\t]*[^\\s$]+",
+    "AIza[0-9A-Za-z_-]{35}",
+    "AKIA[0-9A-Z]{16}",
+    "ghp_[A-Za-z0-9]{36}"
+  ],
+  "secretScanSkip": ["release/rules.json", "scripts/preflight.mjs"]
+}

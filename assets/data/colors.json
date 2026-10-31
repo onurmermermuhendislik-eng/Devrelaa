@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "palette": [
+    { "id": "red", "hex": "#E5484D", "tr": "Kırmızı" },
+    { "id": "blue", "hex": "#3E7BFA", "tr": "Mavi" },
+    { "id": "yellow", "hex": "#F5B800", "tr": "Sarı" },
+    { "id": "green", "hex": "#2FA84F", "tr": "Yeşil" },
+    { "id": "purple", "hex": "#8E5BD9", "tr": "Mor" },
+    { "id": "orange", "hex": "#F47B20", "tr": "Turuncu" }
+  ],
+  "conflicts": [["red", "green"], ["orange", "green"], ["orange", "red"]],
+  "ledColors": [
+    { "id": "red", "hex": "#FF3B30", "glow": "#FF6A5E" },
+    { "id": "yellow", "hex": "#FFC800", "glow": "#FFE066" },
+    { "id": "green", "hex": "#2EDB62", "glow": "#7CF59D" },
+    { "id": "blue", "hex": "#3FA0FF", "glow": "#8CCBFF" }
+  ]
+}

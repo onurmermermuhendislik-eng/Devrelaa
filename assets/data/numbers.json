@@ -1,0 +1,266 @@
+{
+ "version": 1,
+ "note": "Sayi Avi verisi. objects: ekranda sayilan nesneler (assets/numbers/objects/*.svg). words: sayi sozcukleri (sesli yonerge icin). tiers: gorev zorlugu; 4-5 ve 6-8 yas icin 4'er kademe (Baslangic, Cirak, Kalfa, Usta). Kaşif/Mucit icin kademe eklenmedi (planned). kinds: [gorev tipi, agirlik]. max: sayi araligi ust siniri. options: secenek sayisi.",
+ "objects": [
+  {
+   "id": "star",
+   "noun": "yıldız",
+   "file": "assets/numbers/objects/star.svg"
+  },
+  {
+   "id": "apple",
+   "noun": "elma",
+   "file": "assets/numbers/objects/apple.svg"
+  },
+  {
+   "id": "ball",
+   "noun": "top",
+   "file": "assets/numbers/objects/ball.svg"
+  },
+  {
+   "id": "fish",
+   "noun": "balık",
+   "file": "assets/numbers/objects/fish.svg"
+  },
+  {
+   "id": "flower",
+   "noun": "çiçek",
+   "file": "assets/numbers/objects/flower.svg"
+  }
+ ],
+ "words": [
+  "",
+  "bir",
+  "iki",
+  "üç",
+  "dört",
+  "beş",
+  "altı",
+  "yedi",
+  "sekiz",
+  "dokuz",
+  "on"
+ ],
+ "voice": {
+  "count": "Kaç tane {noun} var?",
+  "numToGroup": "{n} tane olanı bul.",
+  "pickGroup": "{n} tane {noun} bul.",
+  "missing": "Kaç tane eksik?",
+  "findNumber": "Doğru sayıyı bul.",
+  "missingNumber": "Eksik sayıyı bul.",
+  "add": "İkisini birleştir, kaç oldu?",
+  "subtract1": "Bir tanesi giderse kaç kalır?",
+  "subtract": "{k} tanesi giderse kaç kalır?",
+  "sequence": "Sırada hangi sayı var?"
+ },
+ "ideas": {
+  "count": "sayma: her nesne bir kez sayılır",
+  "numToGroup": "sayı ile miktar aynı şeydir",
+  "pickGroup": "sayı hem miktarı hem nesneyi belirler",
+  "missing": "bütün = var olan + eksik",
+  "findNumber": "son sayılan sayı toplam miktarı verir",
+  "missingNumber": "sayılar sırayla gider",
+  "add": "birleştirince miktar artar",
+  "subtract": "giden olunca miktar azalır",
+  "sequence": "düzen bir sonraki sayıyı söyler"
+ },
+ "tiers": {
+  "4-5": [
+   {
+    "max": 3,
+    "options": 2,
+    "kinds": [
+     [
+      "count",
+      5
+     ],
+     [
+      "numToGroup",
+      5
+     ]
+    ]
+   },
+   {
+    "max": 4,
+    "options": 3,
+    "kinds": [
+     [
+      "count",
+      4
+     ],
+     [
+      "numToGroup",
+      3
+     ],
+     [
+      "pickGroup",
+      3
+     ]
+    ]
+   },
+   {
+    "max": 5,
+    "options": 3,
+    "kinds": [
+     [
+      "count",
+      3
+     ],
+     [
+      "numToGroup",
+      3
+     ],
+     [
+      "pickGroup",
+      3
+     ],
+     [
+      "missing",
+      3
+     ]
+    ]
+   },
+   {
+    "max": 5,
+    "options": 3,
+    "kinds": [
+     [
+      "count",
+      2
+     ],
+     [
+      "numToGroup",
+      2
+     ],
+     [
+      "pickGroup",
+      3
+     ],
+     [
+      "missing",
+      3
+     ]
+    ]
+   }
+  ],
+  "6-8": [
+   {
+    "max": 5,
+    "options": 3,
+    "addMax": 5,
+    "subMax": 0,
+    "kinds": [
+     [
+      "findNumber",
+      4
+     ],
+     [
+      "missingNumber",
+      3
+     ],
+     [
+      "add",
+      3
+     ]
+    ],
+    "seqLen": 4,
+    "seqRules": []
+   },
+   {
+    "max": 7,
+    "options": 4,
+    "addMax": 7,
+    "subMax": 5,
+    "kinds": [
+     [
+      "findNumber",
+      3
+     ],
+     [
+      "missingNumber",
+      3
+     ],
+     [
+      "add",
+      3
+     ],
+     [
+      "subtract",
+      3
+     ]
+    ],
+    "seqLen": 4,
+    "seqRules": []
+   },
+   {
+    "max": 10,
+    "options": 4,
+    "addMax": 10,
+    "subMax": 10,
+    "kinds": [
+     [
+      "findNumber",
+      2
+     ],
+     [
+      "missingNumber",
+      3
+     ],
+     [
+      "add",
+      3
+     ],
+     [
+      "subtract",
+      3
+     ],
+     [
+      "sequence",
+      3
+     ]
+    ],
+    "seqLen": 4,
+    "seqRules": [
+     "+1",
+     "+2"
+    ]
+   },
+   {
+    "max": 10,
+    "options": 4,
+    "addMax": 10,
+    "subMax": 10,
+    "kinds": [
+     [
+      "findNumber",
+      2
+     ],
+     [
+      "missingNumber",
+      3
+     ],
+     [
+      "add",
+      3
+     ],
+     [
+      "subtract",
+      3
+     ],
+     [
+      "sequence",
+      3
+     ]
+    ],
+    "seqLen": 5,
+    "seqRules": [
+     "+1",
+     "+2",
+     "-1",
+     "repeat"
+    ],
+    "descending": true
+   }
+  ]
+ }
+}

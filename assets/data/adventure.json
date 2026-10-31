@@ -1,0 +1,1221 @@
+{
+  "note": "V8.0 prototip: harita, gorev ve odul ayarlari TEK yerde. Gorsel (adventure/*.js, styles.css) ile oyun mantigi (adventure/model.js) bu dosyadaki degerlere gore calisir.",
+  "rewards": {
+    "starsMax": 3,
+    "maxMistakesForThreeStars": 0,
+    "maxMistakesForTwoStars": 2,
+    "note": "3 yildiz: hatasiz; 2 yildiz: en fazla 2 hata; aksi 1 yildiz. Coin yalniz ilk kez tamamlamada verilir; tekrar oynamak yalniz daha iyi yildizi kaydeder."
+  },
+  "map": {
+    "w": 800,
+    "h": 340,
+    "start": {
+      "x": 58,
+      "y": 104
+    },
+    "gate": {
+      "x": 150,
+      "y": 232
+    }
+  },
+  "regions": [
+    {
+      "id": "pil",
+      "title": "Pil ve Enerji",
+      "icon": "🔋",
+      "tasks": [
+        "tanis",
+        "ilk-isik",
+        "dedektif",
+        "kablo",
+        "anahtar",
+        "seri",
+        "hata",
+        "final"
+      ],
+      "final": "final",
+      "unlocks": "ev"
+    },
+    {
+      "id": "ev",
+      "title": "Evde Enerji",
+      "icon": "🏠",
+      "tasks": [
+        "fener",
+        "oda-lambasi",
+        "kablo-koruma",
+        "guvenlik",
+        "led-direnc",
+        "gece-lambasi",
+        "ev-final"
+      ],
+      "final": "ev-final",
+      "unlocks": "karanlik",
+      "map": {
+        "w": 800,
+        "h": 340,
+        "start": {
+          "x": 58,
+          "y": 104
+        },
+        "gate": {
+          "x": 150,
+          "y": 232
+        }
+      },
+      "finalTitle": "Evde Enerji bölgesini bitirdin!"
+    },
+    {
+      "id": "karanlik",
+      "title": "Karanlık Ev",
+      "icon": "🌙",
+      "tasks": [
+        "karanlik-ev"
+      ],
+      "final": "karanlik-ev",
+      "unlocks": "orman",
+      "map": {
+        "w": 800,
+        "h": 340,
+        "start": {
+          "x": 58,
+          "y": 170
+        },
+        "gate": {
+          "x": 740,
+          "y": 170
+        }
+      },
+      "finalTitle": "Karanlık evi aydınlattın!"
+    },
+    {
+      "id": "orman",
+      "title": "Ormanda Gece Kurtarma",
+      "icon": "🌲",
+      "soon": true,
+      "tasks": [],
+      "final": null,
+      "unlocks": null
+    }
+  ],
+  "tasks": [
+    {
+      "id": "tanis",
+      "legacy": "a1-pil-lamba",
+      "kind": "identify",
+      "coins": 1,
+      "title": "Enerjiyle Tanış",
+      "icon": "🔋",
+      "say": "Parçaları tanıyalım! Dokun ve bul.",
+      "map": {
+        "x": 170,
+        "y": 62
+      },
+      "rounds": [
+        {
+          "say": "Pil hangisi? Dokun!",
+          "answer": "battery",
+          "options": [
+            "lamp",
+            "battery",
+            "wire"
+          ],
+          "hardOptions": [
+            "switch"
+          ],
+          "learn": "Bu bir pil. Pil elektrik verir.",
+          "hint": "Pilin üstünde artı ve eksi işareti var."
+        },
+        {
+          "say": "Lamba hangisi? Dokun!",
+          "answer": "lamp",
+          "options": [
+            "wire",
+            "battery",
+            "lamp"
+          ],
+          "hardOptions": [
+            "switch"
+          ],
+          "learn": "Bu bir lamba. Elektrik gelince ışık verir.",
+          "hint": "Lamba ışık veren, yuvarlak şeydir."
+        },
+        {
+          "say": "Kablo hangisi? Dokun!",
+          "answer": "wire",
+          "options": [
+            "lamp",
+            "wire",
+            "battery"
+          ],
+          "hardOptions": [
+            "switch"
+          ],
+          "learn": "Bu bir kablo. Elektriği taşır.",
+          "hint": "Kablo uzun ve ince bir yoldur."
+        }
+      ]
+    },
+    {
+      "id": "ilk-isik",
+      "legacy": "a2-pil-ne",
+      "kind": "circuit",
+      "coins": 2,
+      "title": "İlk Işık",
+      "icon": "💡",
+      "say": "Pil ve lambayı boş yerlere koy. Lamba yansın!",
+      "map": {
+        "x": 290,
+        "y": 118
+      },
+      "win": "Lamba yandı! Pil, kablo ve lamba bir yol oluşturdu.",
+      "board": {
+        "edges": {
+          "left": "slot",
+          "top": "wire",
+          "right": "slot",
+          "bottom": "wire"
+        },
+        "tray": [
+          {
+            "id": "p1",
+            "type": "battery"
+          },
+          {
+            "id": "p2",
+            "type": "lamp"
+          },
+          {
+            "id": "p3",
+            "type": "stone"
+          },
+          {
+            "id": "p4",
+            "type": "leaf",
+            "hard": true
+          }
+        ]
+      },
+      "hints": {
+        "insulator": "Taş ve yaprak elektriği geçirmez. Pil ve lamba lazım!",
+        "incomplete": "Lamba için pil de lazım. Boş yere parça koy!",
+        "start": "Pili ve lambayı boş yerlere koy."
+      }
+    },
+    {
+      "id": "dedektif",
+      "legacy": "a3-lamba",
+      "kind": "judge",
+      "coins": 1,
+      "title": "Devre Dedektifi",
+      "icon": "🔎",
+      "say": "Bu devre kapalı mı, açık mı? Dikkatle bak!",
+      "map": {
+        "x": 410,
+        "y": 62
+      },
+      "scenes": [
+        {
+          "edges": {
+            "left": "battery",
+            "top": "wire",
+            "right": "lamp",
+            "bottom": "wire"
+          },
+          "learn": "Yol hiç kopmamış. Bu kapalı devre. Lamba yanar!",
+          "hint": "Yolda kopukluk var mı, bak."
+        },
+        {
+          "edges": {
+            "left": "battery",
+            "top": "gap",
+            "right": "lamp",
+            "bottom": "wire"
+          },
+          "learn": "Kablo kopuk. Bu açık devre. Lamba yanmaz.",
+          "hint": "Kablonun ortasında boşluk var."
+        },
+        {
+          "edges": {
+            "left": "battery",
+            "top": "switch",
+            "right": "lamp",
+            "bottom": "wire"
+          },
+          "fixedClosed": false,
+          "learn": "Anahtar açık, yol kesik. Bu açık devre. Lamba yanmaz.",
+          "hint": "Anahtarın kolu yatmış mı, kalkmış mı?"
+        },
+        {
+          "edges": {
+            "left": "battery",
+            "top": "stone",
+            "right": "lamp",
+            "bottom": "wire"
+          },
+          "hard": true,
+          "learn": "Taş elektriği geçirmez. Bu açık devre. Lamba yanmaz.",
+          "hint": "Yoldaki taşa dikkat et."
+        },
+        {
+          "edges": {
+            "left": "battery",
+            "top": "switch",
+            "right": "lamp",
+            "bottom": "wire"
+          },
+          "fixedClosed": true,
+          "hard": true,
+          "learn": "Anahtar kapalı, yol tamam. Bu kapalı devre. Lamba yanar!",
+          "hint": "Anahtar yolu birleştiriyor mu?"
+        }
+      ]
+    },
+    {
+      "id": "kablo",
+      "legacy": "a4-biten-pil",
+      "kind": "circuit",
+      "coins": 2,
+      "title": "Kabloyu Bul",
+      "icon": "🧵",
+      "say": "Kablo kopmuş! Eksik yere doğru parçayı koy.",
+      "map": {
+        "x": 530,
+        "y": 118
+      },
+      "win": "Kabloyu buldun! Yol tamamlandı, lamba yandı.",
+      "board": {
+        "edges": {
+          "left": "battery",
+          "top": "slot",
+          "right": "lamp",
+          "bottom": "wire"
+        },
+        "tray": [
+          {
+            "id": "p1",
+            "type": "wire"
+          },
+          {
+            "id": "p2",
+            "type": "stone"
+          },
+          {
+            "id": "p3",
+            "type": "leaf",
+            "hard": true
+          }
+        ]
+      },
+      "hints": {
+        "insulator": "Taş elektriği geçirmez. Kablo lazım!",
+        "incomplete": "Bu parça yolu tamamlamıyor. Kabloyu dene!",
+        "start": "Boş yere kabloyu koy."
+      }
+    },
+    {
+      "id": "anahtar",
+      "legacy": "a5-final",
+      "kind": "circuit",
+      "coins": 2,
+      "title": "Anahtarın Gücü",
+      "icon": "🔘",
+      "say": "Anahtarı yerleştir. Dokununca devre açılır, kapanır!",
+      "map": {
+        "x": 665,
+        "y": 190
+      },
+      "need": {
+        "lit": 1,
+        "thenOpen": true
+      },
+      "win": "Anahtar devreyi açar ve kapatır. Lamba söndü!",
+      "board": {
+        "edges": {
+          "left": "battery",
+          "top": "slot",
+          "right": "lamp",
+          "bottom": "wire"
+        },
+        "tray": [
+          {
+            "id": "p1",
+            "type": "switch"
+          },
+          {
+            "id": "p2",
+            "type": "stone"
+          },
+          {
+            "id": "p3",
+            "type": "leaf",
+            "hard": true
+          }
+        ]
+      },
+      "hints": {
+        "insulator": "Taş elektriği geçirmez. Anahtar lazım!",
+        "switch": "Anahtar açık! Ona dokun, devre kapansın.",
+        "thenOpen": "Lamba yandı! Şimdi anahtara tekrar dokun, lamba sönsün.",
+        "start": "Anahtarı boş yere koy. Sonra ona dokun."
+      }
+    },
+    {
+      "id": "seri",
+      "kind": "circuit",
+      "coins": 2,
+      "title": "Seri Devre",
+      "icon": "💡💡",
+      "say": "İki lamba yerleştir. İkisi de yansın!",
+      "map": {
+        "x": 560,
+        "y": 262
+      },
+      "need": {
+        "lit": 2
+      },
+      "win": "İki lamba aynı yolda: bu seri devre. İkisi de yandı!",
+      "board": {
+        "edges": {
+          "left": "battery",
+          "top": "slot",
+          "right": "slot",
+          "bottom": "wire"
+        },
+        "tray": [
+          {
+            "id": "p1",
+            "type": "lamp"
+          },
+          {
+            "id": "p2",
+            "type": "lamp"
+          },
+          {
+            "id": "p3",
+            "type": "stone"
+          },
+          {
+            "id": "p4",
+            "type": "leaf",
+            "hard": true
+          }
+        ]
+      },
+      "hints": {
+        "insulator": "Taş elektriği geçirmez. İki lamba lazım!",
+        "incomplete": "İki boş yere de lamba koy.",
+        "start": "İki boş yere iki lamba koy."
+      }
+    },
+    {
+      "id": "hata",
+      "kind": "circuit",
+      "coins": 2,
+      "title": "Hata Avcısı",
+      "icon": "🕵️",
+      "say": "Bir parça yanlış! Hatayı bul ve düzelt.",
+      "map": {
+        "x": 430,
+        "y": 222
+      },
+      "win": "Hatayı buldun ve düzelttin! Lamba yandı.",
+      "board": {
+        "edges": {
+          "left": "battery",
+          "top": "slot",
+          "right": "lamp",
+          "bottom": "wire"
+        },
+        "tray": [
+          {
+            "id": "p1",
+            "type": "wire"
+          },
+          {
+            "id": "p2",
+            "type": "stone"
+          },
+          {
+            "id": "p3",
+            "type": "leaf",
+            "hard": true
+          }
+        ],
+        "preset": {
+          "top": "p2"
+        }
+      },
+      "hints": {
+        "insulator": "Bu da elektriği geçirmez. Kabloyu dene!",
+        "incomplete": "Bu parça yolu tamamlamıyor. Kabloyu dene!",
+        "start": "Yanlış parçaya dokun, yerine kabloyu koy."
+      }
+    },
+    {
+      "id": "final",
+      "kind": "circuit",
+      "coins": 3,
+      "title": "Küçük Mucit Finali",
+      "icon": "🏆",
+      "say": "Son devre! Pil, anahtar ve iki lamba koy. Sonra anahtarı kapat.",
+      "map": {
+        "x": 300,
+        "y": 266
+      },
+      "final": true,
+      "need": {
+        "lit": 2
+      },
+      "win": "Muhteşem! Kendi devreni kurdun, iki lamba yandı!",
+      "board": {
+        "edges": {
+          "left": "slot",
+          "top": "slot",
+          "right": "slot",
+          "bottom": "slot"
+        },
+        "tray": [
+          {
+            "id": "p1",
+            "type": "battery"
+          },
+          {
+            "id": "p2",
+            "type": "switch"
+          },
+          {
+            "id": "p3",
+            "type": "lamp"
+          },
+          {
+            "id": "p4",
+            "type": "lamp"
+          },
+          {
+            "id": "p5",
+            "type": "stone"
+          },
+          {
+            "id": "p6",
+            "type": "leaf",
+            "hard": true
+          }
+        ]
+      },
+      "hints": {
+        "insulator": "Taş elektriği geçirmez. Pil, anahtar ve iki lamba lazım!",
+        "incomplete": "Dört boş yere pil, anahtar ve iki lamba koy.",
+        "switch": "Anahtar açık! Ona dokun, devre kapansın.",
+        "start": "Pil, anahtar ve iki lamba koy. Sonra anahtara dokun."
+      }
+    },
+    {
+      "id": "fener",
+      "kind": "choice",
+      "coins": 1,
+      "title": "Cep Feneri",
+      "icon": "🔦",
+      "say": "Cep fenerin yanmıyor. Önce neye bakmalısın?",
+      "scene": "🔦",
+      "options": [
+        {
+          "text": "Feneri sallarım",
+          "ok": false
+        },
+        {
+          "text": "Pilin doğru takılı mı bakarım",
+          "ok": true
+        },
+        {
+          "text": "Feneri yere vururum",
+          "ok": false
+        }
+      ],
+      "learn": "Doğru! Fener enerjisini pilden alır. Pil bitmiş ya da yanlış takılmış olabilir.",
+      "hint": "Fener enerjisini pilden alır.",
+      "map": {
+        "x": 170,
+        "y": 62
+      },
+      "real": true
+    },
+    {
+      "id": "oda-lambasi",
+      "kind": "choice",
+      "coins": 1,
+      "title": "Oda Lambası",
+      "icon": "💡",
+      "say": "Odanın lambasını açıp kapatmak için hangi parçaya dokunuruz?",
+      "scene": "🛏️",
+      "options": [
+        {
+          "text": "Oyuncak",
+          "ok": false
+        },
+        {
+          "text": "Anahtar",
+          "ok": true
+        },
+        {
+          "text": "Yastık",
+          "ok": false
+        }
+      ],
+      "learn": "Doğru! Anahtar devreyi açar ve kapatır. Yol tamamsa lamba yanar.",
+      "hint": "Lambanın duvardaki düğmesi var.",
+      "map": {
+        "x": 290,
+        "y": 118
+      },
+      "real": true
+    },
+    {
+      "id": "kablo-koruma",
+      "kind": "choice",
+      "coins": 1,
+      "title": "Kablonun Kılıfı",
+      "icon": "🧵",
+      "say": "Kabloların dışı neden plastikle kaplı?",
+      "scene": "🧵",
+      "options": [
+        {
+          "text": "Daha güzel görünsün",
+          "ok": false
+        },
+        {
+          "text": "Daha ağır olsun",
+          "ok": false
+        },
+        {
+          "text": "Elektrik kaçmasın, bizi korusun",
+          "ok": true
+        }
+      ],
+      "learn": "Doğru! Plastik elektriği geçirmez. Kabloyu korur, bizi de korur.",
+      "hint": "Plastik elektriği geçirmez.",
+      "map": {
+        "x": 410,
+        "y": 62
+      },
+      "real": true
+    },
+    {
+      "id": "guvenlik",
+      "kind": "choice",
+      "coins": 2,
+      "title": "Güvenli Deney",
+      "icon": "🛡️",
+      "say": "Elektrikle deney yapacağız. Hangisini kullanırız?",
+      "scene": "🔋",
+      "options": [
+        {
+          "text": "Duvardaki priz",
+          "ok": false
+        },
+        {
+          "text": "Küçük pil",
+          "ok": true
+        },
+        {
+          "text": "Uzatma kablosu",
+          "ok": false
+        }
+      ],
+      "learn": "Doğru! Küçük pil güvenlidir. Prizdeki elektrik çok güçlüdür, ona asla dokunma. Gerekirse büyüklerden yardım iste.",
+      "hint": "Priz çok güçlüdür ve tehlikelidir. Pil küçük ve güvenlidir.",
+      "map": {
+        "x": 530,
+        "y": 118
+      },
+      "real": true
+    },
+    {
+      "id": "led-direnc",
+      "kind": "circuit",
+      "coins": 2,
+      "title": "LED ve Direnç",
+      "icon": "🔴",
+      "say": "LED için direnç lazım. İkisini boş yerlere koy. Direnç LED'i korur!",
+      "map": {
+        "x": 650,
+        "y": 176
+      },
+      "need": {
+        "lit": 1,
+        "resistor": true
+      },
+      "win": "LED yandı! Direnç LED'i korudu.",
+      "real": true,
+      "board": {
+        "edges": {
+          "left": "battery",
+          "top": "slot",
+          "right": "slot",
+          "bottom": "wire"
+        },
+        "tray": [
+          {
+            "id": "p1",
+            "type": "led"
+          },
+          {
+            "id": "p2",
+            "type": "resistor"
+          },
+          {
+            "id": "p3",
+            "type": "wire"
+          },
+          {
+            "id": "p4",
+            "type": "stone",
+            "hard": true
+          }
+        ]
+      },
+      "hints": {
+        "insulator": "Taş elektriği geçirmez. LED ve direnç lazım!",
+        "incomplete": "İki boş yere LED ve direnç koy.",
+        "noResistor": "LED yandı ama direnç yok! Direnç LED'i korur. Kabloyu çıkarıp direnci koy.",
+        "start": "LED ve direnci boş yerlere koy."
+      }
+    },
+    {
+      "id": "gece-lambasi",
+      "kind": "circuit",
+      "coins": 2,
+      "title": "Gece Lambası",
+      "icon": "🌙",
+      "say": "Anahtar, direnç ve LED'i koy. Yansın! Sonra anahtarla söndür.",
+      "map": {
+        "x": 560,
+        "y": 262
+      },
+      "need": {
+        "lit": 1,
+        "resistor": true,
+        "thenOpen": true
+      },
+      "win": "Gece lambası hazır! Anahtar açar ve kapatır.",
+      "real": true,
+      "board": {
+        "edges": {
+          "left": "battery",
+          "top": "slot",
+          "right": "slot",
+          "bottom": "slot"
+        },
+        "tray": [
+          {
+            "id": "p1",
+            "type": "switch"
+          },
+          {
+            "id": "p2",
+            "type": "led"
+          },
+          {
+            "id": "p3",
+            "type": "resistor"
+          },
+          {
+            "id": "p4",
+            "type": "wire"
+          },
+          {
+            "id": "p5",
+            "type": "stone",
+            "hard": true
+          }
+        ]
+      },
+      "hints": {
+        "insulator": "Taş elektriği geçirmez. Anahtar, direnç ve LED lazım!",
+        "incomplete": "Üç boş yere anahtar, direnç ve LED koy.",
+        "switch": "Anahtar açık! Ona dokun, devre kapansın.",
+        "noResistor": "LED yandı ama direnç yok! Direnç LED'i korur. Kabloyu çıkarıp direnci koy.",
+        "thenOpen": "Yandı! Şimdi anahtara dokun, gece lambası sönsün.",
+        "start": "Anahtar, direnç ve LED'i boş yerlere koy. Sonra anahtara dokun."
+      }
+    },
+    {
+      "id": "ev-final",
+      "kind": "circuit",
+      "coins": 3,
+      "title": "Mucit Evi Finali",
+      "icon": "🏆",
+      "say": "Son devre! Pil, anahtar, direnç ve LED koy. Yansın, sonra anahtarla söndür.",
+      "map": {
+        "x": 300,
+        "y": 266
+      },
+      "final": true,
+      "need": {
+        "lit": 1,
+        "resistor": true,
+        "thenOpen": true
+      },
+      "win": "Muhteşem! Kendi güvenli devreni kurdun!",
+      "real": true,
+      "board": {
+        "edges": {
+          "left": "slot",
+          "top": "slot",
+          "right": "slot",
+          "bottom": "slot"
+        },
+        "tray": [
+          {
+            "id": "p1",
+            "type": "battery"
+          },
+          {
+            "id": "p2",
+            "type": "switch"
+          },
+          {
+            "id": "p3",
+            "type": "resistor"
+          },
+          {
+            "id": "p4",
+            "type": "led"
+          },
+          {
+            "id": "p5",
+            "type": "stone"
+          },
+          {
+            "id": "p6",
+            "type": "leaf",
+            "hard": true
+          }
+        ]
+      },
+      "hints": {
+        "insulator": "Taş elektriği geçirmez. Pil, anahtar, direnç ve LED lazım!",
+        "incomplete": "Dört boş yere pil, anahtar, direnç ve LED koy.",
+        "switch": "Anahtar açık! Ona dokun, devre kapansın.",
+        "noResistor": "LED için direnç lazım!",
+        "thenOpen": "Yandı! Şimdi anahtara dokun, devre sönsün.",
+        "start": "Pil, anahtar, direnç ve LED koy. Sonra anahtara dokun."
+      }
+    },
+    {
+      "id": "karanlik-ev",
+      "kind": "darkhouse",
+      "coins": 3,
+      "title": "Karanlık Ev",
+      "icon": "🌙",
+      "final": true,
+      "say": "Odada pil, anahtar ve lamba bul. Dokun ve ara!",
+      "map": {
+        "x": 400,
+        "y": 170
+      },
+      "win": "Başardın! Lambamız ışıl ışıl yanıyor!",
+      "next": "Sıradaki macera: Ormanda Gece Kurtarma. Çok yakında!",
+      "scenes": [
+        {
+          "learn": "Akşam oldu. Haydi küçük mucit, eve girelim!"
+        },
+        {
+          "learn": "Aaa, ev çok karanlık! Lambalar yanmıyor."
+        },
+        {
+          "learn": "Hadi, lambayı yakacak parçaları birlikte bulalım!"
+        }
+      ],
+      "ui": {
+        "skip": "Atla ›",
+        "bag": "Bulduklarım",
+        "empty": "Henüz parça yok. Odada dokunarak ara!",
+        "build": "Devreyi kur ▶",
+        "next": "Sıradaki maceraya geç ▶",
+        "opened": "açıldı",
+        "idleMs": 14000
+      },
+      "spots": [
+        {
+          "id": "sandik",
+          "icon": "🧰",
+          "label": "Sandık",
+          "x": 17,
+          "y": 62,
+          "finds": "battery",
+          "say": "Harika! Sandıkta pil var. Pil elektrik verir."
+        },
+        {
+          "id": "cekmece",
+          "icon": "🗄️",
+          "label": "Çekmece",
+          "x": 50,
+          "y": 66,
+          "finds": "switch",
+          "say": "Süper! Anahtar buldun. Anahtar yolu açar ve kapatır."
+        },
+        {
+          "id": "dolap",
+          "icon": "🚪",
+          "label": "Dolap",
+          "x": 86,
+          "y": 56,
+          "finds": "lamp",
+          "say": "Bravo! Lamba da burada. Şimdi devreyi kuralım!"
+        },
+        {
+          "id": "pencere",
+          "icon": "🌙",
+          "label": "Pencere",
+          "x": 68,
+          "y": 24,
+          "finds": null,
+          "say": "Ay ışığı var ama oda karanlık. Aramaya devam et!"
+        },
+        {
+          "id": "saksi",
+          "icon": "🪴",
+          "label": "Saksı",
+          "x": 34,
+          "y": 82,
+          "finds": "leaf",
+          "hard": true,
+          "say": "Bu bir yaprak. Yaprak elektriği taşımaz."
+        },
+        {
+          "id": "tas",
+          "icon": "🪨",
+          "label": "Taş",
+          "x": 72,
+          "y": 84,
+          "finds": "stone",
+          "hard": true,
+          "say": "Bu bir taş. Taş da elektriği taşımaz."
+        }
+      ],
+      "board": {
+        "edges": {
+          "left": "slot",
+          "top": "slot",
+          "right": "slot",
+          "bottom": "wire"
+        },
+        "tray": [
+          {
+            "id": "p1",
+            "type": "battery"
+          },
+          {
+            "id": "p2",
+            "type": "switch"
+          },
+          {
+            "id": "p3",
+            "type": "lamp"
+          },
+          {
+            "id": "p4",
+            "type": "leaf",
+            "hard": true
+          },
+          {
+            "id": "p5",
+            "type": "stone",
+            "hard": true
+          }
+        ]
+      },
+      "hints": {
+        "insulator": "Hımm, bu elektriği taşımaz. Pil, anahtar ve lamba lazım!",
+        "incomplete": "Boş yerlere pil, anahtar ve lamba koyalım.",
+        "switch": "Anahtar açık! Ona dokun, devre kapansın.",
+        "start": "Pil, anahtar ve lamba koy. Sonra anahtara dokun.",
+        "idle": "Sandığa, çekmeceye ve dolaba dokunmayı dene!"
+      },
+      "sound": {
+        "cinema": {
+          "music": "ev-gizem",
+          "ambience": "ev-gece"
+        },
+        "search": {
+          "music": "ev-gizem",
+          "ambience": "ev-gece"
+        },
+        "build": {
+          "music": "ev-heyecan",
+          "ambience": "ev-gece"
+        },
+        "lit": {
+          "music": "ev-basari",
+          "ambience": "ev-isik"
+        }
+      }
+    }
+  ],
+  "text": {
+    "appName": "ALTEZ MiniLab",
+    "hudCoin": "Coin",
+    "hudStar": "Yıldız",
+    "hudTasks": "görev",
+    "start": "Başla",
+    "soon": "Çok yakında",
+    "locked": "Kilitli",
+    "open": "Sıradaki görev",
+    "done": "Tamamlandı",
+    "finalName": "Final",
+    "menu": "Menü",
+    "menuMini": "Mini oyunlar",
+    "menuIntro": "Tanıtımı tekrar izle",
+    "menuSoundOn": "Sesi kapat",
+    "menuSoundOff": "Sesi aç",
+    "menuClose": "Kapat",
+    "back": "Haritaya dön",
+    "reset": "Baştan",
+    "tray": "Parçalar",
+    "next": "Devam ▶",
+    "rewardTitle": "Görev tamamlandı!",
+    "rewardStars": "yıldız",
+    "rewardCoin": "+{n} coin",
+    "rewardReplay": "Daha önce yaptın. Coin zaten sende, yeni coin yok.",
+    "rewardBetter": "Yeni en iyi yıldızın!",
+    "toMap": "Haritaya dön ▶",
+    "again": "Tekrar oyna",
+    "unlocked": "Yeni görev açıldı!",
+    "finalTitle": "Pil ve Enerji bölgesini bitirdin!",
+    "finalSub": "Harika bir mucitsin!",
+    "regionOpen": "Yeni bölge açıldı: {title}",
+    "regionSoon": "Bu bölge çok yakında geliyor.",
+    "rotate": "Telefonu yatay çevir",
+    "introSkip": "Atla ›",
+    "introGo": "Haydi başlayalım!",
+    "introReplay": "Tanıtımı tekrar izle",
+    "intro": [
+      "Merhaba! Ben MiniLab!",
+      "Pil + kablo + lamba = ışık!",
+      "Haydi, macera haritasına!",
+      "Birlikte keşfedelim!"
+    ],
+    "boardWin": "Lamba yandı!",
+    "boardAria": "Devre tahtası",
+    "slotEmpty": "Boş yer",
+    "placed": "koyuldu",
+    "parts": {
+      "battery": "Pil",
+      "lamp": "Lamba",
+      "switch": "Anahtar",
+      "stone": "Taş",
+      "leaf": "Yaprak",
+      "wire": "Kablo",
+      "led": "LED",
+      "resistor": "Direnç"
+    },
+    "saveFail": "İlerleme kaydedilemedi. Tekrar dene.",
+    "mapAria": "Macera haritası",
+    "hexAria": {
+      "open": "Sıradaki görev",
+      "done": "Tamamlandı",
+      "locked": "Kilitli görev"
+    },
+    "lockedHint": "Önce önceki görevi bitir!",
+    "taskAria": "Görev",
+    "tryAgain": "Bir daha dene! Yapabilirsin.",
+    "closedCircuit": "Kapalı devre",
+    "openCircuit": "Açık devre",
+    "partN": "Parça",
+    "gap": "Kopuk kablo",
+    "replay": "Tekrar dinle",
+    "replayAria": "Yönergeyi tekrar dinle",
+    "voiceOffNote": "Ses kapalı. Açmak için 🔊 düğmesine dokun.",
+    "voiceProblem": "Ses çıkmıyor. Telefonda Türkçe ses (Google Metin Okuma) kurulu mu, ses açık mı bak.",
+    "voiceNoTr": "Telefonda Türkçe ses bulunamadı. Ayarlar > Metin okuma bölümünden Türkçe sesi indir.",
+    "voiceClose": "Tamam",
+    "goRegion": "Bölgeye git",
+    "backRegion": "Önceki bölge",
+    "marketBtn": "Enerji Marketi",
+    "menuMusicOn": "Müziği kapat",
+    "menuMusicOff": "Müziği aç",
+    "menuWorld": "Macera Dünyası"
+  },
+  "market": {
+    "note": "V8.4 Enerji Marketi: SANAL egitim ekipmanlari, yalniz oyun ici coin ile. Gercek para, reklam, abonelik, can/enerji sistemi YOK. Her ekipman TEK SEFER alinir (tekrar satin alma yok). Bakiye = kazanilan coin - sahip olunan ekipmanlarin fiyatlari toplami (ayri sayac yok).",
+    "items": [
+      {
+        "id": "gozluk",
+        "icon": "🥽",
+        "price": 2,
+        "title": "Mucit Gözlüğü",
+        "desc": "Deney yaparken gözlerini korur.",
+        "use": "Deney yaparken gözünü korur.",
+        "usedIn": [
+          "orman",
+          "koy",
+          "atolye"
+        ]
+      },
+      {
+        "id": "pil-kutusu",
+        "icon": "🔋",
+        "price": 3,
+        "title": "Pil Kutusu",
+        "desc": "Güvenli, küçük piller için.",
+        "use": "Fener ve işaret lambası için enerji verir.",
+        "usedIn": [
+          "orman",
+          "koy"
+        ]
+      },
+      {
+        "id": "kablo-seti",
+        "icon": "🧵",
+        "price": 4,
+        "title": "Kablo Seti",
+        "desc": "Renkli kablolar, plastik kılıflı.",
+        "use": "Parçaları birbirine bağlar.",
+        "usedIn": [
+          "mahalle",
+          "koy",
+          "atolye"
+        ]
+      },
+      {
+        "id": "anahtar-kiti",
+        "icon": "🔘",
+        "price": 5,
+        "title": "Anahtar Kiti",
+        "desc": "Devreyi açar ve kapatır.",
+        "use": "Devreyi açıp kapatan anahtarlar.",
+        "usedIn": [
+          "mahalle",
+          "atolye"
+        ]
+      },
+      {
+        "id": "led-seti",
+        "icon": "🔴",
+        "price": 6,
+        "title": "LED Seti",
+        "desc": "Direnç ile birlikte kullanılır.",
+        "use": "Işık veren LED'ler (direnç ile).",
+        "usedIn": [
+          "orman",
+          "mahalle"
+        ]
+      },
+      {
+        "id": "canta",
+        "icon": "🧰",
+        "price": 7,
+        "title": "Mucit Çantası",
+        "desc": "Bütün ekipmanlarını taşır.",
+        "use": "Bütün ekipmanlarını taşır; atölyede parçaları birleştirirsin.",
+        "usedIn": [
+          "atolye"
+        ]
+      }
+    ],
+    "text": {
+      "title": "Enerji Marketi",
+      "balance": "Coin",
+      "bag": "Çantam",
+      "bagCount": "{n} / {total} ekipman",
+      "buy": "Satın al",
+      "owned": "Sende var",
+      "need": "{n} coin eksik",
+      "confirm": "{title} ekipmanını {price} coin ile alalım mı?",
+      "yes": "Evet, al",
+      "no": "Vazgeç",
+      "bought": "{title} çantana girdi!",
+      "noCoin": "Yetmiyor. Biraz daha coin kazan!",
+      "already": "Bu ekipman zaten sende.",
+      "saveFail": "Satın alma kaydedilemedi. Coin harcanmadı.",
+      "back": "Haritaya dön",
+      "empty": "Çantan boş. Coin kazan ve ekipman al!",
+      "allBought": "Bütün ekipmanlar sende! Harikasın!",
+      "say": "Enerji Marketine hoş geldin! Coinlerinle ekipman al.",
+      "sayBought": "Ekipman çantana girdi!",
+      "sayNo": "Yetmiyor. Biraz daha coin kazan!"
+    }
+  },
+  "world": {
+    "note": "V8.5 Bagli Macera Dunyasi: 5 asama, kolaydan zora. Yalniz status=playable olan asama oynanir; soon olanlar YAPIM ASAMASINDADIR ve bitmis gibi gosterilmez. needs = o asama icin gereken ekipman (market kataloguyla AYNI kimlikler; ikinci market yok). Karanlik Ev ucretsiz baslangic: needs bos. Kilitlenme olmamasi testle korunur (gereken ekipman toplam fiyati, o asamadan ONCE kazanilabilir coini asamaz).",
+    "stages": [
+      {
+        "id": "karanlik",
+        "n": 1,
+        "region": "karanlik",
+        "title": "Karanlık Ev",
+        "icon": "🌙",
+        "status": "playable",
+        "learn": "Pil, kablo, anahtar ve lambayı tanırsın; karanlık evde ışık yakarsın.",
+        "needs": []
+      },
+      {
+        "id": "orman",
+        "n": 2,
+        "region": "orman",
+        "title": "Ormanda Gece Kurtarma",
+        "icon": "🌲",
+        "status": "soon",
+        "learn": "Işık ve enerji bilgini fener ve işaret lambalarıyla kullanırsın.",
+        "needs": [
+          "pil-kutusu",
+          "led-seti"
+        ]
+      },
+      {
+        "id": "mahalle",
+        "n": 3,
+        "region": null,
+        "title": "Mahallede Elektrik Görevi",
+        "icon": "🏘️",
+        "status": "soon",
+        "learn": "Anahtarlar, kablolar ve basit arıza bulma.",
+        "needs": [
+          "kablo-seti",
+          "anahtar-kiti"
+        ]
+      },
+      {
+        "id": "koy",
+        "n": 4,
+        "region": null,
+        "title": "Köyde Su ve Enerji",
+        "icon": "💧",
+        "status": "soon",
+        "learn": "Su pompası, motor ve enerji kaynağı; öğrendiklerini birleştirirsin.",
+        "needs": [
+          "gozluk"
+        ]
+      },
+      {
+        "id": "atolye",
+        "n": 5,
+        "region": null,
+        "title": "Mucit Atölyesi",
+        "icon": "🛠️",
+        "status": "soon",
+        "learn": "Öğrendiklerinle kendi çalışan sistemini kurarsın.",
+        "needs": [
+          "canta"
+        ]
+      }
+    ],
+    "text": {
+      "title": "Macera Dünyası",
+      "stage": "Aşama {n}",
+      "playable": "Oynanabilir",
+      "done": "Tamamlandı",
+      "soon": "Çok yakında",
+      "locked": "Önce önceki macerayı bitir",
+      "needs": "Gerekli ekipman",
+      "needsNone": "Ekipman gerekmez. Başlangıç ücretsiz!",
+      "have": "Sende var",
+      "missing": "Eksik",
+      "goShop": "Markete git",
+      "back": "Haritaya dön",
+      "nextNeed": "Sıradaki macera için gerekenler",
+      "say": "Macera dünyası! Sırayla ilerleyeceğiz."
+    }
+  }
+}

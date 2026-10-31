@@ -1,0 +1,515 @@
+{
+  "standard": 1,
+  "note": "Ozellik envanteri: her ozellik kaynak, arayuz, veri/varlik, kayit davranisi ve testleriyle eslestirilir. preflight.mjs hepsinin varligini ve testlerin gercekten test icerdigini denetler; tests/*.test.js dosyalarinin her biri en az bir ozellige bagli olmalidir.",
+  "features": [
+    {
+      "id": "shape-complete",
+      "name": "Sekli Tamamla (sekiller + devre gorevleri)",
+      "inherited": true,
+      "sources": [
+        "src/games/shape-complete/game.js",
+        "src/games/shape-complete/index.js",
+        "src/games/shape-complete/rounds.js",
+        "src/games/shape-complete/render.js",
+        "src/games/shape-complete/geometry.js",
+        "src/games/shape-complete/circuit-rounds.js"
+      ],
+      "ui": [
+        "src/games/shape-complete/render.js",
+        "src/ui/styles.css"
+      ],
+      "data": [
+        "assets/data/shapes.json",
+        "assets/data/colors.json",
+        "assets/data/figures.json",
+        "assets/data/circuits.json"
+      ],
+      "storage": "games.shape-complete (storage.js)",
+      "tests": [
+        "tests/geometry.test.js",
+        "tests/rounds.test.js",
+        "tests/stage3.test.js"
+      ]
+    },
+    {
+      "id": "circuit-sim",
+      "name": "Devre simulasyonu ve cizimi (LED/pil/kablo/anahtar/direnc)",
+      "inherited": true,
+      "sources": [
+        "src/games/shape-complete/circuit-sim.js"
+      ],
+      "ui": [
+        "src/games/shape-complete/circuit-render.js"
+      ],
+      "data": [
+        "assets/data/circuits.json"
+      ],
+      "storage": "-",
+      "tests": [
+        "tests/circuits.test.js",
+        "tests/v4-guard.json"
+      ]
+    },
+    {
+      "id": "number-hunt",
+      "name": "Sayi Avi",
+      "inherited": true,
+      "sources": [
+        "src/games/number-hunt/game.js",
+        "src/games/number-hunt/index.js",
+        "src/games/number-hunt/rounds.js"
+      ],
+      "ui": [
+        "src/games/number-hunt/render.js"
+      ],
+      "data": [
+        "assets/data/numbers.json",
+        "assets/numbers/objects/apple.svg"
+      ],
+      "storage": "games.number-hunt (storage.js)",
+      "tests": [
+        "tests/numberhunt.test.js"
+      ]
+    },
+    {
+      "id": "invent",
+      "name": "Mucit Atolyesi (devre kurma, kayitli bulusler)",
+      "inherited": true,
+      "sources": [
+        "src/games/invent/game.js",
+        "src/games/invent/index.js",
+        "src/games/invent/logic.js"
+      ],
+      "ui": [
+        "src/games/invent/game.js"
+      ],
+      "data": [
+        "assets/data/invent.json"
+      ],
+      "storage": "games.invent + invMine (storage.js)",
+      "tests": [
+        "tests/invent.test.js",
+        "tests/invent51.test.js"
+      ]
+    },
+    {
+      "id": "levels",
+      "name": "Seviyeler ve oyun ilerlemesi",
+      "inherited": true,
+      "sources": [
+        "src/core/progress.js",
+        "src/games/registry.js"
+      ],
+      "ui": [
+        "src/ui/home.js"
+      ],
+      "data": [
+        "assets/data/levels.json"
+      ],
+      "storage": "games.<id>.level (storage.js)",
+      "tests": [
+        "tests/levels.test.js"
+      ]
+    },
+    {
+      "id": "storage",
+      "name": "Kayit / geri yukleme (allow-list sanitize)",
+      "inherited": true,
+      "sources": [
+        "src/core/storage.js"
+      ],
+      "ui": [
+        "src/ui/home.js"
+      ],
+      "data": [],
+      "storage": "altez-minilab:v1",
+      "tests": [
+        "tests/storage.test.js"
+      ]
+    },
+    {
+      "id": "voice",
+      "name": "Sesli yonerge (TTS)",
+      "inherited": true,
+      "sources": [
+        "src/core/voice.js",
+        "src/core/audio.js"
+      ],
+      "ui": [
+        "src/ui/voicetest.js"
+      ],
+      "data": [
+        "assets/data/strings.tr.json"
+      ],
+      "storage": "ayar: ses acik/kapali (storage.js)",
+      "tests": [
+        "tests/voice.test.js"
+      ]
+    },
+    {
+      "id": "back",
+      "name": "Android fiziksel Geri tusu",
+      "inherited": true,
+      "sources": [
+        "src/core/back.js",
+        "src/core/app.js"
+      ],
+      "ui": [
+        "src/ui/home.js"
+      ],
+      "data": [],
+      "storage": "-",
+      "tests": [
+        "tests/back.test.js"
+      ]
+    },
+    {
+      "id": "learn",
+      "name": "Egitim Bolumu (V7, V7.2, V7.5, V7.6): seviyeler, kilitli dersler, parca kartlari, ogretici ipuclari, rozetli ders bitisi, Elektrik devresi nedir?, Kalfa: seri ve paralel devre",
+      "inherited": false,
+      "sources": [
+        "src/games/learn/game.js",
+        "src/games/learn/index.js",
+        "src/games/learn/logic.js"
+      ],
+      "ui": [
+        "src/ui/home.js",
+        "src/ui/styles.css"
+      ],
+      "data": [
+        "assets/data/learn.json",
+        "assets/manifest.json",
+        "assets/data/strings.tr.json"
+      ],
+      "storage": "edu.done (ayri alan, storage.js)",
+      "tests": [
+        "tests/learn.test.js",
+        "tests/learn-v72.test.js",
+        "tests/v73.test.js",
+        "tests/v74.test.js",
+        "tests/v75.test.js",
+        "tests/v76.test.js"
+      ]
+    },
+    {
+      "id": "tasks",
+      "name": "Gorevler (V7.7, V7.8): footer'da tek dugme ve hub; Elektrik Dedektifi (17 vaka) + Mantik ve Bilim (16 gorev), kademeli ipucu, tekrar yanlista ipucu korunur, tekrar oynama, ilk (gercekten kaydedilen) cozumde odul, ses zamanlamasi, kucuk ekran/yatay yerlesim",
+      "inherited": false,
+      "sources": [
+        "src/games/tasks/game.js",
+        "src/games/tasks/index.js",
+        "src/games/tasks/shell.js",
+        "src/games/tasks/subgames.js",
+        "src/games/detective/index.js",
+        "src/games/detective/logic.js",
+        "src/games/detective/view.js",
+        "src/games/logic-science/index.js",
+        "src/games/logic-science/logic.js",
+        "src/games/logic-science/view.js",
+        "src/core/taskkit.js",
+        "src/core/storage.js"
+      ],
+      "ui": [
+        "src/ui/home.js",
+        "src/ui/styles.css"
+      ],
+      "data": [
+        "assets/data/detective.json",
+        "assets/data/logic-science.json",
+        "assets/manifest.json",
+        "assets/data/strings.tr.json"
+      ],
+      "storage": "games.<oyun>.done (eklemeli alan, storage.js completeTask); edu.done degismedi",
+      "tests": [
+        "tests/v77.test.js",
+        "tests/v78.test.js"
+      ]
+    },
+    {
+      "id": "home-mascot",
+      "name": "Yeni Ana Menu (Oyunlar/Egitim/Profil/Ebeveyn), MiniLab maskotu ve hafif animasyonlar (V7.8)",
+      "inherited": false,
+      "sources": [
+        "src/ui/mascot.js",
+        "src/ui/home.js",
+        "src/core/app.js",
+        "src/games/tasks/shell.js"
+      ],
+      "ui": [
+        "src/ui/home.js",
+        "src/ui/styles.css"
+      ],
+      "data": [
+        "assets/data/strings.tr.json"
+      ],
+      "storage": "yeni alan YOK; kayit bicimi ayni (altez-minilab:v1)",
+      "tests": [
+        "tests/v78-home.test.js"
+      ]
+    },
+    {
+      "id": "energy-adventure",
+      "name": "Maskot V2 + Enerji Macerasi (Pil ve Enerji bolgesi, coin turetilmis) (V7.9)",
+      "inherited": false,
+      "sources": [
+        "src/ui/mascot.js",
+        "src/games/energy-adventure/index.js",
+        "src/games/energy-adventure/coins.js",
+        "src/games/tasks/shell.js",
+        "src/core/app.js",
+        "src/ui/home.js"
+      ],
+      "ui": [
+        "src/ui/styles.css",
+        "src/ui/mascot.js"
+      ],
+      "data": [
+        "assets/data/energy.json",
+        "assets/data/strings.tr.json",
+        "assets/manifest.json"
+      ],
+      "storage": "yeni alan YOK; coin games.energy-adventure.done'dan turetilir (altez-minilab:v1)",
+      "tests": [
+        "tests/v79.test.js"
+      ]
+    },
+    {
+      "id": "adventure",
+      "name": "V8.1: Enerji Macerasi (8 gorev: tanis, ilk isik, dedektif, kablo, anahtar, seri, hata, final), yatay ana menu, Ilerlemem/Ayarlar, sesli yonerge + Tekrar Dinle (V8.0 prototipinden gelisti)",
+      "inherited": false,
+      "sources": [
+        "src/games/adventure/index.js",
+        "src/games/adventure/model.js",
+        "src/games/adventure/map.js",
+        "src/games/adventure/intro.js",
+        "src/games/adventure/circuit.js",
+        "src/games/adventure/choice.js",
+        "src/games/adventure/svg.js",
+        "src/core/storage.js",
+        "src/core/app.js",
+        "src/ui/home.js",
+        "src/ui/mascot.js",
+        "android/app/src/main/AndroidManifest.xml",
+        "src/games/adventure/identify.js",
+        "src/games/adventure/judge.js",
+        "src/ui/mainmenu.js",
+        "src/core/voice.js"
+      ],
+      "ui": [
+        "src/ui/styles.css",
+        "src/games/adventure/map.js",
+        "src/games/adventure/intro.js",
+        "src/ui/mainmenu.js"
+      ],
+      "data": [
+        "assets/data/adventure.json",
+        "assets/data/strings.tr.json",
+        "assets/manifest.json"
+      ],
+      "storage": "adv {intro, tasks{id:yildiz 1-3}}; V8.0 kimlikleri migrateAdvIds ile yeni kimliklere tasinir; coin/kilit TURETILIR (altez-minilab:v1)",
+      "tests": [
+        "tests/v81.test.js"
+      ]
+    },
+    {
+      "id": "gradlew-izni",
+      "name": "Kalici android/gradlew calistirilabilir izni (paketleme + teslim dogrulamasi)",
+      "sources": [
+        "scripts/pack-zip.py",
+        "scripts/verify-delivery.sh",
+        "scripts/release-stage.mjs",
+        "install-and-build.sh",
+        "scripts/prepare-android.sh"
+      ],
+      "ui": [],
+      "data": [],
+      "storage": "yok",
+      "tests": [
+        "tests/v811.test.js"
+      ]
+    },
+    {
+      "id": "v82-yon-profil-ebeveyn",
+      "name": "V8.2: yon kilidi, dikey/yatay menu+tanitim, kart duzeni, yerel profil, ebeveyn kilidi, tanitim sesi, test ayristirici",
+      "sources": [
+        "src/core/orient.js",
+        "src/core/parental.js",
+        "src/core/profile.js",
+        "src/ui/gate.js",
+        "src/ui/parent.js",
+        "src/ui/profile.js",
+        "src/ui/mainmenu.js",
+        "src/games/adventure/intro.js",
+        "scripts/parse-test-output.mjs",
+        "android/app/src/main/java/com/altez/minilab/v4/MainActivity.java"
+      ],
+      "ui": [
+        "src/ui/styles.css",
+        "src/ui/mainmenu.js"
+      ],
+      "data": [
+        "assets/data/strings.tr.json"
+      ],
+      "storage": "profile, parent (storage.js)",
+      "tests": [
+        "tests/v82.test.js"
+      ]
+    },
+    {
+      "id": "v83-giris-sesi",
+      "name": "V8.3: kayitli ElevenLabs CAGLAYAN giris sesi (yerel MP3, ses ayarina uyar, TTS yedegi)",
+      "sources": [
+        "assets/sounds/intro-caglayan.mp3",
+        "assets/manifest.json",
+        "src/core/audio.js",
+        "src/games/adventure/intro.js"
+      ],
+      "ui": [
+        "src/games/adventure/intro.js"
+      ],
+      "data": [
+        "assets/manifest.json"
+      ],
+      "storage": "yeni alan yok",
+      "tests": [
+        "tests/v83.test.js"
+      ]
+    },
+    {
+      "id": "v83-giris-sesi",
+      "name": "V8.3: kayitli ElevenLabs CAGLAYAN giris sesi (yerel MP3, bir kez, ses ayarina uyar, yedek TTS)",
+      "sources": [
+        "assets/sounds/intro-caglayan.mp3",
+        "assets/manifest.json",
+        "src/core/audio.js",
+        "src/games/adventure/intro.js"
+      ],
+      "ui": [
+        "src/games/adventure/intro.js"
+      ],
+      "data": [
+        "assets/manifest.json"
+      ],
+      "storage": "yok",
+      "tests": [
+        "tests/v83.test.js"
+      ]
+    },
+    {
+      "id": "v84-yon-giris-sesi",
+      "name": "V8.4 Asama A-C: yalniz Enerji Macerasi yatay, Egitim dikey tasma duzeltmesi, giris sesi saglamlastirma",
+      "sources": [
+        "src/core/orient.js",
+        "src/games/adventure/intro.js",
+        "src/ui/styles.css",
+        "assets/sounds/intro-caglayan.mp3",
+        "CLAUDE.md"
+      ],
+      "ui": [
+        "src/ui/styles.css",
+        "src/games/adventure/intro.js"
+      ],
+      "data": [
+        "assets/manifest.json"
+      ],
+      "storage": "yok",
+      "tests": [
+        "tests/v84.test.js"
+      ]
+    },
+    {
+      "id": "v84-gorev-coin-market",
+      "name": "V8.4 Asama D-F: Evde Enerji gercek hayat gorevleri (LED/direnc), coin bakiyesi, Enerji Marketi + envanter, Caglayan satir sesi altyapisi",
+      "sources": [
+        "src/games/adventure/index.js",
+        "src/games/adventure/model.js",
+        "src/games/adventure/map.js",
+        "src/games/adventure/circuit.js",
+        "src/games/adventure/choice.js",
+        "src/games/adventure/svg.js",
+        "src/core/storage.js",
+        "src/core/voicekey.js",
+        "scripts/voice-lines.mjs",
+        "scripts/voice-sync.mjs",
+        "scripts/gen-voice-elevenlabs.mjs"
+      ],
+      "ui": [
+        "src/games/adventure/map.js",
+        "src/games/adventure/index.js",
+        "src/ui/styles.css",
+        "scripts/ui-v84-market.mjs"
+      ],
+      "data": [
+        "assets/data/adventure.json",
+        "assets/data/voice-lines.json",
+        "assets/manifest.json",
+        "assets/sounds/voice/VOICE-MANIFEST.json"
+      ],
+      "storage": "adv.inv (storage.js): sahip olunan ekipman kimlikleri; coin bakiyesi = kazanilan (adv.tasks) - envanter fiyatlari (turetilir)",
+      "tests": [
+        "tests/v84-market.test.js"
+      ]
+    },
+    {
+      "id": "v85-karanlik-ev-ses-dunya",
+      "name": "V8.5-dev: Karanlik Ev macerasi (sinematik, kesif, devre), ortak sahne altyapisi, macera muzigi + ortam sesi + ses onceligi/ducking, Macera Dunyasi paneli ve ekipman gereksinimi modeli",
+      "sources": [
+        "src/games/adventure/darkhouse.js",
+        "src/games/adventure/scene-kit.js",
+        "src/games/adventure/model.js",
+        "src/games/adventure/index.js",
+        "src/core/music.js",
+        "src/core/ambience.js",
+        "src/core/soundscape.js",
+        "src/core/audio.js",
+        "src/core/storage.js",
+        "src/core/app.js",
+        "scripts/import-voice.mjs"
+      ],
+      "ui": [
+        "src/games/adventure/map.js",
+        "src/ui/mainmenu.js",
+        "src/ui/styles.css",
+        "scripts/ui-v85.mjs",
+        "scripts/ui-v85-audio.mjs"
+      ],
+      "data": [
+        "assets/data/adventure.json",
+        "assets/data/strings.tr.json",
+        "assets/data/voice-lines.json",
+        "assets/manifest.json"
+      ],
+      "storage": "mix (storage.js): muzik/ortam/seviye tercihi, EKLEMELI alan; coin ve envanter V8.4 ile ayni (adv.tasks, adv.inv)",
+      "tests": [
+        "tests/v85-darkhouse.test.js",
+        "tests/v85-music.test.js",
+        "tests/v85-world.test.js",
+        "tests/v85-version.test.js",
+        "tests/v85-import-voice.test.js"
+      ]
+    },
+    {
+      "id": "mahalle-r1",
+      "name": "V8.5 Mahalle Macerasi Asama 1 (R1): oynanabilir dunya prototipi (8 yon hareket, joystick, kamera, 4 mekan giris/cikis)",
+      "sources": [
+        "src/games/mahalle/world.js",
+        "src/games/mahalle/engine.js",
+        "src/games/mahalle/art.js",
+        "src/games/mahalle/interiors.js",
+        "src/games/mahalle/index.js",
+        "src/core/app.js"
+      ],
+      "ui": [
+        "src/ui/mainmenu.js",
+        "src/ui/styles.css",
+        "scripts/ui-mahalle.mjs",
+        "scripts/ui-mahalle-shots.mjs"
+      ],
+      "data": [],
+      "storage": "yok (dunya durumu oturum boyunca bellekte; kayit semasi degismedi)",
+      "tests": [
+        "tests/mahalle.test.js"
+      ]
+    }
+  ]
+}

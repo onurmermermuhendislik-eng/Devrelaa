@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "note": "Nihai seviye sirasi (degistirme): Baslangic, Cirak, Kalfa, Usta, Kasif, Mucit. status='active' seviyeler gercek icerige sahiptir ve 'min' (dogru cevap esigi) ile acilir. status='planned' seviyeler henuz icerik icermez: esik (min) yoktur, cocuk oraya yukselmez; ana ekranda sadece soluk gorunur. Yeni icerik eklemek icin: seviyenin 'content' alanina oyun kimligiyle bir kayit ekle (ör. \"shape-complete\": {\"tier\": 3}), status'u 'active' yap ve bir 'min' ver. Bir oyun kendi 'content' kaydina gore zorlugu secer.",
+  "levels": [
+    {
+      "id": "baslangic",
+      "emoji": "🌱",
+      "name": "Başlangıç",
+      "status": "active",
+      "min": 0,
+      "content": {
+        "shape-complete": {
+          "tier": 0
+        },
+        "number-hunt": {
+          "tier": 0
+        }
+      }
+    },
+    {
+      "id": "cirak",
+      "emoji": "🔧",
+      "name": "Çırak",
+      "status": "active",
+      "min": 10,
+      "content": {
+        "shape-complete": {
+          "tier": 1
+        },
+        "number-hunt": {
+          "tier": 1
+        }
+      }
+    },
+    {
+      "id": "kalfa",
+      "emoji": "🛠️",
+      "name": "Kalfa",
+      "status": "active",
+      "min": 30,
+      "content": {
+        "shape-complete": {
+          "tier": 2
+        },
+        "number-hunt": {
+          "tier": 2
+        }
+      }
+    },
+    {
+      "id": "usta",
+      "emoji": "⭐",
+      "name": "Usta",
+      "status": "active",
+      "min": 60,
+      "content": {
+        "shape-complete": {
+          "tier": 3
+        },
+        "number-hunt": {
+          "tier": 3
+        }
+      }
+    },
+    {
+      "id": "kasif",
+      "emoji": "🔭",
+      "name": "Kaşif",
+      "status": "planned",
+      "min": null,
+      "content": {}
+    },
+    {
+      "id": "mucit",
+      "emoji": "💡",
+      "name": "Mucit",
+      "status": "planned",
+      "min": null,
+      "content": {}
+    }
+  ]
+}

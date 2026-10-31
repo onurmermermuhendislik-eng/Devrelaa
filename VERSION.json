@@ -1,0 +1,20 @@
+{
+  "name": "altez-minilab-v8.5-dev",
+  "project": "ALTEZ MiniLab",
+  "tag": "V8.5",
+  "channel": "dev",
+  "revision": "V8.5-dev: Sinematik macera altyapisi + Karanlik Ev, macera muzigi/ortam sesi/ses onceligi, Baglantili Macera Dunyasi paneli; V8.4 uzerine. GERCEK ANDROID CIHAZ TESTI YAPILMADI.",
+  "versionName": "8.5",
+  "versionCode": 26,
+  "applicationId": "com.altez.minilab.v4",
+  "parent": "V8.4 (versionCode 25)",
+  "parentVersionCode": 25,
+  "created": "2026-10-23",
+  "androidIncluded": true,
+  "features": [
+    "V8.5: Karanlik Ev macerasi (sinematik, kesif, devre, isik, odul; coin tek seferlik)",
+    "V8.5: ortak macera altyapisi (scene-kit), ses onceligi ve ducking, sentetik macera muzigi + ortam sesi, Ayarlar'da muzik/seviye/ortam",
+    "V8.5: Macera Dunyasi paneli (5 asama; yalniz Karanlik Ev oynanabilir) ve ekipman gereksinimi modeli",
+    "V8.5: 17 yeni/yeniden yazilmis seslendirme satiri icin gercek MP3 YOK (cihaz TTS yedegi)"
+  ]
+}

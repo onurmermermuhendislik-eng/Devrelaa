@@ -1,0 +1,320 @@
+{
+ "version": 1,
+ "note": "Dondurme ve simetri gorevleri icin sekil varliklari (0..100 kutusu, 10..90 araliginda kalir). rotate: asimetrik sekiller (dondurulunce gorunur sekilde degisir). symmetry: dikey eksen x=50'nin SOL yarisi; eksene dokunan bir kenari vardir. Yeni sekil eklemek icin listeye bir kayit ekleyin; testler tasma/benzersizlik kontrolunu yapar.",
+ "rotate": [
+  {
+   "id": "l",
+   "geom": {
+    "type": "poly",
+    "points": [
+     [
+      24,
+      12
+     ],
+     [
+      48,
+      12
+     ],
+     [
+      48,
+      62
+     ],
+     [
+      78,
+      62
+     ],
+     [
+      78,
+      88
+     ],
+     [
+      24,
+      88
+     ]
+    ]
+   }
+  },
+  {
+   "id": "flag",
+   "geom": {
+    "type": "poly",
+    "points": [
+     [
+      22,
+      12
+     ],
+     [
+      82,
+      32
+     ],
+     [
+      34,
+      50
+     ],
+     [
+      34,
+      88
+     ],
+     [
+      22,
+      88
+     ]
+    ]
+   }
+  },
+  {
+   "id": "steps",
+   "geom": {
+    "type": "poly",
+    "points": [
+     [
+      14,
+      88
+     ],
+     [
+      14,
+      70
+     ],
+     [
+      34,
+      70
+     ],
+     [
+      34,
+      46
+     ],
+     [
+      58,
+      46
+     ],
+     [
+      58,
+      16
+     ],
+     [
+      86,
+      16
+     ],
+     [
+      86,
+      88
+     ]
+    ]
+   }
+  },
+  {
+   "id": "tri",
+   "geom": {
+    "type": "poly",
+    "points": [
+     [
+      16,
+      84
+     ],
+     [
+      16,
+      16
+     ],
+     [
+      84,
+      84
+     ]
+    ]
+   }
+  },
+  {
+   "id": "t",
+   "geom": {
+    "type": "poly",
+    "points": [
+     [
+      12,
+      14
+     ],
+     [
+      88,
+      14
+     ],
+     [
+      88,
+      36
+     ],
+     [
+      62,
+      36
+     ],
+     [
+      62,
+      86
+     ],
+     [
+      38,
+      86
+     ],
+     [
+      38,
+      36
+     ],
+     [
+      12,
+      36
+     ]
+    ]
+   }
+  }
+ ],
+ "symmetry": [
+  {
+   "id": "house",
+   "geom": {
+    "type": "poly",
+    "points": [
+     [
+      50,
+      14
+     ],
+     [
+      12,
+      46
+     ],
+     [
+      12,
+      86
+     ],
+     [
+      50,
+      86
+     ]
+    ]
+   }
+  },
+  {
+   "id": "arrow",
+   "geom": {
+    "type": "poly",
+    "points": [
+     [
+      50,
+      10
+     ],
+     [
+      14,
+      48
+     ],
+     [
+      34,
+      48
+     ],
+     [
+      34,
+      86
+     ],
+     [
+      50,
+      86
+     ]
+    ]
+   }
+  },
+  {
+   "id": "castle",
+   "geom": {
+    "type": "poly",
+    "points": [
+     [
+      12,
+      86
+     ],
+     [
+      12,
+      30
+     ],
+     [
+      24,
+      30
+     ],
+     [
+      24,
+      44
+     ],
+     [
+      36,
+      44
+     ],
+     [
+      36,
+      30
+     ],
+     [
+      50,
+      30
+     ],
+     [
+      50,
+      86
+     ]
+    ]
+   }
+  },
+  {
+   "id": "heart",
+   "geom": {
+    "type": "poly",
+    "points": [
+     [
+      50,
+      86
+     ],
+     [
+      16,
+      52
+     ],
+     [
+      12,
+      32
+     ],
+     [
+      22,
+      18
+     ],
+     [
+      36,
+      16
+     ],
+     [
+      50,
+      32
+     ]
+    ]
+   }
+  },
+  {
+   "id": "sail",
+   "geom": {
+    "type": "poly",
+    "points": [
+     [
+      50,
+      10
+     ],
+     [
+      50,
+      64
+     ],
+     [
+      10,
+      64
+     ],
+     [
+      22,
+      86
+     ],
+     [
+      50,
+      86
+     ]
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,745 @@
+{
+  "note": "Uretilmis dosya: node scripts/voice-lines.mjs. El ile DEGISTIRME. MP3 yolu: assets/sounds/voice/<key>.mp3",
+  "voice": "CAGLAYAN",
+  "count": 123,
+  "lines": [
+    {
+      "key": "adv_95f21a02",
+      "kind": "adv",
+      "text": "Görev tamamlandı!",
+      "source": "adventure.text.rewardTitle"
+    },
+    {
+      "key": "adv_856ea863",
+      "kind": "adv",
+      "text": "Pil ve Enerji bölgesini bitirdin!",
+      "source": "adventure.text.finalTitle"
+    },
+    {
+      "key": "adv_584dc398",
+      "kind": "adv",
+      "text": "Bir daha dene! Yapabilirsin.",
+      "source": "adventure.text.tryAgain"
+    },
+    {
+      "key": "adv_925db002",
+      "kind": "adv",
+      "text": "Lamba yandı!",
+      "source": "adventure.text.boardWin"
+    },
+    {
+      "key": "adv_3d6cd629",
+      "kind": "adv",
+      "text": "Evde Enerji bölgesini bitirdin!",
+      "source": "adventure.regions.ev.finalTitle"
+    },
+    {
+      "key": "adv_ddb1d04c",
+      "kind": "adv",
+      "text": "Karanlık evi aydınlattın!",
+      "source": "adventure.regions.karanlik.finalTitle"
+    },
+    {
+      "key": "adv_d4b9ff7e",
+      "kind": "adv",
+      "text": "Parçaları tanıyalım! Dokun ve bul.",
+      "source": "adventure.tasks.tanis.say"
+    },
+    {
+      "key": "adv_868cee26",
+      "kind": "adv",
+      "text": "Pil hangisi? Dokun!",
+      "source": "adventure.tasks.tanis.rounds[0].say"
+    },
+    {
+      "key": "adv_54dbdf4e",
+      "kind": "adv",
+      "text": "Bu bir pil. Pil elektrik verir.",
+      "source": "adventure.tasks.tanis.rounds[0].learn"
+    },
+    {
+      "key": "adv_ef1f5488",
+      "kind": "adv",
+      "text": "Pilin üstünde artı ve eksi işareti var.",
+      "source": "adventure.tasks.tanis.rounds[0].hint"
+    },
+    {
+      "key": "adv_5fecd650",
+      "kind": "adv",
+      "text": "Lamba hangisi? Dokun!",
+      "source": "adventure.tasks.tanis.rounds[1].say"
+    },
+    {
+      "key": "adv_6f583bfc",
+      "kind": "adv",
+      "text": "Bu bir lamba. Elektrik gelince ışık verir.",
+      "source": "adventure.tasks.tanis.rounds[1].learn"
+    },
+    {
+      "key": "adv_4a230ddb",
+      "kind": "adv",
+      "text": "Lamba ışık veren, yuvarlak şeydir.",
+      "source": "adventure.tasks.tanis.rounds[1].hint"
+    },
+    {
+      "key": "adv_955485d0",
+      "kind": "adv",
+      "text": "Kablo hangisi? Dokun!",
+      "source": "adventure.tasks.tanis.rounds[2].say"
+    },
+    {
+      "key": "adv_304c71d1",
+      "kind": "adv",
+      "text": "Bu bir kablo. Elektriği taşır.",
+      "source": "adventure.tasks.tanis.rounds[2].learn"
+    },
+    {
+      "key": "adv_478f2456",
+      "kind": "adv",
+      "text": "Kablo uzun ve ince bir yoldur.",
+      "source": "adventure.tasks.tanis.rounds[2].hint"
+    },
+    {
+      "key": "adv_5593f807",
+      "kind": "adv",
+      "text": "Pil ve lambayı boş yerlere koy. Lamba yansın!",
+      "source": "adventure.tasks.ilk-isik.say"
+    },
+    {
+      "key": "adv_fd64ac3e",
+      "kind": "adv",
+      "text": "Lamba yandı! Pil, kablo ve lamba bir yol oluşturdu.",
+      "source": "adventure.tasks.ilk-isik.win"
+    },
+    {
+      "key": "adv_8f9e5c79",
+      "kind": "adv",
+      "text": "Taş ve yaprak elektriği geçirmez. Pil ve lamba lazım!",
+      "source": "adventure.tasks.ilk-isik.hints.insulator"
+    },
+    {
+      "key": "adv_d85aaaf2",
+      "kind": "adv",
+      "text": "Lamba için pil de lazım. Boş yere parça koy!",
+      "source": "adventure.tasks.ilk-isik.hints.incomplete"
+    },
+    {
+      "key": "adv_514bb1a6",
+      "kind": "adv",
+      "text": "Pili ve lambayı boş yerlere koy.",
+      "source": "adventure.tasks.ilk-isik.hints.start"
+    },
+    {
+      "key": "adv_86183aa3",
+      "kind": "adv",
+      "text": "Bu devre kapalı mı, açık mı? Dikkatle bak!",
+      "source": "adventure.tasks.dedektif.say"
+    },
+    {
+      "key": "adv_66507864",
+      "kind": "adv",
+      "text": "Yol hiç kopmamış. Bu kapalı devre. Lamba yanar!",
+      "source": "adventure.tasks.dedektif.scenes[0].learn"
+    },
+    {
+      "key": "adv_dfa75dbf",
+      "kind": "adv",
+      "text": "Yolda kopukluk var mı, bak.",
+      "source": "adventure.tasks.dedektif.scenes[0].hint"
+    },
+    {
+      "key": "adv_6ed5831c",
+      "kind": "adv",
+      "text": "Kablo kopuk. Bu açık devre. Lamba yanmaz.",
+      "source": "adventure.tasks.dedektif.scenes[1].learn"
+    },
+    {
+      "key": "adv_d65cf0df",
+      "kind": "adv",
+      "text": "Kablonun ortasında boşluk var.",
+      "source": "adventure.tasks.dedektif.scenes[1].hint"
+    },
+    {
+      "key": "adv_814d2299",
+      "kind": "adv",
+      "text": "Anahtar açık, yol kesik. Bu açık devre. Lamba yanmaz.",
+      "source": "adventure.tasks.dedektif.scenes[2].learn"
+    },
+    {
+      "key": "adv_76f87efe",
+      "kind": "adv",
+      "text": "Anahtarın kolu yatmış mı, kalkmış mı?",
+      "source": "adventure.tasks.dedektif.scenes[2].hint"
+    },
+    {
+      "key": "adv_dad10f97",
+      "kind": "adv",
+      "text": "Taş elektriği geçirmez. Bu açık devre. Lamba yanmaz.",
+      "source": "adventure.tasks.dedektif.scenes[3].learn"
+    },
+    {
+      "key": "adv_fae1b3b0",
+      "kind": "adv",
+      "text": "Yoldaki taşa dikkat et.",
+      "source": "adventure.tasks.dedektif.scenes[3].hint"
+    },
+    {
+      "key": "adv_414c36d0",
+      "kind": "adv",
+      "text": "Anahtar kapalı, yol tamam. Bu kapalı devre. Lamba yanar!",
+      "source": "adventure.tasks.dedektif.scenes[4].learn"
+    },
+    {
+      "key": "adv_16437bdf",
+      "kind": "adv",
+      "text": "Anahtar yolu birleştiriyor mu?",
+      "source": "adventure.tasks.dedektif.scenes[4].hint"
+    },
+    {
+      "key": "adv_ef9b239f",
+      "kind": "adv",
+      "text": "Kablo kopmuş! Eksik yere doğru parçayı koy.",
+      "source": "adventure.tasks.kablo.say"
+    },
+    {
+      "key": "adv_108065bb",
+      "kind": "adv",
+      "text": "Kabloyu buldun! Yol tamamlandı, lamba yandı.",
+      "source": "adventure.tasks.kablo.win"
+    },
+    {
+      "key": "adv_93d29972",
+      "kind": "adv",
+      "text": "Taş elektriği geçirmez. Kablo lazım!",
+      "source": "adventure.tasks.kablo.hints.insulator"
+    },
+    {
+      "key": "adv_5acd6093",
+      "kind": "adv",
+      "text": "Bu parça yolu tamamlamıyor. Kabloyu dene!",
+      "source": "adventure.tasks.kablo.hints.incomplete"
+    },
+    {
+      "key": "adv_014d16f8",
+      "kind": "adv",
+      "text": "Boş yere kabloyu koy.",
+      "source": "adventure.tasks.kablo.hints.start"
+    },
+    {
+      "key": "adv_2fc55855",
+      "kind": "adv",
+      "text": "Anahtarı yerleştir. Dokununca devre açılır, kapanır!",
+      "source": "adventure.tasks.anahtar.say"
+    },
+    {
+      "key": "adv_1b86fcc7",
+      "kind": "adv",
+      "text": "Anahtar devreyi açar ve kapatır. Lamba söndü!",
+      "source": "adventure.tasks.anahtar.win"
+    },
+    {
+      "key": "adv_7a33ce34",
+      "kind": "adv",
+      "text": "Taş elektriği geçirmez. Anahtar lazım!",
+      "source": "adventure.tasks.anahtar.hints.insulator"
+    },
+    {
+      "key": "adv_8707d1cd",
+      "kind": "adv",
+      "text": "Anahtar açık! Ona dokun, devre kapansın.",
+      "source": "adventure.tasks.anahtar.hints.switch"
+    },
+    {
+      "key": "adv_551f299e",
+      "kind": "adv",
+      "text": "Lamba yandı! Şimdi anahtara tekrar dokun, lamba sönsün.",
+      "source": "adventure.tasks.anahtar.hints.thenOpen"
+    },
+    {
+      "key": "adv_967b8085",
+      "kind": "adv",
+      "text": "Anahtarı boş yere koy. Sonra ona dokun.",
+      "source": "adventure.tasks.anahtar.hints.start"
+    },
+    {
+      "key": "adv_403a3f17",
+      "kind": "adv",
+      "text": "İki lamba yerleştir. İkisi de yansın!",
+      "source": "adventure.tasks.seri.say"
+    },
+    {
+      "key": "adv_82f6f48b",
+      "kind": "adv",
+      "text": "İki lamba aynı yolda: bu seri devre. İkisi de yandı!",
+      "source": "adventure.tasks.seri.win"
+    },
+    {
+      "key": "adv_4d0a8396",
+      "kind": "adv",
+      "text": "Taş elektriği geçirmez. İki lamba lazım!",
+      "source": "adventure.tasks.seri.hints.insulator"
+    },
+    {
+      "key": "adv_863200af",
+      "kind": "adv",
+      "text": "İki boş yere de lamba koy.",
+      "source": "adventure.tasks.seri.hints.incomplete"
+    },
+    {
+      "key": "adv_00f9e0ff",
+      "kind": "adv",
+      "text": "İki boş yere iki lamba koy.",
+      "source": "adventure.tasks.seri.hints.start"
+    },
+    {
+      "key": "adv_785199e9",
+      "kind": "adv",
+      "text": "Bir parça yanlış! Hatayı bul ve düzelt.",
+      "source": "adventure.tasks.hata.say"
+    },
+    {
+      "key": "adv_05b62337",
+      "kind": "adv",
+      "text": "Hatayı buldun ve düzelttin! Lamba yandı.",
+      "source": "adventure.tasks.hata.win"
+    },
+    {
+      "key": "adv_334b07f1",
+      "kind": "adv",
+      "text": "Bu da elektriği geçirmez. Kabloyu dene!",
+      "source": "adventure.tasks.hata.hints.insulator"
+    },
+    {
+      "key": "adv_4bf03d17",
+      "kind": "adv",
+      "text": "Yanlış parçaya dokun, yerine kabloyu koy.",
+      "source": "adventure.tasks.hata.hints.start"
+    },
+    {
+      "key": "adv_d0ac20a4",
+      "kind": "adv",
+      "text": "Son devre! Pil, anahtar ve iki lamba koy. Sonra anahtarı kapat.",
+      "source": "adventure.tasks.final.say"
+    },
+    {
+      "key": "adv_df6acd99",
+      "kind": "adv",
+      "text": "Muhteşem! Kendi devreni kurdun, iki lamba yandı!",
+      "source": "adventure.tasks.final.win"
+    },
+    {
+      "key": "adv_3d66abea",
+      "kind": "adv",
+      "text": "Taş elektriği geçirmez. Pil, anahtar ve iki lamba lazım!",
+      "source": "adventure.tasks.final.hints.insulator"
+    },
+    {
+      "key": "adv_e43961a4",
+      "kind": "adv",
+      "text": "Dört boş yere pil, anahtar ve iki lamba koy.",
+      "source": "adventure.tasks.final.hints.incomplete"
+    },
+    {
+      "key": "adv_650d0819",
+      "kind": "adv",
+      "text": "Pil, anahtar ve iki lamba koy. Sonra anahtara dokun.",
+      "source": "adventure.tasks.final.hints.start"
+    },
+    {
+      "key": "adv_91b3c83b",
+      "kind": "adv",
+      "text": "Cep fenerin yanmıyor. Önce neye bakmalısın?",
+      "source": "adventure.tasks.fener.say"
+    },
+    {
+      "key": "adv_5a24855f",
+      "kind": "adv",
+      "text": "Doğru! Fener enerjisini pilden alır. Pil bitmiş ya da yanlış takılmış olabilir.",
+      "source": "adventure.tasks.fener.learn"
+    },
+    {
+      "key": "adv_1e40d9c9",
+      "kind": "adv",
+      "text": "Fener enerjisini pilden alır.",
+      "source": "adventure.tasks.fener.hint"
+    },
+    {
+      "key": "adv_9dbe8db2",
+      "kind": "adv",
+      "text": "Odanın lambasını açıp kapatmak için hangi parçaya dokunuruz?",
+      "source": "adventure.tasks.oda-lambasi.say"
+    },
+    {
+      "key": "adv_1d90b4f0",
+      "kind": "adv",
+      "text": "Doğru! Anahtar devreyi açar ve kapatır. Yol tamamsa lamba yanar.",
+      "source": "adventure.tasks.oda-lambasi.learn"
+    },
+    {
+      "key": "adv_a415c8f2",
+      "kind": "adv",
+      "text": "Lambanın duvardaki düğmesi var.",
+      "source": "adventure.tasks.oda-lambasi.hint"
+    },
+    {
+      "key": "adv_7d6ca78c",
+      "kind": "adv",
+      "text": "Kabloların dışı neden plastikle kaplı?",
+      "source": "adventure.tasks.kablo-koruma.say"
+    },
+    {
+      "key": "adv_67eeec65",
+      "kind": "adv",
+      "text": "Doğru! Plastik elektriği geçirmez. Kabloyu korur, bizi de korur.",
+      "source": "adventure.tasks.kablo-koruma.learn"
+    },
+    {
+      "key": "adv_52180499",
+      "kind": "adv",
+      "text": "Plastik elektriği geçirmez.",
+      "source": "adventure.tasks.kablo-koruma.hint"
+    },
+    {
+      "key": "adv_adb35f0f",
+      "kind": "adv",
+      "text": "Elektrikle deney yapacağız. Hangisini kullanırız?",
+      "source": "adventure.tasks.guvenlik.say"
+    },
+    {
+      "key": "adv_b2d75523",
+      "kind": "adv",
+      "text": "Doğru! Küçük pil güvenlidir. Prizdeki elektrik çok güçlüdür, ona asla dokunma. Gerekirse büyüklerden yardım iste.",
+      "source": "adventure.tasks.guvenlik.learn"
+    },
+    {
+      "key": "adv_bba3ce3b",
+      "kind": "adv",
+      "text": "Priz çok güçlüdür ve tehlikelidir. Pil küçük ve güvenlidir.",
+      "source": "adventure.tasks.guvenlik.hint"
+    },
+    {
+      "key": "adv_f3c82d87",
+      "kind": "adv",
+      "text": "LED için direnç lazım. İkisini boş yerlere koy. Direnç LED'i korur!",
+      "source": "adventure.tasks.led-direnc.say"
+    },
+    {
+      "key": "adv_ec54a01e",
+      "kind": "adv",
+      "text": "LED yandı! Direnç LED'i korudu.",
+      "source": "adventure.tasks.led-direnc.win"
+    },
+    {
+      "key": "adv_4937782e",
+      "kind": "adv",
+      "text": "Taş elektriği geçirmez. LED ve direnç lazım!",
+      "source": "adventure.tasks.led-direnc.hints.insulator"
+    },
+    {
+      "key": "adv_d72b0b9a",
+      "kind": "adv",
+      "text": "İki boş yere LED ve direnç koy.",
+      "source": "adventure.tasks.led-direnc.hints.incomplete"
+    },
+    {
+      "key": "adv_8de84d3f",
+      "kind": "adv",
+      "text": "LED yandı ama direnç yok! Direnç LED'i korur. Kabloyu çıkarıp direnci koy.",
+      "source": "adventure.tasks.led-direnc.hints.noResistor"
+    },
+    {
+      "key": "adv_3260f55a",
+      "kind": "adv",
+      "text": "LED ve direnci boş yerlere koy.",
+      "source": "adventure.tasks.led-direnc.hints.start"
+    },
+    {
+      "key": "adv_6ba28239",
+      "kind": "adv",
+      "text": "Anahtar, direnç ve LED'i koy. Yansın! Sonra anahtarla söndür.",
+      "source": "adventure.tasks.gece-lambasi.say"
+    },
+    {
+      "key": "adv_c43b7c14",
+      "kind": "adv",
+      "text": "Gece lambası hazır! Anahtar açar ve kapatır.",
+      "source": "adventure.tasks.gece-lambasi.win"
+    },
+    {
+      "key": "adv_865af361",
+      "kind": "adv",
+      "text": "Taş elektriği geçirmez. Anahtar, direnç ve LED lazım!",
+      "source": "adventure.tasks.gece-lambasi.hints.insulator"
+    },
+    {
+      "key": "adv_7cca0e5a",
+      "kind": "adv",
+      "text": "Üç boş yere anahtar, direnç ve LED koy.",
+      "source": "adventure.tasks.gece-lambasi.hints.incomplete"
+    },
+    {
+      "key": "adv_c5170ca4",
+      "kind": "adv",
+      "text": "Yandı! Şimdi anahtara dokun, gece lambası sönsün.",
+      "source": "adventure.tasks.gece-lambasi.hints.thenOpen"
+    },
+    {
+      "key": "adv_c7cf447c",
+      "kind": "adv",
+      "text": "Anahtar, direnç ve LED'i boş yerlere koy. Sonra anahtara dokun.",
+      "source": "adventure.tasks.gece-lambasi.hints.start"
+    },
+    {
+      "key": "adv_af814a6a",
+      "kind": "adv",
+      "text": "Son devre! Pil, anahtar, direnç ve LED koy. Yansın, sonra anahtarla söndür.",
+      "source": "adventure.tasks.ev-final.say"
+    },
+    {
+      "key": "adv_e447e199",
+      "kind": "adv",
+      "text": "Muhteşem! Kendi güvenli devreni kurdun!",
+      "source": "adventure.tasks.ev-final.win"
+    },
+    {
+      "key": "adv_d23c5118",
+      "kind": "adv",
+      "text": "Taş elektriği geçirmez. Pil, anahtar, direnç ve LED lazım!",
+      "source": "adventure.tasks.ev-final.hints.insulator"
+    },
+    {
+      "key": "adv_a27bb5e2",
+      "kind": "adv",
+      "text": "Dört boş yere pil, anahtar, direnç ve LED koy.",
+      "source": "adventure.tasks.ev-final.hints.incomplete"
+    },
+    {
+      "key": "adv_1fb1306e",
+      "kind": "adv",
+      "text": "LED için direnç lazım!",
+      "source": "adventure.tasks.ev-final.hints.noResistor"
+    },
+    {
+      "key": "adv_930191f7",
+      "kind": "adv",
+      "text": "Yandı! Şimdi anahtara dokun, devre sönsün.",
+      "source": "adventure.tasks.ev-final.hints.thenOpen"
+    },
+    {
+      "key": "adv_b620fc2b",
+      "kind": "adv",
+      "text": "Pil, anahtar, direnç ve LED koy. Sonra anahtara dokun.",
+      "source": "adventure.tasks.ev-final.hints.start"
+    },
+    {
+      "key": "adv_1d8b562a",
+      "kind": "adv",
+      "text": "Odada pil, anahtar ve lamba bul. Dokun ve ara!",
+      "source": "adventure.tasks.karanlik-ev.say"
+    },
+    {
+      "key": "adv_68aeb0f3",
+      "kind": "adv",
+      "text": "Başardın! Lambamız ışıl ışıl yanıyor!",
+      "source": "adventure.tasks.karanlik-ev.win"
+    },
+    {
+      "key": "adv_41d4d7f8",
+      "kind": "adv",
+      "text": "Hımm, bu elektriği taşımaz. Pil, anahtar ve lamba lazım!",
+      "source": "adventure.tasks.karanlik-ev.hints.insulator"
+    },
+    {
+      "key": "adv_1af7bacb",
+      "kind": "adv",
+      "text": "Boş yerlere pil, anahtar ve lamba koyalım.",
+      "source": "adventure.tasks.karanlik-ev.hints.incomplete"
+    },
+    {
+      "key": "adv_e590c758",
+      "kind": "adv",
+      "text": "Pil, anahtar ve lamba koy. Sonra anahtara dokun.",
+      "source": "adventure.tasks.karanlik-ev.hints.start"
+    },
+    {
+      "key": "adv_60fe03ab",
+      "kind": "adv",
+      "text": "Sandığa, çekmeceye ve dolaba dokunmayı dene!",
+      "source": "adventure.tasks.karanlik-ev.hints.idle"
+    },
+    {
+      "key": "adv_4717d70e",
+      "kind": "adv",
+      "text": "Akşam oldu. Haydi küçük mucit, eve girelim!",
+      "source": "adventure.tasks.karanlik-ev.scenes[0].learn"
+    },
+    {
+      "key": "adv_00cbda00",
+      "kind": "adv",
+      "text": "Aaa, ev çok karanlık! Lambalar yanmıyor.",
+      "source": "adventure.tasks.karanlik-ev.scenes[1].learn"
+    },
+    {
+      "key": "adv_cb146e7f",
+      "kind": "adv",
+      "text": "Hadi, lambayı yakacak parçaları birlikte bulalım!",
+      "source": "adventure.tasks.karanlik-ev.scenes[2].learn"
+    },
+    {
+      "key": "adv_c4afb1e7",
+      "kind": "adv",
+      "text": "Harika! Sandıkta pil var. Pil elektrik verir.",
+      "source": "adventure.tasks.karanlik-ev.spots[0].say"
+    },
+    {
+      "key": "adv_c2a814ed",
+      "kind": "adv",
+      "text": "Süper! Anahtar buldun. Anahtar yolu açar ve kapatır.",
+      "source": "adventure.tasks.karanlik-ev.spots[1].say"
+    },
+    {
+      "key": "adv_9fa27c00",
+      "kind": "adv",
+      "text": "Bravo! Lamba da burada. Şimdi devreyi kuralım!",
+      "source": "adventure.tasks.karanlik-ev.spots[2].say"
+    },
+    {
+      "key": "adv_0611cad2",
+      "kind": "adv",
+      "text": "Ay ışığı var ama oda karanlık. Aramaya devam et!",
+      "source": "adventure.tasks.karanlik-ev.spots[3].say"
+    },
+    {
+      "key": "adv_8ca163f8",
+      "kind": "adv",
+      "text": "Bu bir yaprak. Yaprak elektriği taşımaz.",
+      "source": "adventure.tasks.karanlik-ev.spots[4].say"
+    },
+    {
+      "key": "adv_a72219df",
+      "kind": "adv",
+      "text": "Bu bir taş. Taş da elektriği taşımaz.",
+      "source": "adventure.tasks.karanlik-ev.spots[5].say"
+    },
+    {
+      "key": "adv_51f3721e",
+      "kind": "adv",
+      "text": "Sıradaki macera: Ormanda Gece Kurtarma. Çok yakında!",
+      "source": "adventure.tasks.karanlik-ev.next"
+    },
+    {
+      "key": "adv_0ca281c0",
+      "kind": "adv",
+      "text": "Enerji Marketine hoş geldin! Coinlerinle ekipman al.",
+      "source": "adventure.market.text.say"
+    },
+    {
+      "key": "adv_9c06dca4",
+      "kind": "adv",
+      "text": "Ekipman çantana girdi!",
+      "source": "adventure.market.text.sayBought"
+    },
+    {
+      "key": "adv_63e7d34c",
+      "kind": "adv",
+      "text": "Yetmiyor. Biraz daha coin kazan!",
+      "source": "adventure.market.text.sayNo"
+    },
+    {
+      "key": "adv_d54b6c7c",
+      "kind": "adv",
+      "text": "Bu ekipman zaten sende.",
+      "source": "adventure.market.text.already"
+    },
+    {
+      "key": "complete",
+      "kind": "named",
+      "text": "Eksik parçayı bul",
+      "source": "strings.voice.complete"
+    },
+    {
+      "key": "color",
+      "kind": "named",
+      "text": "Aynı rengi bul",
+      "source": "strings.voice.color"
+    },
+    {
+      "key": "shape",
+      "kind": "named",
+      "text": "Aynı şekli bul",
+      "source": "strings.voice.shape"
+    },
+    {
+      "key": "pattern",
+      "kind": "named",
+      "text": "Sıradaki hangisi?",
+      "source": "strings.voice.pattern"
+    },
+    {
+      "key": "circuitSwitch",
+      "kind": "named",
+      "text": "Şimdi anahtara dokun.",
+      "source": "strings.voice.circuitSwitch"
+    },
+    {
+      "key": "circuit_wire",
+      "kind": "named",
+      "text": "Eksik kabloyu bul.",
+      "source": "strings.voice.circuit_wire"
+    },
+    {
+      "key": "circuit_battery",
+      "kind": "named",
+      "text": "Pili al ve boş yere koy.",
+      "source": "strings.voice.circuit_battery"
+    },
+    {
+      "key": "circuit_led",
+      "kind": "named",
+      "text": "LED'i al ve boş yere koy.",
+      "source": "strings.voice.circuit_led"
+    },
+    {
+      "key": "circuit_resistor",
+      "kind": "named",
+      "text": "Direnci al ve boş yere koy.",
+      "source": "strings.voice.circuit_resistor"
+    },
+    {
+      "key": "circuit_switch",
+      "kind": "named",
+      "text": "Anahtarı al ve boş yere koy.",
+      "source": "strings.voice.circuit_switch"
+    },
+    {
+      "key": "circuit_multi",
+      "kind": "named",
+      "text": "Eksik parçaları bul ve boş yerlere koy.",
+      "source": "strings.voice.circuit_multi"
+    },
+    {
+      "key": "circuitDone",
+      "kind": "named",
+      "text": "Harika! Devre tamamlandı.",
+      "source": "strings.voice.circuitDone"
+    },
+    {
+      "key": "rotate",
+      "kind": "named",
+      "text": "Döndürülmüş şekli bul.",
+      "source": "strings.voice.rotate"
+    },
+    {
+      "key": "symmetry",
+      "kind": "named",
+      "text": "Diğer tarafı tamamla.",
+      "source": "strings.voice.symmetry"
+    },
+    {
+      "key": "circuit_fix",
+      "kind": "named",
+      "text": "Bozuk parçayı bul.",
+      "source": "strings.voice.circuit_fix"
+    }
+  ]
+}

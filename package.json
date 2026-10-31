@@ -1,0 +1,42 @@
+{
+  "name": "altez-minilab",
+  "version": "8.5.0",
+  "description": "ALTEZ MiniLab - 4-8 yas icin egitici mini oyunlar",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "node --test \"tests/*.test.js\"",
+    "test:ui": "node scripts/ui-smoke.mjs",
+    "test:ui75": "node scripts/ui-v75.mjs",
+    "test:ui76": "node scripts/ui-v76.mjs",
+    "test:ui77": "node scripts/ui-v77.mjs",
+    "test:ui78": "node scripts/ui-v78.mjs",
+    "test:ui78home": "node scripts/ui-v78-home.mjs",
+    "test:ui79": "node scripts/ui-v79.mjs",
+    "cap:sync": "node scripts/build.mjs && npx cap sync android",
+    "android:prep": "node scripts/android-prep.mjs",
+    "brand": "node scripts/make-brand.mjs",
+    "jingle": "node scripts/make-jingle.mjs",
+    "test:ui81": "node scripts/ui-v81.mjs",
+    "test:ui82": "node scripts/ui-v82.mjs",
+    "test:ui83": "node scripts/ui-v83.mjs",
+    "test:ui84": "node scripts/ui-v84.mjs",
+    "test:ui84market": "node scripts/ui-v84-market.mjs",
+    "voice:lines": "node scripts/voice-lines.mjs",
+    "voice:sync": "node scripts/voice-sync.mjs",
+    "voice:gen": "node scripts/gen-voice-elevenlabs.mjs",
+    "test:ui85": "node scripts/ui-v85.mjs",
+    "test:ui85audio": "node scripts/ui-v85-audio.mjs",
+    "voice:import": "node scripts/import-voice.mjs"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@capacitor-community/text-to-speech": "8.0.2",
+    "@capacitor/android": "8.5.3",
+    "@capacitor/app": "^8.1.2",
+    "@capacitor/cli": "8.5.3",
+    "@capacitor/core": "8.5.3"
+  }
+}

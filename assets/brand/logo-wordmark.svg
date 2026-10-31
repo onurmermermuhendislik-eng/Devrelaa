@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 304 82" role="img" aria-label="MiniLab">
+  <g fill="none" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="#4A6FA5">
+      <path d="M8 70V12L31 44L54 12V70"/>
+      <path d="M72 34V70"/>
+      <path d="M92 70V48A14 14 0 0 1 120 48V70"/>
+      <path d="M138 34V70"/>
+    </g>
+    <g stroke="#F0A04B">
+      <path d="M158 12V70H184"/>
+      <circle cx="220" cy="52" r="18"/><path d="M238 34V70"/>
+      <circle cx="276" cy="52" r="18"/><path d="M258 10V70"/>
+    </g>
+  </g>
+  <circle cx="72" cy="15" r="5.5" fill="#F0A04B"/>
+  <circle cx="138" cy="15" r="5.5" fill="#F0A04B"/>
+</svg>
