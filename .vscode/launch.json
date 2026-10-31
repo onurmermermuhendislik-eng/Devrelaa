@@ -1,0 +1,49 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Uygulama (Chrome) - sunucuyu başlat + debug",
+      "type": "chrome",
+      "request": "launch",
+      "preLaunchTask": "sunucu-baslat",
+      "url": "http://localhost:5173/#/",
+      "webRoot": "${workspaceFolder}",
+      "pathMapping": { "/": "${workspaceFolder}/" }
+    },
+    {
+      "name": "Mahalle (Chrome) - #/mahalle",
+      "type": "chrome",
+      "request": "launch",
+      "preLaunchTask": "sunucu-baslat",
+      "url": "http://localhost:5173/#/mahalle",
+      "webRoot": "${workspaceFolder}",
+      "pathMapping": { "/": "${workspaceFolder}/" }
+    },
+    {
+      "name": "Birim testleri (hepsi)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["--test", "tests/"],
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "Birim testi (açık dosya)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["--test", "${file}"],
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "Mahalle UI testi (Playwright)",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/ui-mahalle.mjs",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ]
+}
